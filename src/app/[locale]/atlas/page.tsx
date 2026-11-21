@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { Route, Search, ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
@@ -29,8 +29,8 @@ export default function AtlasPage() {
   const [stepIndex, setStepIndex] = useState(0);
   const [selectedPlaceId, setSelectedPlaceId] = useState<string>(journeys[0].waypoints[0].placeId);
   const [search, setSearch] = useState('');
-  const [onlyLocalized, setOnlyLocalized] = useState(true);
   const [visibleLimit, setVisibleLimit] = useState(40);
+  const mapTopRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (places.length === 0) {
@@ -42,19 +42,17 @@ export default function AtlasPage() {
   const currentWaypoint = activeJourney?.waypoints[stepIndex] ?? null;
   const selectedPlace = places.find((p) => p.id === selectedPlaceId) ?? places[0];
 
-  const localizedCount = places.filter((p) => typeof p.ancientName !== 'string').length;
-
-  const baseList =
-    onlyLocalized && !search.trim() && locale !== 'en'
-      ? places.filter((p) => typeof p.ancientName !== 'string')
-      : places;
-
-  const filteredPlaces = baseList.filter((p) => matchesPlaceQuery(p, search, locale));
+  const filteredPlaces = places.filter((p) => matchesPlaceQuery(p, search, locale));
   const displayedChips = filteredPlaces.slice(0, visibleLimit);
 
   const handleOpenInReader = (bookId: string, chapter: number) => {
     setLocation(bookId, chapter);
     router.push(`/${locale}`);
+  };
+
+  const handleSelectChip = (id: string) => {
+    setSelectedPlaceId(id);
+    mapTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
@@ -129,7 +127,7 @@ export default function AtlasPage() {
         </section>
 
         {/* Map + Timeline + Place Commentary Grid */}
-        <div className="grid gap-6 lg:grid-cols-12">
+        <div ref={mapTopRef} className="grid scroll-mt-20 gap-6 lg:grid-cols-12">
           <div className="space-y-4 lg:col-span-7">
             <BiblicalMap
               places={places}
@@ -210,47 +208,18 @@ export default function AtlasPage() {
               </div>
             )}
 
-            {/* Biblical Places Chips with Major (Localized) / All Toggle */}
+            {/* All 1,305 Localized Biblical Places */}
             <div className="space-y-3">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <h3 className="text-xs font-bold uppercase tracking-wider opacity-70">
-                  {t('places')} ({filteredPlaces.length.toLocaleString()})
-                </h3>
-
-                {locale !== 'en' && (
-                  <div className="flex items-center gap-1 rounded-lg p-0.5 text-xs" style={{ backgroundColor: 'var(--bg-muted)' }}>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setOnlyLocalized(true);
-                        setVisibleLimit(40);
-                      }}
-                      className="rounded-md px-2.5 py-1 font-semibold transition cursor-pointer"
-                      style={onlyLocalized ? { backgroundColor: 'var(--bg-surface)' } : undefined}
-                    >
-                      주요 지명 ({localizedCount})
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setOnlyLocalized(false);
-                        setVisibleLimit(40);
-                      }}
-                      className="rounded-md px-2.5 py-1 font-semibold transition cursor-pointer"
-                      style={!onlyLocalized ? { backgroundColor: 'var(--bg-surface)' } : undefined}
-                    >
-                      전체 ({places.length.toLocaleString()})
-                    </button>
-                  </div>
-                )}
-              </div>
+              <h3 className="text-xs font-bold uppercase tracking-wider opacity-70">
+                {t('places')} ({filteredPlaces.length.toLocaleString()})
+              </h3>
 
               <div className="flex flex-wrap gap-2">
                 {displayedChips.map((p) => (
                   <button
                     key={p.id}
                     type="button"
-                    onClick={() => setSelectedPlaceId(p.id)}
+                    onClick={() => handleSelectChip(p.id)}
                     className="rounded-full border px-3 py-1.5 text-xs font-medium transition cursor-pointer"
                     style={{
                       borderColor:

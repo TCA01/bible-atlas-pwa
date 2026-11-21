@@ -1,7 +1,14 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { Map as MapLibreMap, Marker, NavigationControl, setWorkerUrl, type GeoJSONSource } from 'maplibre-gl';
+import {
+  Map as MapLibreMap,
+  Marker,
+  Popup,
+  NavigationControl,
+  setWorkerUrl,
+  type GeoJSONSource,
+} from 'maplibre-gl';
 import { useLocale } from 'next-intl';
 import type { LanguageCode } from '@/types/bible';
 import type { BiblicalJourney, BiblicalPlace } from '@/types/geo';
@@ -15,6 +22,14 @@ interface BiblicalMapProps {
   heightClass?: string;
 }
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
 export function BiblicalMap({
   places,
   selectedPlaceId,
@@ -25,46 +40,35 @@ export function BiblicalMap({
   const locale = useLocale() as LanguageCode;
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
+  const isLoadedRef = useRef(false);
   const selectedMarkerRef = useRef<Marker | null>(null);
+  const selectedPopupRef = useRef<Popup | null>(null);
+
+  const placesRef = useRef(places);
+  const selectedPlaceIdRef = useRef(selectedPlaceId);
+  const activeJourneyRef = useRef(activeJourney);
+  const localeRef = useRef(locale);
   const onSelectRef = useRef(onSelectPlace);
+
+  placesRef.current = places;
+  selectedPlaceIdRef.current = selectedPlaceId;
+  activeJourneyRef.current = activeJourney;
+  localeRef.current = locale;
   onSelectRef.current = onSelectPlace;
 
-  useEffect(() => {
-    if (!containerRef.current || mapRef.current) return;
-
-    setWorkerUrl('/maplibre-gl-worker.mjs');
-
-    const map = new MapLibreMap({
-      container: containerRef.current,
-      style: 'https://tiles.openfreemap.org/styles/liberty',
-      center: [35.2137, 32.5],
-      zoom: 5.5,
-      attributionControl: false,
-    });
-
-    map.addControl(new NavigationControl({ showCompass: false }), 'top-right');
-    mapRef.current = map;
-
-    return () => {
-      selectedMarkerRef.current?.remove();
-      selectedMarkerRef.current = null;
-      map.remove();
-      mapRef.current = null;
-    };
-  }, []);
-
-  // Render all 1,300+ places as a GPU-accelerated WebGL GeoJSON circle layer
-  useEffect(() => {
+  const syncPlacesLayer = () => {
     const map = mapRef.current;
-    if (!map) return;
+    if (!map || !isLoadedRef.current) return;
 
+    const currentPlaces = placesRef.current;
+    const currentLocale = localeRef.current;
     const geojson = {
       type: 'FeatureCollection' as const,
-      features: places.map((p) => ({
+      features: currentPlaces.map((p) => ({
         type: 'Feature' as const,
         properties: {
           id: p.id,
-          name: pickText(p.ancientName, locale),
+          name: pickText(p.ancientName, currentLocale),
           featured: p.featured ? 1 : 0,
         },
         geometry: {
@@ -74,62 +78,62 @@ export function BiblicalMap({
       })),
     };
 
-    const applyPlacesLayer = () => {
-      const existing = map.getSource('biblical-places') as GeoJSONSource | undefined;
-      if (existing) {
-        existing.setData(geojson);
-        return;
-      }
-
-      map.addSource('biblical-places', {
-        type: 'geojson',
-        data: geojson,
-      });
-
-      map.addLayer({
-        id: 'biblical-places-circles',
-        type: 'circle',
-        source: 'biblical-places',
-        paint: {
-          'circle-radius': ['case', ['==', ['get', 'featured'], 1], 7, 4.5],
-          'circle-color': ['case', ['==', ['get', 'featured'], 1], '#D97706', '#1E3A5F'],
-          'circle-stroke-width': 1.5,
-          'circle-stroke-color': '#FFFFFF',
-          'circle-opacity': 0.88,
-        },
-      });
-
-      map.on('click', 'biblical-places-circles', (e) => {
-        const id = e.features?.[0]?.properties?.id;
-        if (typeof id === 'string') {
-          onSelectRef.current(id);
-        }
-      });
-
-      map.on('mouseenter', 'biblical-places-circles', () => {
-        map.getCanvas().style.cursor = 'pointer';
-      });
-      map.on('mouseleave', 'biblical-places-circles', () => {
-        map.getCanvas().style.cursor = '';
-      });
-    };
-
-    if (map.isStyleLoaded()) {
-      applyPlacesLayer();
-    } else {
-      map.once('load', applyPlacesLayer);
+    const existing = map.getSource('biblical-places') as GeoJSONSource | undefined;
+    if (existing) {
+      existing.setData(geojson);
+      return;
     }
-  }, [places, locale]);
 
-  // Highlight selected place with a prominent pin & flyTo
-  useEffect(() => {
+    map.addSource('biblical-places', {
+      type: 'geojson',
+      data: geojson,
+    });
+
+    map.addLayer({
+      id: 'biblical-places-circles',
+      type: 'circle',
+      source: 'biblical-places',
+      paint: {
+        'circle-radius': ['case', ['==', ['get', 'featured'], 1], 7, 4.5],
+        'circle-color': ['case', ['==', ['get', 'featured'], 1], '#D97706', '#1E3A5F'],
+        'circle-stroke-width': 1.5,
+        'circle-stroke-color': '#FFFFFF',
+        'circle-opacity': 0.88,
+      },
+    });
+
+    map.on('click', 'biblical-places-circles', (e) => {
+      const id = e.features?.[0]?.properties?.id;
+      if (typeof id === 'string') {
+        onSelectRef.current(id);
+      }
+    });
+
+    map.on('mouseenter', 'biblical-places-circles', () => {
+      map.getCanvas().style.cursor = 'pointer';
+    });
+    map.on('mouseleave', 'biblical-places-circles', () => {
+      map.getCanvas().style.cursor = '';
+    });
+  };
+
+  const syncSelectedMarker = (animate = true) => {
     const map = mapRef.current;
-    if (!map || !selectedPlaceId) return;
-    const place = places.find((p) => p.id === selectedPlaceId);
+    const id = selectedPlaceIdRef.current;
+    if (!map || !id) return;
+
+    const place = placesRef.current.find((p) => p.id === id);
     if (!place) return;
 
+    const currentLocale = localeRef.current;
+    const ancient = pickText(place.ancientName, currentLocale);
+    const modern = pickText(place.modernName, currentLocale);
+
     selectedMarkerRef.current?.remove();
+    selectedPopupRef.current?.remove();
+
     const el = document.createElement('div');
+    el.style.zIndex = '20';
     el.innerHTML = `
       <span style="
         display:inline-flex;
@@ -140,43 +144,71 @@ export function BiblicalMap({
         border-radius:9999px;
         background:#D97706;
         border:3px solid #FFFFFF;
-        box-shadow:0 0 0 4px rgba(217,119,6,0.35), 0 4px 10px rgba(0,0,0,0.4);
+        box-shadow:0 0 0 5px rgba(217,119,6,0.38), 0 4px 12px rgba(0,0,0,0.45);
       "></span>
     `;
-    el.title = `${pickText(place.ancientName, locale)} → ${pickText(place.modernName, locale)}`;
+
     selectedMarkerRef.current = new Marker({ element: el })
       .setLngLat(place.coordinates)
       .addTo(map);
 
-    map.flyTo({
-      center: place.coordinates,
-      zoom: 7.5,
-      duration: 900,
-      essential: true,
-    });
-  }, [selectedPlaceId, places, locale]);
+    const subtitle =
+      modern && modern.toLowerCase() !== ancient.toLowerCase()
+        ? `<div style="font-size:11px;color:#B45309;font-weight:600;margin-top:2px;">→ ${escapeHtml(modern)}</div>`
+        : '';
 
-  // Render active journey LineString
-  useEffect(() => {
-    const map = mapRef.current;
-    if (!map) return;
+    selectedPopupRef.current = new Popup({
+      closeButton: false,
+      closeOnClick: false,
+      offset: 18,
+      maxWidth: '240px',
+    })
+      .setLngLat(place.coordinates)
+      .setHTML(
+        `<div style="font-family:system-ui,sans-serif;padding:2px 4px;color:#111827;">
+          <div style="font-size:13px;font-weight:700;line-height:1.25;">${escapeHtml(ancient)}</div>
+          ${subtitle}
+        </div>`
+      )
+      .addTo(map);
 
-    const applyLayer = () => {
-      if (map.getLayer('journey-line')) map.removeLayer('journey-line');
-      if (map.getSource('journey-source')) map.removeSource('journey-source');
-
-      if (!activeJourney) return;
-
-      map.addSource('journey-source', {
-        type: 'geojson',
-        data: {
-          type: 'Feature',
-          properties: {},
-          geometry: activeJourney.geometry,
-        },
+    map.stop();
+    if (animate && isLoadedRef.current) {
+      map.flyTo({
+        center: place.coordinates,
+        zoom: Math.max(map.getZoom(), 7.2),
+        duration: 750,
+        essential: true,
       });
+    } else {
+      map.jumpTo({
+        center: place.coordinates,
+        zoom: 7.2,
+      });
+    }
+  };
 
-      map.addLayer({
+  const syncJourneyLayer = () => {
+    const map = mapRef.current;
+    if (!map || !isLoadedRef.current) return;
+
+    const journey = activeJourneyRef.current;
+    if (map.getLayer('journey-line')) map.removeLayer('journey-line');
+    if (map.getSource('journey-source')) map.removeSource('journey-source');
+
+    if (!journey) return;
+
+    map.addSource('journey-source', {
+      type: 'geojson',
+      data: {
+        type: 'Feature',
+        properties: {},
+        geometry: journey.geometry,
+      },
+    });
+
+    map.addLayer(
+      {
         id: 'journey-line',
         type: 'line',
         source: 'journey-source',
@@ -185,18 +217,75 @@ export function BiblicalMap({
           'line-cap': 'round',
         },
         paint: {
-          'line-color': activeJourney.color,
+          'line-color': journey.color,
           'line-width': 3.5,
           'line-dasharray': [2, 1.5],
         },
-      });
-    };
+      },
+      map.getLayer('biblical-places-circles') ? 'biblical-places-circles' : undefined
+    );
+  };
 
-    if (map.isStyleLoaded()) {
-      applyLayer();
-    } else {
-      map.once('load', applyLayer);
-    }
+  // Initialize MapLibre instance once
+  useEffect(() => {
+    if (!containerRef.current || mapRef.current) return;
+
+    setWorkerUrl('/maplibre-gl-worker.mjs');
+
+    const initialPlace = placesRef.current.find((p) => p.id === selectedPlaceIdRef.current);
+    const map = new MapLibreMap({
+      container: containerRef.current,
+      style: 'https://tiles.openfreemap.org/styles/liberty',
+      center: initialPlace ? initialPlace.coordinates : [35.2137, 32.5],
+      zoom: initialPlace ? 7.2 : 5.5,
+      attributionControl: false,
+    });
+
+    map.addControl(new NavigationControl({ showCompass: false }), 'top-right');
+    mapRef.current = map;
+
+    map.on('load', () => {
+      isLoadedRef.current = true;
+      syncPlacesLayer();
+      syncJourneyLayer();
+      syncSelectedMarker(false);
+    });
+
+    const ro = new ResizeObserver(() => {
+      map.resize();
+    });
+    ro.observe(containerRef.current);
+
+    return () => {
+      ro.disconnect();
+      isLoadedRef.current = false;
+      selectedMarkerRef.current?.remove();
+      selectedPopupRef.current?.remove();
+      selectedMarkerRef.current = null;
+      selectedPopupRef.current = null;
+      map.remove();
+      mapRef.current = null;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Re-sync places layer whenever places or locale updates
+  useEffect(() => {
+    syncPlacesLayer();
+    syncSelectedMarker(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [places, locale]);
+
+  // Fly to selected place + show glowing marker & popup label
+  useEffect(() => {
+    syncSelectedMarker(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedPlaceId]);
+
+  // Re-sync active journey overlay
+  useEffect(() => {
+    syncJourneyLayer();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeJourney]);
 
   return (
