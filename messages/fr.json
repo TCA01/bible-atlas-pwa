@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "Bible Interactive Mondiale et Atlas Historique"
+  },
+  "nav": {
+    "reader": "Lire la Bible",
+    "atlas": "Atlas Biblique",
+    "study": "Mon Étude",
+    "language": "Langue"
+  },
+  "reader": {
+    "version": "Version",
+    "book": "Livre",
+    "chapter": "Chapitre",
+    "prevChapter": "Précédent",
+    "nextChapter": "Suivant",
+    "verticalMode": "Vertical",
+    "horizontalMode": "Horizontal",
+    "placeHint": "Cliquez sur les lieux soulignés pour explorer la carte et l'histoire",
+    "apiFallbackTitle": "{version} nécessite une clé API",
+    "apiFallbackDesc": "Configurez ESV_API_KEY ou API_BIBLE_KEY sur le serveur pour charger {version}. Affichage de KJV (Domaine public).",
+    "switchToKjv": "Utiliser KJV",
+    "loading": "Chargement des Écritures..."
+  },
+  "typography": {
+    "title": "Affichage et Lecture",
+    "fontSize": "Taille de police",
+    "lineHeight": "Interligne",
+    "compact": "Compact",
+    "normal": "Normal",
+    "relaxed": "Large",
+    "fontFamily": "Police",
+    "serif": "Serif",
+    "sans": "Sans",
+    "theme": "Thème",
+    "light": "Clair",
+    "sepia": "Sépia",
+    "dark": "Sombre",
+    "writingDirection": "Sens de lecture",
+    "showPlaces": "Surligner les lieux bibliques"
+  },
+  "map": {
+    "title": "Lieu Biblique et Histoire",
+    "ancientName": "Nom ancien",
+    "modernLocation": "Lieu moderne",
+    "confidence": "Fiabilité géographique",
+    "confidence_certain": "Certaine",
+    "confidence_probable": "Probable",
+    "confidence_uncertain": "Incertaine",
+    "summary": "Aperçu",
+    "geography": "Géographie",
+    "biblicalEvents": "Événements bibliques",
+    "modernContext": "Aujourd'hui et Archéologie",
+    "keyVerses": "Versets clés",
+    "close": "Fermer la carte",
+    "selectPlacePrompt": "Sélectionnez un lieu dans le texte ou recherchez ci-dessous.",
+    "searchPlaceholder": "Rechercher un lieu (ex. Damas)..."
+  },
+  "atlas": {
+    "title": "Atlas Biblique et Voyages",
+    "journeys": "Voyages historiques",
+    "places": "Tous les lieux",
+    "step": "Étape {current} sur {total}",
+    "prevStep": "Précédent",
+    "nextStep": "Suivant",
+    "openInReader": "Ouvrir dans le lecteur",
+    "allEras": "Toutes les époques"
+  },
+  "study": {
+    "title": "Mon Étude (Local)",
+    "bookmarks": "Signets",
+    "highlights": "Surlignages",
+    "notes": "Notes",
+    "addBookmark": "Signet",
+    "removeBookmark": "Enregistré",
+    "highlight": "Surligner",
+    "addNote": "Note",
+    "saveNote": "Enregistrer",
+    "delete": "Supprimer",
+    "notePlaceholder": "Écrivez votre méditation ou note d'étude...",
+    "empty": "Aucun élément enregistré. Touchez un numéro de verset pour ajouter un signet ou une note."
+  }
+}

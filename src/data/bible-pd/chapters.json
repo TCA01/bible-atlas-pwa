@@ -1,0 +1,265 @@
+{
+  "KJV": {
+    "ACT.9": [
+      { "verse": 1, "text": "And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord, went unto the high priest," },
+      { "verse": 2, "text": "And desired of him letters to Damascus to the synagogues, that if he found any of this way, whether they were men or women, he might bring them bound unto Jerusalem." },
+      { "verse": 3, "text": "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven:" },
+      { "verse": 4, "text": "And he fell to the earth, and heard a voice saying unto him, Saul, Saul, why persecutest thou me?" },
+      { "verse": 5, "text": "And he said, Who art thou, Lord? And the Lord said, I am Jesus whom thou persecutest: it is hard for thee to kick against the pricks." },
+      { "verse": 6, "text": "And he trembling and astonished said, Lord, what wilt thou have me to do? And the Lord said unto him, Arise, and go into the city, and it shall be told thee what thou must do." },
+      { "verse": 8, "text": "And Saul arose from the earth; and when his eyes were opened, he saw no man: but they led him by the hand, and brought him into Damascus." },
+      { "verse": 10, "text": "And there was a certain disciple at Damascus, named Ananias; and to him said the Lord in a vision, Ananias. And he said, Behold, I am here, Lord." },
+      { "verse": 11, "text": "And the Lord said unto him, Arise, and go into the street which is called Straight, and enquire in the house of Judas for one called Saul, of Tarsus: for, behold, he prayeth," },
+      { "verse": 17, "text": "And Ananias went his way, and entered into the house; and putting his hands on him said, Brother Saul, the Lord, even Jesus, that appeared unto thee in the way as thou camest, hath sent me, that thou mightest receive thy sight, and be filled with the Holy Ghost." },
+      { "verse": 18, "text": "And immediately there fell from his eyes as it had been scales: and he received sight forthwith, and arose, and was baptized." },
+      { "verse": 26, "text": "And when Saul was come to Jerusalem, he assayed to join himself to the disciples: but they were all afraid of him, and believed not that he was a disciple." }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east to Jerusalem," },
+      { "verse": 2, "text": "Saying, Where is he that is born King of the Jews? for we have seen his star in the east, and are come to worship him." },
+      { "verse": 5, "text": "And they said unto him, In Bethlehem of Judaea: for thus it is written by the prophet," },
+      { "verse": 6, "text": "And thou Bethlehem, in the land of Juda, art not the least among the princes of Juda: for out of thee shall come a Governor, that shall rule my people Israel." },
+      { "verse": 11, "text": "And when they were come into the house, they saw the young child with Mary his mother, and fell down, and worshipped him: and when they had opened their treasures, they presented unto him gifts; gold, and frankincense, and myrrh." },
+      { "verse": 23, "text": "And he came and dwelt in a city called Nazareth: that it might be fulfilled which was spoken by the prophets, He shall be called a Nazarene." }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "The LORD is my shepherd; I shall not want." },
+      { "verse": 2, "text": "He maketh me to lie down in green pastures: he leadeth me beside the still waters." },
+      { "verse": 3, "text": "He restoreth my soul: he leadeth me in the paths of righteousness for his name's sake." },
+      { "verse": 4, "text": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me." },
+      { "verse": 5, "text": "Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over." },
+      { "verse": 6, "text": "Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever." }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "In the beginning God created the heaven and the earth." },
+      { "verse": 2, "text": "And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters." },
+      { "verse": 3, "text": "And God said, Let there be light: and there was light." },
+      { "verse": 4, "text": "And God saw the light, that it was good: and God divided the light from the darkness." },
+      { "verse": 5, "text": "And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day." }
+    ]
+  },
+  "KRV": {
+    "ACT.9": [
+      { "verse": 1, "text": "사울이 주의 제자들을 대하여 여전히 위협과 살기가 등등하여 대제사장에게 가서" },
+      { "verse": 2, "text": "다메섹 여러 회당에 갈 공문을 청하니 이는 만일 그 도를 좇는 사람을 만나면 무론 남녀하고 결박하여 예루살렘으로 잡아 오려 함이라" },
+      { "verse": 3, "text": "사울이 행하여 다메섹에 가까이 가더니 홀연히 하늘로서 빛이 저를 둘러 비추는지라" },
+      { "verse": 4, "text": "땅에 엎드러져 들으매 소리 있어 가라사대 사울아 사울아 네가 어찌하여 나를 핍박하느냐 하시거늘" },
+      { "verse": 5, "text": "대답하되 주여 뉘시오니이까 가라사대 나는 네가 핍박하는 예수라" },
+      { "verse": 6, "text": "네가 일어나 성으로 들어가라 행할 것을 네게 이를 자가 있느니라 하시니" },
+      { "verse": 8, "text": "사울이 땅에서 일어나 눈은 떴으나 아무 것도 보지 못하고 사람의 손에 끌려 다메섹으로 들어가서" },
+      { "verse": 10, "text": "그 때에 다메섹에 아나니아라 하는 제자가 있더니 주께서 환상 중에 불러 가라사대 아나니아야 하시거늘 대답하되 주여 내가 여기 있나이다 하니" },
+      { "verse": 11, "text": "주께서 가라사대 일어나 직가라 하는 거리로 가서 유다 집에서 다소 사람 사울이라 하는 자를 찾으라 저가 기도하는 중이다" },
+      { "verse": 17, "text": "아나니아가 떠나 그 집에 들어가서 그에게 안수하여 가로되 형제 사울아 주 곧 네가 오는 길에서 나타나시던 예수께서 나를 보내어 너로 다시 보게 하시고 성령으로 충만하게 하신다 하니" },
+      { "verse": 18, "text": "즉시 사울의 눈에서 비늘 같은 것이 벗어져 다시 보게 된지라 일어나 세례를 받고" },
+      { "verse": 26, "text": "사울이 예루살렘에 가서 제자들을 사귀고자 하나 다 두려워하여 그의 제자 됨을 믿지 아니하니" }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "헤롯 왕 때에 예수께서 유대 베들레헴에서 나시매 동방으로부터 박사들이 예루살렘에 이르러 말하되" },
+      { "verse": 2, "text": "유대인의 왕으로 나신 이가 어디 계시뇨 우리가 동방에서 그의 별을 보고 그에게 경배하러 왔노라 하니" },
+      { "verse": 5, "text": "가로되 유대 베들레헴이오니 이는 선지자로 이렇게 기록된바" },
+      { "verse": 6, "text": "또 유대 땅 베들레헴아 너는 유대 고을 중에 가장 작지 아니하도다 네게서 한 다스리는 자가 나와서 내 백성 이스라엘의 목자가 되리라 하였음이니이다" },
+      { "verse": 11, "text": "집에 들어가 아기와 그 모친 마리아의 함께 있는 것을 보고 엎드려 아기께 경배하고 보배합을 열어 황금과 유향과 몰약을 예물로 드리니라" },
+      { "verse": 23, "text": "나사렛이란 동네에 와서 사니 이는 선지자로 하신 말씀에 나사렛 사람이라 칭하리라 하심을 이루려 함이러라" }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "여호와는 나의 목자시니 내가 부족함이 없으리로다" },
+      { "verse": 2, "text": "그가 나를 푸른 초장에 누이시며 쉴만한 물 가으로 인도하시는도다" },
+      { "verse": 3, "text": "내 영혼을 소생시키시고 자기 이름을 위하여 의의 길로 인도하시는도다" },
+      { "verse": 4, "text": "내가 사망의 음침한 골짜기로 다닐찌라도 해를 두려워하지 않을 것은 주께서 나와 함께 하심이라 주의 지팡이와 막대기가 나를 안위하시나이다" },
+      { "verse": 5, "text": "주께서 내 원수의 목전에서 내게 상을 베푸시고 기름으로 내 머리에 바르셨으니 내 잔이 넘치나이다" },
+      { "verse": 6, "text": "나의 평생에 선하심과 인자하심이 정녕 나를 따르리니 내가 여호와의 집에 영원히 거하리로다" }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "태초에 하나님이 천지를 창조하시니라" },
+      { "verse": 2, "text": "땅이 혼돈하고 공허하며 흑암이 깊음 위에 있고 하나님의 신은 수면에 운행하시니라" },
+      { "verse": 3, "text": "하나님이 가라사대 빛이 있으라 하시매 빛이 있었고" },
+      { "verse": 4, "text": "그 빛이 하나님의 보시기에 좋았더라 하나님이 빛과 어두움을 나누사" },
+      { "verse": 5, "text": "빛을 낮이라 칭하시고 어두움을 밤이라 칭하시니라 저녁이 되며 아침이 되니 이는 첫째 날이니라" }
+    ]
+  },
+  "KOUGO": {
+    "ACT.9": [
+      { "verse": 1, "text": "さて、サウロはなおも主の弟子たちに対する脅迫と殺害の息をはずませながら、大祭司のところへ行き、" },
+      { "verse": 2, "text": "ダマスコの諸会堂あての手紙を求めた。それは、この道の者を見つけ出したら、男でも女でも縛りあげて、エルサレムへ引いて来るためであった。" },
+      { "verse": 3, "text": "ところが、道を進んで行って、ダマスコの近くにさしかかった時、突然、天からの光が彼をめぐり照らした。" },
+      { "verse": 4, "text": "彼は地に倒れ、「サウロ、サウロ、なぜわたしを迫害するのか」と呼びかける声を聞いた。" },
+      { "verse": 8, "text": "サウロは地から起き上がって目を開いたが、何も見えなかった。それで人々に手を引かれて、ダマスコへ連れて行かれた。" },
+      { "verse": 10, "text": "さて、ダマスコにアナニヤという弟子がいた。主が幻の中で、「アナニヤよ」と呼びかけられたので、「主よ、わたしはここにおります」と答えた。" },
+      { "verse": 11, "text": "主は言われた、「立って、『まっすぐ』という通りに行き、ユダヤ人の家にいるタルソ人サウロという者を尋ねよ。彼は今、祈っている。" },
+      { "verse": 26, "text": "サウロはエルサレムに着いて、弟子たちの仲間に入ろうと努めたが、みな彼を恐れて、弟子だとは信じようとしなかった。" }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "イエスがヘロデ王の代に、ユダヤのベツレヘムでお生れになったとき、見よ、東から博士たちがエルサレムに着いて、言った、" },
+      { "verse": 5, "text": "彼らは言った、「それはユダヤのベツレヘムです。預言者がこうしるしています、" },
+      { "verse": 23, "text": "そしてナザレという町に行って住んだ。これは預言者たちによって「彼はナザレ人と呼ばれるであろう」と言われた言葉が成就するためである。" }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "主はわたしの牧者であって、わたしには乏しいことがない。" },
+      { "verse": 2, "text": "主はわたしを緑の牧場に伏させ、いこいのみぎわに伴われる。" },
+      { "verse": 3, "text": "主はわたしの魂をいきかえらせ、み名のためにわたしを正しい道に導かれる。" }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "はじめに神は天と地とを創造された。" },
+      { "verse": 2, "text": "地は形なく、むなしく、やみが淵のおもてにあり、神の霊が水のおもてをおおっていた。" },
+      { "verse": 3, "text": "神は「光あれ」と言われた。すると光があった。" }
+    ]
+  },
+  "CUVS": {
+    "ACT.9": [
+      { "verse": 1, "text": "扫罗仍然向主的门徒口吐威吓凶杀的话，去见大祭司，" },
+      { "verse": 2, "text": "求文书给大马士革的各会堂，若是找着信奉这道的人，无论男女，都准他捆绑带到耶路撒冷。" },
+      { "verse": 3, "text": "扫罗行路，将到大马士革，忽然从天上发光，四面照着他。" },
+      { "verse": 8, "text": "扫罗从地上起来，睁开眼睛，竟不能看见什么。有人拉他的手，领他进了大马士革。" },
+      { "verse": 10, "text": "当下，在大马士革有一个门徒，名叫亚拿尼亚。主在异象中对他说：亚拿尼亚。他说：主，我在这里。" },
+      { "verse": 11, "text": "主对他说：起来，往直街去，在犹大的家里，访问一个大数人，名叫扫罗。他正祷告，" },
+      { "verse": 26, "text": "扫罗到了耶路撒冷，想与门徒结交，他们却都怕他，不信他是门徒。" }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "当希律王的时候，耶稣生在犹太的伯利恒。有几个博士从东方来到耶路撒冷，说：" },
+      { "verse": 23, "text": "到了一座城，名叫拿撒勒，就住在那里。这是要应验先知所说，他将称为拿撒勒人的话了。" }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "耶和华是我的牧者，我必不至缺乏。" },
+      { "verse": 2, "text": "他使我躺卧在青草地上，领我在可安歇的水边。" }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "起初，神创造天地。" },
+      { "verse": 2, "text": "地是空虚混沌，渊面黑暗；神的灵运行在水面上。" },
+      { "verse": 3, "text": "神说：要有光，就有了光。" }
+    ]
+  },
+  "CUVT": {
+    "ACT.9": [
+      { "verse": 1, "text": "掃羅仍然向主的門徒口吐威嚇凶殺的話，去見大祭司，" },
+      { "verse": 2, "text": "求文書給大馬士革的各會堂，若是找著信奉這道的人，無論男女，都准他捆綁帶到耶路撒冷。" },
+      { "verse": 3, "text": "掃羅行路，將到大馬士革，忽然從天上發光，四面照著他。" },
+      { "verse": 8, "text": "掃羅從地上起來，睜開眼睛，竟不能看見甚麼。有人拉他的手，領他進了大馬士革。" },
+      { "verse": 10, "text": "當下，在大馬士革有一個門徒，名叫亞拿尼亞。主在異象中對他說：亞拿尼亞。他說：主，我在這裡。" },
+      { "verse": 11, "text": "主對他說：起來，往直街去，在猶大的家裡，訪問一個大數人，名叫掃羅。他正禱告，" },
+      { "verse": 26, "text": "掃羅到了耶路撒冷，想與門徒結交，他們卻都怕他，不信他是門徒。" }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "當希律王的時候，耶穌生在猶太的伯利恆。有幾個博士從東方來到耶路撒冷，說：" },
+      { "verse": 23, "text": "到了一座城，名叫拿撒勒，就住在那裡。這是要應驗先知所說，他將稱為拿撒勒人的話了。" }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "耶和華是我的牧者，我必不致缺乏。" },
+      { "verse": 2, "text": "他使我躺臥在青草地上，領我在可安歇的水邊。" }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "起初，神創造天地。" },
+      { "verse": 2, "text": "地是空虛混沌，淵面黑暗；神的靈運行在水面上。" },
+      { "verse": 3, "text": "神說：要有光，就有了光。" }
+    ]
+  },
+  "RV1909": {
+    "ACT.9": [
+      { "verse": 1, "text": "Y Saulo, respirando aún amenazas y muerte contra los discípulos del Señor, vino al príncipe de los sacerdotes," },
+      { "verse": 2, "text": "Y demandó de él letras para Damasco á las sinagogas, para que si hallase algunos hombres ó mujeres de este camino, los trajese presos á Jerusalén." },
+      { "verse": 3, "text": "Y yendo por el camino, aconteció que llegando cerca de Damasco, súbitamente le cercó un resplandor de luz del cielo;" },
+      { "verse": 8, "text": "Entonces Saulo se levantó de tierra, y abriendo los ojos, no veía á nadie: así que, llevándole por la mano, le metieron en Damasco," },
+      { "verse": 10, "text": "Y había un discípulo en Damasco llamado Ananías, al cual el Señor dijo en visión: Ananías. Y él respondió: Heme aquí, Señor." },
+      { "verse": 26, "text": "Y como vino á Jerusalén, tentaba de juntarse con los discípulos; mas todos tenían miedo de él, no creyendo que era discípulo." }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "Y como Jesús nació en Belén de Judea en días del rey Herodes, he aquí unos magos vinieron del oriente á Jerusalén," },
+      { "verse": 23, "text": "Y vino, y habitó en la ciudad que se llama Nazaret: para que se cumpliese lo que fué dicho por los profetas, que había de ser llamado Nazareno." }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "Jehová es mi pastor; nada me faltará." },
+      { "verse": 2, "text": "En lugares de delicados pastos me hará yacer: junto á aguas de reposo me pastoreará." }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "En el principio crió Dios los cielos y la tierra." },
+      { "verse": 3, "text": "Y dijo Dios: Sea la luz: y fué la luz." }
+    ]
+  },
+  "ACF": {
+    "ACT.9": [
+      { "verse": 1, "text": "E Saulo, respirando ainda ameaças e mortes contra os discípulos do Senhor, dirigiu-se ao sumo sacerdote." },
+      { "verse": 2, "text": "E pediu-lhe cartas para Damasco, para as sinagogas, a fim de que, se encontrasse alguns daquela seita, quer homens quer mulheres, os conduzisse presos a Jerusalém." },
+      { "verse": 3, "text": "E, indo no caminho, aconteceu que, chegando perto de Damasco, subitamente o cercou um resplendor de luz do céu." },
+      { "verse": 8, "text": "E Saulo levantou-se da terra, e, abrindo os olhos, não via a ninguém. E, guiando-o pela mão, o conduziram a Damasco." },
+      { "verse": 10, "text": "E havia em Damasco um certo discípulo chamado Ananias; e disse-lhe o Senhor em visão: Ananias! E ele respondeu: Eis-me aqui, Senhor." },
+      { "verse": 26, "text": "E, quando Saulo chegou a Jerusalém, procurava ajuntar-se aos discípulos, mas todos o temiam, não crendo que fosse discípulo." }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "E, tendo nascido Jesus em Belém de Judéia, no tempo do rei Herodes, eis que uns magos vieram do oriente a Jerusalém," },
+      { "verse": 23, "text": "E chegou, e habitou numa cidade chamada Nazaré, para que se cumprisse o que fora dito pelos profetas: Ele será chamado Nazareno." }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "O Senhor é o meu pastor, nada me faltará." },
+      { "verse": 2, "text": "Deitar-me faz em verdes pastos, guia-me mansamente a águas tranquilas." }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "No princípio criou Deus os céus e a terra." },
+      { "verse": 3, "text": "E disse Deus: Haja luz; e houve luz." }
+    ]
+  },
+  "LSG": {
+    "ACT.9": [
+      { "verse": 1, "text": "Cependant Saul, respirant encore la menace et le meurtre contre les disciples du Seigneur, se rendit chez le souverain sacrificateur," },
+      { "verse": 2, "text": "et lui demanda des lettres pour les synagogues de Damas, afin que, s'il trouvait quelques personnes suivant cette voie, hommes ou femmes, il les amenât liés à Jérusalem." },
+      { "verse": 3, "text": "Comme il était en chemin, et qu'il approchait de Damas, tout à coup une lumière venant du ciel resplendit autour de lui." },
+      { "verse": 8, "text": "Saul se releva de terre, et, quoique ses yeux fussent ouverts, il ne voyait rien; on le prit par la main, et on le conduisit à Damas." },
+      { "verse": 10, "text": "Or, il y avait à Damas un disciple nommé Ananias. Le Seigneur lui dit dans une vision: Ananias! Il répondit: Me voici, Seigneur!" },
+      { "verse": 26, "text": "Lorsqu'il se rendit à Jérusalem, Saul tâcha de se joindre à eux; mais tous le craignaient, ne croyant pas qu'il fût un disciple." }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "Jésus étant né à Bethléem en Judée, au temps du roi Hérode, voici des mages d'Orient arrivèrent à Jérusalem," },
+      { "verse": 23, "text": "et vint demeurer dans une ville appelée Nazareth, afin que s'accomplît ce qui avait été annoncé par les prophètes: Il sera appelé Nazaréen." }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "L'Éternel est mon berger: je ne manquerai de rien." },
+      { "verse": 2, "text": "Il me fait reposer dans de verts pâturages, Il me dirige près des eaux paisibles." }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "Au commencement, Dieu créa les cieux et la terre." },
+      { "verse": 3, "text": "Dieu dit: Que la lumière soit! Et la lumière fut." }
+    ]
+  },
+  "LUT1912": {
+    "ACT.9": [
+      { "verse": 1, "text": "Saulus aber schnaubte noch mit Drohen und Morden wider die Jünger des Herrn und ging zum Hohenpriester" },
+      { "verse": 2, "text": "und bat ihn um Briefe gen Damaskus an die Schulen, auf daß, so er etliche dieses Weges fände, Männer und Weiber, er sie gebunden führte gen Jerusalem." },
+      { "verse": 3, "text": "Und da er auf dem Wege war und nahe an Damaskus kam, umleuchtete ihn plötzlich ein Licht vom Himmel;" },
+      { "verse": 8, "text": "Saulus aber richtete sich auf von der Erde; und als er seine Augen auftat, sah er niemand. Sie nahmen ihn aber bei der Hand und führten ihn gen Damaskus;" },
+      { "verse": 10, "text": "Es war aber ein Jünger zu Damaskus mit Namen Ananias; zu dem sprach der Herr im Gesicht: Ananias! Und er sprach: Hier bin ich, Herr." },
+      { "verse": 26, "text": "Da aber Saulus kam gen Jerusalem, versuchte er, sich zu den Jüngern zu tun; und sie fürchteten sich alle vor ihm und glaubten nicht, daß er ein Jünger wäre." }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "Da Jesus geboren war zu Bethlehem im jüdischen Lande zur Zeit des Königs Herodes, siehe, da kamen die Weisen vom Morgenland gen Jerusalem und sprachen:" },
+      { "verse": 23, "text": "und kam und wohnte in der Stadt, die da heißt Nazareth, auf daß erfüllet würde, was da gesagt ist durch die Propheten: Er soll Nazarenus heißen." }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "Der HERR ist mein Hirte; mir wird nichts mangeln." },
+      { "verse": 2, "text": "Er weidet mich auf einer grünen Aue und führet mich zum frischen Wasser." }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "Am Anfang schuf Gott Himmel und Erde." },
+      { "verse": 3, "text": "Und Gott sprach: Es werde Licht! Und es ward Licht." }
+    ]
+  },
+  "SVD": {
+    "ACT.9": [
+      { "verse": 1, "text": "أَمَّا شَاوُلُ فَكَانَ لَمْ يَزَلْ يَنْفُثُ تَهَدُّداً وَقَتْلاً عَلَى تَلاَمِيذِ الرَّبِّ، فَتَقَدَّمَ إِلَى رَئِيسِ الْكَهَنَةِ" },
+      { "verse": 2, "text": "وَطَلَبَ مِنْهُ رَسَائِلَ إِلَى دِمَشْقَ، إِلَى الْجَمَاعَاتِ، حَتَّى إِذَا وَجَدَ أُنَاساً فِي الطَّرِيقِ، رِجَالاً أَوْ نِسَاءً، يَسُوقُهُمْ مُوثَقِينَ إِلَى أُورُشَلِيمَ." },
+      { "verse": 3, "text": "وَفِي ذَهَابِهِ حَدَثَ أَنَّهُ اقْتَرَبَ إِلَى دِمَشْقَ فَبَغْتَةً أَبْرَقَ حَوْلَهُ نُورٌ مِنَ السَّمَاءِ،" },
+      { "verse": 8, "text": "فَنَهَضَ شَاوُلُ عَنِ الأَرْضِ، وَكَانَ وَهُوَ مَفْتُوحُ الْعَيْنَيْنِ لاَ يُبْصِرُ أَحَداً. فَاقْتَادُوهُ بِيَدِهِ وَأَدْخَلُوهُ إِلَى دِمَشْقَ." },
+      { "verse": 10, "text": "وَكَانَ فِي دِمَشْقَ تِلْمِيذٌ اسْمُهُ حَنَانِيَّا، فَقَالَ لَهُ الرَّبُّ فِي رُؤْيَا: «يَا حَنَانِيَّا». فَقَالَ: «هَأَنَذَا يَا رَبُّ»." },
+      { "verse": 26, "text": "وَلَمَّا جَاءَ شَاوُلُ إِلَى أُورُشَلِيمَ حَاوَلَ أَنْ يَلْتَصِقَ بِالتَّلاَمِيذِ، وَكَانَ الْجَمِيعُ يَخَافُونَهُ غَيْرَ مُصَدِّقِينَ أَنَّهُ تِلْمِيذٌ." }
+    ],
+    "MAT.2": [
+      { "verse": 1, "text": "وَلَمَّا وُلِدَ يَسُوعُ فِي بَيْتِ لَحْمِ الْيَهُودِيَّةِ فِي أَيَّامِ هِيرُودُسَ الْمَلِكِ، إِذَا مَجُوسٌ مِنَ الْمَشْرِقِ قَدْ جَاءُوا إِلَى أُورُشَلِيمَ" },
+      { "verse": 23, "text": "وَأَتَى وَسَكَنَ فِي مَدِينَةٍ يُقَالُ لَهَا نَاصِرَةُ، لِكَيْ يَتِمَّ مَا قِيلَ بِالأَنْبِيَاءِ: «إِنَّهُ سَيُدْعَى نَاصِرِيّاً»." }
+    ],
+    "PSA.23": [
+      { "verse": 1, "text": "الرَّبُّ رَاعِيَّ فَلاَ يُعْوِزُنِي شَيْءٌ." },
+      { "verse": 2, "text": "فِي مَرَاعٍ خُضْرٍ يُرْبِضُنِي. إِلَى مِيَاهِ الرَّاحَةِ يُورِدُنِي." }
+    ],
+    "GEN.1": [
+      { "verse": 1, "text": "فِي الْبَدْءِ خَلَقَ اللهُ السَّمَاوَاتِ وَالأَرْضَ." },
+      { "verse": 3, "text": "وَقَالَ اللهُ: «لِيَكُنْ نُورٌ»، فَكَانَ نُورٌ." }
+    ]
+  }
+}

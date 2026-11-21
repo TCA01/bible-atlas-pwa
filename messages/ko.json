@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "글로벌 인터랙티브 성경 & 역사 지도"
+  },
+  "nav": {
+    "reader": "성경 읽기",
+    "atlas": "성경 지도",
+    "study": "내 서재",
+    "language": "언어"
+  },
+  "reader": {
+    "version": "역본",
+    "book": "성경",
+    "chapter": "장",
+    "prevChapter": "이전 장",
+    "nextChapter": "다음 장",
+    "verticalMode": "세로쓰기",
+    "horizontalMode": "가로쓰기",
+    "placeHint": "밑줄 친 지명을 클릭하면 현대 위치와 역사 해설이 열립니다",
+    "apiFallbackTitle": "{version} 역본은 API 키 연동이 필요합니다",
+    "apiFallbackDesc": "서버 환경변수(ESV_API_KEY 또는 API_BIBLE_KEY)를 설정하면 {version} 본문을 불러올 수 있습니다. 현재는 퍼블릭 도메인 KJV 본문을 표시합니다.",
+    "switchToKjv": "KJV로 보기",
+    "loading": "말씀을 불러오는 중..."
+  },
+  "typography": {
+    "title": "화면 및 읽기 설정",
+    "fontSize": "글씨 크기",
+    "lineHeight": "줄 간격",
+    "compact": "좁게",
+    "normal": "보통",
+    "relaxed": "넓게",
+    "fontFamily": "글꼴",
+    "serif": "명조 (Serif)",
+    "sans": "고딕 (Sans)",
+    "theme": "배경 테마",
+    "light": "라이트",
+    "sepia": "세피아",
+    "dark": "다크",
+    "writingDirection": "읽기 방향",
+    "showPlaces": "성경 지명 하이라이트 표시"
+  },
+  "map": {
+    "title": "성경 지명 & 역사 해설",
+    "ancientName": "고대 지명",
+    "modernLocation": "현대 위치",
+    "confidence": "위치 비정 신뢰도",
+    "confidence_certain": "확실함",
+    "confidence_probable": "유력함",
+    "confidence_uncertain": "추정",
+    "summary": "핵심 요약",
+    "geography": "지리적 배경",
+    "biblicalEvents": "성경 속 사건",
+    "modernContext": "현재 모습 & 고고학",
+    "keyVerses": "주요 관련 구절",
+    "close": "지도 닫기",
+    "selectPlacePrompt": "본문의 지명을 클릭하거나 아래에서 검색하세요.",
+    "searchPlaceholder": "고대 또는 현대 지명 검색 (예: 다메섹, 다마스쿠스)..."
+  },
+  "atlas": {
+    "title": "성경 지도 & 시대별 여정",
+    "journeys": "시대별 여정",
+    "places": "전체 성경 지명",
+    "step": "{total}단계 중 {current}번째",
+    "prevStep": "이전 경유지",
+    "nextStep": "다음 경유지",
+    "openInReader": "본문에서 읽기",
+    "allEras": "전체 시대"
+  },
+  "study": {
+    "title": "내 서재 (기기 내 저장)",
+    "bookmarks": "북마크",
+    "highlights": "하이라이트",
+    "notes": "묵상 메모",
+    "addBookmark": "북마크",
+    "removeBookmark": "북마크됨",
+    "highlight": "형광펜",
+    "addNote": "메모",
+    "saveNote": "메모 저장",
+    "delete": "삭제",
+    "notePlaceholder": "묵상이나 역사/지리 메모를 기록하세요...",
+    "empty": "아직 저장된 항목이 없습니다. 절 번호를 눌러 북마크, 형광펜, 메모를 남겨보세요."
+  }
+}

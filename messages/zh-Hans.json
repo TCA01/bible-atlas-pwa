@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "全球互动圣经与历史地图"
+  },
+  "nav": {
+    "reader": "阅读圣经",
+    "atlas": "圣经地图",
+    "study": "我的书房",
+    "language": "语言"
+  },
+  "reader": {
+    "version": "译本",
+    "book": "书卷",
+    "chapter": "章",
+    "prevChapter": "上一章",
+    "nextChapter": "下一章",
+    "verticalMode": "竖排",
+    "horizontalMode": "横排",
+    "placeHint": "点击带下划线的地名以查看现代位置和历史背景",
+    "apiFallbackTitle": "{version} 需要 API 密钥",
+    "apiFallbackDesc": "请在服务器配置 ESV_API_KEY 或 API_BIBLE_KEY 以加载 {version}。当前显示公共领域 KJV 译本。",
+    "switchToKjv": "使用 KJV",
+    "loading": "正在加载经文..."
+  },
+  "typography": {
+    "title": "显示与阅读设置",
+    "fontSize": "字体大小",
+    "lineHeight": "行距",
+    "compact": "紧凑",
+    "normal": "标准",
+    "relaxed": "宽松",
+    "fontFamily": "字体",
+    "serif": "宋体 (Serif)",
+    "sans": "黑体 (Sans)",
+    "theme": "主题",
+    "light": "浅色",
+    "sepia": "护眼纸",
+    "dark": "深色",
+    "writingDirection": "阅读方向",
+    "showPlaces": "高亮显示圣经地名"
+  },
+  "map": {
+    "title": "圣经地名与历史讲解",
+    "ancientName": "古代地名",
+    "modernLocation": "现代位置",
+    "confidence": "位置可信度",
+    "confidence_certain": "确定",
+    "confidence_probable": "极可能",
+    "confidence_uncertain": "推测",
+    "summary": "概述",
+    "geography": "地理背景",
+    "biblicalEvents": "圣经事件",
+    "modernContext": "现状与考古",
+    "keyVerses": "相关经文",
+    "close": "关闭地图",
+    "selectPlacePrompt": "点击经文中的地名或在下方搜索。",
+    "searchPlaceholder": "搜索古代或现代地名（如：大马士革）..."
+  },
+  "atlas": {
+    "title": "圣经地图与历史路线",
+    "journeys": "历史路线",
+    "places": "所有圣经地名",
+    "step": "第 {current} / {total} 站",
+    "prevStep": "上一站",
+    "nextStep": "下一站",
+    "openInReader": "在阅读器中打开",
+    "allEras": "所有时代"
+  },
+  "study": {
+    "title": "我的书房（本地存储）",
+    "bookmarks": "书签",
+    "highlights": "高亮",
+    "notes": "笔记",
+    "addBookmark": "书签",
+    "removeBookmark": "已收藏",
+    "highlight": "高亮",
+    "addNote": "笔记",
+    "saveNote": "保存笔记",
+    "delete": "删除",
+    "notePlaceholder": "记录您的默想或研经笔记...",
+    "empty": "暂无保存内容。点击任何节号即可添加书签、高亮或笔记。"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "Global Interactive Bible & Historical Atlas"
+  },
+  "nav": {
+    "reader": "Read Bible",
+    "atlas": "Biblical Atlas",
+    "study": "My Study",
+    "language": "Language"
+  },
+  "reader": {
+    "version": "Version",
+    "book": "Book",
+    "chapter": "Chapter",
+    "prevChapter": "Previous",
+    "nextChapter": "Next",
+    "verticalMode": "Vertical",
+    "horizontalMode": "Horizontal",
+    "placeHint": "Click highlighted places to explore maps & history",
+    "apiFallbackTitle": "{version} requires an API key",
+    "apiFallbackDesc": "Configure ESV_API_KEY or API_BIBLE_KEY on the server to load {version}. Showing KJV (Public Domain) instead.",
+    "switchToKjv": "Use KJV",
+    "loading": "Loading scripture..."
+  },
+  "typography": {
+    "title": "Display & Reading",
+    "fontSize": "Font Size",
+    "lineHeight": "Line Height",
+    "compact": "Compact",
+    "normal": "Normal",
+    "relaxed": "Relaxed",
+    "fontFamily": "Typeface",
+    "serif": "Serif",
+    "sans": "Sans",
+    "theme": "Theme",
+    "light": "Light",
+    "sepia": "Sepia",
+    "dark": "Dark",
+    "writingDirection": "Reading Direction",
+    "showPlaces": "Highlight Biblical Places"
+  },
+  "map": {
+    "title": "Biblical Place & History",
+    "ancientName": "Ancient Name",
+    "modernLocation": "Modern Location",
+    "confidence": "Location Confidence",
+    "confidence_certain": "Certain",
+    "confidence_probable": "Probable",
+    "confidence_uncertain": "Uncertain",
+    "summary": "Overview",
+    "geography": "Geography",
+    "biblicalEvents": "Biblical Events",
+    "modernContext": "Today & Archaeology",
+    "keyVerses": "Key Verses",
+    "close": "Close Map",
+    "selectPlacePrompt": "Select a highlighted place in the text or search below.",
+    "searchPlaceholder": "Search ancient or modern place (e.g. Damascus)..."
+  },
+  "atlas": {
+    "title": "Biblical Atlas & Journeys",
+    "journeys": "Historical Journeys",
+    "places": "All Biblical Places",
+    "step": "Step {current} of {total}",
+    "prevStep": "Prev Stop",
+    "nextStep": "Next Stop",
+    "openInReader": "Open in Reader",
+    "allEras": "All Eras"
+  },
+  "study": {
+    "title": "My Study (Local-First)",
+    "bookmarks": "Bookmarks",
+    "highlights": "Highlights",
+    "notes": "Notes",
+    "addBookmark": "Bookmark",
+    "removeBookmark": "Bookmarked",
+    "highlight": "Highlight",
+    "addNote": "Note",
+    "saveNote": "Save Note",
+    "delete": "Delete",
+    "notePlaceholder": "Write your reflection or study note...",
+    "empty": "No saved items yet. Tap any verse number to bookmark, highlight, or add a note."
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "グローバル・インタラクティブ聖書＆歴史地図"
+  },
+  "nav": {
+    "reader": "聖書を読む",
+    "atlas": "聖書地図",
+    "study": "マイ書斎",
+    "language": "言語"
+  },
+  "reader": {
+    "version": "翻訳",
+    "book": "書名",
+    "chapter": "章",
+    "prevChapter": "前の章",
+    "nextChapter": "次の章",
+    "verticalMode": "縦書き",
+    "horizontalMode": "横書き",
+    "placeHint": "下線の地名をクリックすると地図と歴史解説が開きます",
+    "apiFallbackTitle": "{version} にはAPIキーが必要です",
+    "apiFallbackDesc": "サーバーにESV_API_KEYまたはAPI_BIBLE_KEYを設定すると{version}を表示できます。現在はパブリックドメインのKJVを表示しています。",
+    "switchToKjv": "KJVを使用",
+    "loading": "聖書を読み込み中..."
+  },
+  "typography": {
+    "title": "表示・読書設定",
+    "fontSize": "文字サイズ",
+    "lineHeight": "行間",
+    "compact": "狭い",
+    "normal": "標準",
+    "relaxed": "広い",
+    "fontFamily": "書体",
+    "serif": "明朝体 (Serif)",
+    "sans": "ゴシック体 (Sans)",
+    "theme": "テーマ",
+    "light": "ライト",
+    "sepia": "セピア",
+    "dark": "ダーク",
+    "writingDirection": "文字の向き",
+    "showPlaces": "聖書の地名をハイライト表示"
+  },
+  "map": {
+    "title": "聖書の地名＆歴史解説",
+    "ancientName": "古代の地名",
+    "modernLocation": "現代の場所",
+    "confidence": "比定の確実性",
+    "confidence_certain": "確実",
+    "confidence_probable": "有力",
+    "confidence_uncertain": "推定",
+    "summary": "概要",
+    "geography": "地理的背景",
+    "biblicalEvents": "聖書での出来事",
+    "modernContext": "現在と考古学",
+    "keyVerses": "関連聖句",
+    "close": "地図を閉じる",
+    "selectPlacePrompt": "本文中の地名をクリックするか、下から検索してください。",
+    "searchPlaceholder": "古代・現代の地名を検索（例：ダマスコ）..."
+  },
+  "atlas": {
+    "title": "聖書地図＆時代別ルート",
+    "journeys": "時代別ルート",
+    "places": "すべての聖書地名",
+    "step": "{total}地点中 {current}番目",
+    "prevStep": "前の地点",
+    "nextStep": "次の地点",
+    "openInReader": "本文で開く",
+    "allEras": "すべての時代"
+  },
+  "study": {
+    "title": "マイ書斎（ローカル保存）",
+    "bookmarks": "しおり",
+    "highlights": "マーカー",
+    "notes": "ノート",
+    "addBookmark": "しおり",
+    "removeBookmark": "登録済み",
+    "highlight": "マーカー",
+    "addNote": "ノート",
+    "saveNote": "保存",
+    "delete": "削除",
+    "notePlaceholder": "黙想や学びのメモを入力...",
+    "empty": "保存された項目はありません。節番号をタップしてしおりやマーカーを追加できます。"
+  }
+}

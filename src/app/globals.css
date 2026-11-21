@@ -1,26 +1,71 @@
 @import "tailwindcss";
+@import "maplibre-gl/dist/maplibre-gl.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+:root,
+[data-theme="light"] {
+  --bg-page: #faf8f5;
+  --bg-surface: #ffffff;
+  --bg-muted: #f1ede6;
+  --text-primary: #1a1a1a;
+  --text-secondary: #57534e;
+  --border-subtle: #e7e2d8;
+  --accent: #1e3a5f;
+  --accent-soft: #e0e7ff;
+  --place-underline: #d97706;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+[data-theme="sepia"] {
+  --bg-page: #f5efe6;
+  --bg-surface: #fbf7f0;
+  --bg-muted: #eadfcd;
+  --text-primary: #3d3226;
+  --text-secondary: #6e5d4b;
+  --border-subtle: #dfd2be;
+  --accent: #8b4513;
+  --accent-soft: #f3e5d0;
+  --place-underline: #b45309;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+[data-theme="dark"] {
+  --bg-page: #121417;
+  --bg-surface: #1b1f24;
+  --bg-muted: #262b33;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --border-subtle: #2e3440;
+  --accent: #60a5fa;
+  --accent-soft: #1e293b;
+  --place-underline: #f59e0b;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Japanese & Traditional Chinese Vertical Reading Mode (縦書き) */
+.reader-vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: calc(100dvh - 11.5rem);
+  min-height: 420px;
+  width: 100%;
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+  line-break: strict;
+  word-break: normal;
+}
+
+.reader-vertical-rl .verse-number {
+  text-combine-upright: digits 2;
+  font-size: 0.72em;
+  margin-block-end: 0.35em;
+  font-variant-numeric: tabular-nums;
+}
+
+.reader-vertical-rl .verse-block {
+  margin-inline-start: 0.75em;
 }

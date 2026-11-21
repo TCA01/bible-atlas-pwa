@@ -1,0 +1,237 @@
+[
+  {
+    "id": "paul-damascus-road",
+    "era": "apostolic",
+    "color": "#D97706",
+    "title": {
+      "en": "Saul's Journey to Damascus",
+      "ko": "사울(바울)의 다메섹 회심 여정",
+      "ja": "サウロのダマスコ回心の旅",
+      "zh-Hans": "扫罗前往大马士革的归主之路",
+      "zh-Hant": "掃羅前往大馬士革的歸主之路",
+      "es": "El viaje de Saulo a Damasco",
+      "pt": "A jornada de Saulo a Damasco",
+      "fr": "Le voyage de Saul vers Damas",
+      "de": "Die Reise des Saulus nach Damaskus",
+      "ar": "رحلة شاول إلى دمشق"
+    },
+    "description": {
+      "en": "From Jerusalem to Damascus where the risen Christ transformed Saul into the Apostle Paul.",
+      "ko": "예루살렘 대제사장의 공문을 받아 다메섹으로 가던 중 부활하신 예수님을 만나 회심한 여정입니다.",
+      "ja": "エルサレムからダマスコへ向かう途中、復活のキリストに出会い回心した歴史的ルートです。",
+      "zh-Hans": "从耶路撒冷前往大马士革途中遇见复活基督并归主的旅程。",
+      "zh-Hant": "從耶路撒冷前往大馬士革途中遇見復活基督並歸主的旅程。",
+      "es": "De Jerusalén a Damasco, donde Cristo resucitado transformó a Saulo en Pablo.",
+      "pt": "De Jerusalém a Damasco, onde Cristo ressuscitado transformou Saulo em Paulo.",
+      "fr": "De Jérusalem à Damas, où le Christ ressuscité transforma Saul en Paul.",
+      "de": "Von Jerusalem nach Damaskus, wo der auferstandene Christus Saulus zu Paulus berief.",
+      "ar": "من أورشليم إلى دمشق حيث التقى شاول بالمسيح القائم."
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "placeId": "jerusalem",
+        "title": {
+          "en": "Departure from Jerusalem",
+          "ko": "예루살렘 출발",
+          "ja": "エルサレムを出発",
+          "zh-Hans": "从耶路撒冷出发",
+          "zh-Hant": "從耶路撒冷出發",
+          "es": "Salida de Jerusalén",
+          "pt": "Partida de Jerusalém",
+          "fr": "Départ de Jérusalem",
+          "de": "Aufbruch in Jerusalem",
+          "ar": "الانطلاق من أورشليم"
+        },
+        "description": {
+          "en": "Saul obtained letters from the high priest to the synagogues in Damascus.",
+          "ko": "사울이 대제사장에게 다메섹 여러 회당에 가져갈 공문을 청하여 출발했습니다.",
+          "ja": "サウロは大祭司からダマスコの諸会堂宛ての手紙を受け取り出発しました。",
+          "zh-Hans": "扫罗向大祭司求文书，带往大马士革的各会堂。",
+          "zh-Hant": "掃羅向大祭司求文書，帶往大馬士革的各會堂。",
+          "es": "Saulo pidió cartas al sumo sacerdote para las sinagogas de Damasco.",
+          "pt": "Saulo pediu cartas ao sumo sacerdote para as sinagogas de Damasco.",
+          "fr": "Saul demanda au grand prêtre des lettres pour les synagogues de Damas.",
+          "de": "Saulus erbat Briefe vom Hohenpriester an die Synagogen in Damaskus.",
+          "ar": "طلب شاول رسائل من رئيس الكهنة إلى مجامع دمشق."
+        },
+        "verseRef": { "bookId": "ACT", "chapter": 9, "verse": 2 }
+      },
+      {
+        "step": 2,
+        "placeId": "damascus",
+        "title": {
+          "en": "Conversion Near Damascus",
+          "ko": "다메섹 도상에서의 회심",
+          "ja": "ダマスコ途上での回心",
+          "zh-Hans": "临近大马士革时的光照与归主",
+          "zh-Hant": "臨近大馬士革時的光照與歸主",
+          "es": "Conversión cerca de Damasco",
+          "pt": "Conversão perto de Damasco",
+          "fr": "Conversion près de Damas",
+          "de": "Bekehrung vor Damaskus",
+          "ar": "الاهتداء قرب دمشق"
+        },
+        "description": {
+          "en": "A light from heaven flashed around him; Ananias met him on Straight Street in Damascus (modern Syria).",
+          "ko": "하늘로부터 빛이 둘러 비추고, 다메섹 '직가'라 하는 거리에서 아나니아를 만나 세례를 받았습니다.",
+          "ja": "天からの光に包まれ、ダマスコの「まっすぐな通り」でアナニアと会い洗礼を受けました。",
+          "zh-Hans": "天上发光四面照着他，随后在直街遇见亚拿尼亚并受洗。",
+          "zh-Hant": "天上發光四面照著他，隨後在直街遇見亞拿尼亞並受洗。",
+          "es": "Una luz del cielo lo rodeó; Ananías lo visitó en la calle llamada Derecha.",
+          "pt": "Uma luz do céu o cercou; Ananias o encontrou na Rua Direita.",
+          "fr": "Une lumière du ciel resplendit autour de lui; Ananias le rejoignit dans la rue Droite.",
+          "de": "Ein Licht vom Himmel umstrahlte ihn; Hananias besuchte ihn in der Geraden Straße.",
+          "ar": "أبرق حوله نور من السماء والتقى حنانيا في الشارع المستقيم."
+        },
+        "verseRef": { "bookId": "ACT", "chapter": 9, "verse": 3 }
+      }
+    ],
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [35.2137, 31.7683],
+        [35.46, 32.15],
+        [35.62, 32.85],
+        [36.2913, 33.5138]
+      ]
+    }
+  },
+  {
+    "id": "jesus-galilee-jerusalem",
+    "era": "gospels",
+    "color": "#2563EB",
+    "title": {
+      "en": "Life & Ministry of Jesus",
+      "ko": "예수님의 탄생과 공생애 사역 경로",
+      "ja": "イエスの誕生と公生涯の歩み",
+      "zh-Hans": "耶稣的降生与传道足迹",
+      "zh-Hant": "耶穌的降生與傳道足跡",
+      "es": "Vida y ministerio de Jesús",
+      "pt": "Vida e ministério de Jesus",
+      "fr": "Vie et ministère de Jésus",
+      "de": "Leben und Wirken Jesu",
+      "ar": "حياة وخدمة يسوع"
+    },
+    "description": {
+      "en": "From Bethlehem to Nazareth, Capernaum, Jericho, and Jerusalem.",
+      "ko": "베들레헴 탄생부터 나사렛 성장, 가버나움 사역, 여리고를 거쳐 예루살렘에 입성하신 경로입니다.",
+      "ja": "ベツレヘムでの誕生からナザレ、カペナウム、エリコを経てエルサレムへ至る歩みです。",
+      "zh-Hans": "从伯利恒降生到拿撒勒成长、迦百农传道，经耶利哥进入耶路撒冷。",
+      "zh-Hant": "從伯利恆誕生到拿撒勒成長、迦百農傳道，經耶利哥進入耶路撒冷。",
+      "es": "De Belén a Nazaret, Capernaúm, Jericó y Jerusalén.",
+      "pt": "De Belém a Nazaré, Cafarnaum, Jericó e Jerusalém.",
+      "fr": "De Bethléem à Nazareth, Capharnaüm, Jéricho et Jérusalem.",
+      "de": "Von Betlehem über Nazaret, Kafarnaum und Jericho nach Jerusalem.",
+      "ar": "من بيت لحم إلى الناصرة وكفرناحوم وأريحا فأورشليم."
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "placeId": "bethlehem",
+        "title": { "en": "Birth in Bethlehem", "ko": "베들레헴 탄생", "ja": "ベツレヘムでの誕生", "zh-Hans": "伯利恒降生", "zh-Hant": "伯利恆誕生", "es": "Nacimiento en Belén", "pt": "Nascimento em Belém", "fr": "Naissance à Bethléem", "de": "Geburt in Betlehem", "ar": "الميلاد في بيت لحم" },
+        "description": { "en": "Jesus was born in Bethlehem of Judea.", "ko": "유대 베들레헴에서 나셨습니다.", "ja": "ユダヤのベツレヘムでお生まれになりました。", "zh-Hans": "耶稣降生在犹太的伯利恒。", "zh-Hant": "耶穌降生在猶太的伯利恆。", "es": "Jesús nació en Belén de Judea.", "pt": "Jesus nasceu em Belém da Judeia.", "fr": "Jésus naquit à Bethléem en Judée.", "de": "Jesus wurde in Betlehem in Judäa geboren.", "ar": "وُلد يسوع في بيت لحم اليهودية." },
+        "verseRef": { "bookId": "MAT", "chapter": 2, "verse": 1 }
+      },
+      {
+        "step": 2,
+        "placeId": "nazareth",
+        "title": { "en": "Childhood in Nazareth", "ko": "나사렛에서 성장", "ja": "ナザレでの成長", "zh-Hans": "拿撒勒成长", "zh-Hant": "拿撒勒成長", "es": "Infancia en Nazaret", "pt": "Infância em Nazaré", "fr": "Enfance à Nazareth", "de": "Kindheit in Nazaret", "ar": "النشأة في الناصرة" },
+        "description": { "en": "Joseph settled in Nazareth of Galilee.", "ko": "갈릴리 나사렛에 정착해 자라셨습니다.", "ja": "ガリラヤのナザレで育ちました。", "zh-Hans": "在加利利的拿撒勒长大。", "zh-Hant": "在加利利的拿撒勒長大。", "es": "Se estableció en Nazaret de Galilea.", "pt": "Estabeleceu-se em Nazaré da Galileia.", "fr": "Il s'établit à Nazareth en Galilée.", "de": "Er wuchs in Nazaret in Galiläa auf.", "ar": "سكن في الناصرة بالجليل." },
+        "verseRef": { "bookId": "MAT", "chapter": 2, "verse": 23 }
+      },
+      {
+        "step": 3,
+        "placeId": "capernaum",
+        "title": { "en": "Galilee Ministry in Capernaum", "ko": "가버나움 공생애 본부", "ja": "カペナウムでの宣教", "zh-Hans": "迦百农传道", "zh-Hant": "迦百農傳道", "es": "Ministerio en Capernaúm", "pt": "Ministério em Cafarnaum", "fr": "Ministère à Capharnaüm", "de": "Wirken in Kafarnaum", "ar": "الخدمة في كفرناحوم" },
+        "description": { "en": "Center of Jesus' miracles and teachings by the Sea of Galilee.", "ko": "갈릴리 해변에서 많은 이적과 가르침을 베푸셨습니다.", "ja": "ガリラヤ湖畔で多くの奇跡と教えを行われました。", "zh-Hans": "在加利利海畔行了许多神迹和教导。", "zh-Hant": "在加利利海畔行了許多神蹟和教導。", "es": "Centro de los milagros y enseñanzas de Jesús.", "pt": "Centro dos milagres e ensinos de Jesus.", "fr": "Centre des miracles et enseignements de Jésus.", "de": "Zentrum der Wunder und Lehren Jesu.", "ar": "مركز معجزات وتعاليم يسوع." },
+        "verseRef": { "bookId": "MAT", "chapter": 4, "verse": 13 }
+      },
+      {
+        "step": 4,
+        "placeId": "jerusalem",
+        "title": { "en": "Triumphal Entry into Jerusalem", "ko": "예루살렘 입성과 십자가·부활", "ja": "エルサレム入城と十字架・復活", "zh-Hans": "荣入圣城耶路撒冷", "zh-Hant": "榮入聖城耶路撒冷", "es": "Entrada en Jerusalén", "pt": "Entrada em Jerusalém", "fr": "Entrée à Jérusalem", "de": "Einzug in Jerusalem", "ar": "الدخول إلى أورشليم" },
+        "description": { "en": "Crucifixion and resurrection in Jerusalem.", "ko": "예루살렘에서 십자가에 달리시고 사흘 만에 부활하셨습니다.", "ja": "エルサレムで十字架にかかり、三日目に復活されました。", "zh-Hans": "在耶路撒冷受难并于第三日复活。", "zh-Hant": "在耶路撒冷受難並於第三日復活。", "es": "Crucifixión y resurrección en Jerusalén.", "pt": "Crucificação e ressurreição em Jerusalém.", "fr": "Crucifixion et résurrection à Jérusalem.", "de": "Kreuzigung und Auferstehung in Jerusalem.", "ar": "الصلب والقيامة في أورشليم." },
+        "verseRef": { "bookId": "ACT", "chapter": 9, "verse": 2 }
+      }
+    ],
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [35.2024, 31.7054],
+        [35.2978, 32.7019],
+        [35.5753, 32.8803],
+        [35.4599, 31.8667],
+        [35.2137, 31.7683]
+      ]
+    }
+  },
+  {
+    "id": "paul-mediterranean-mission",
+    "era": "apostolic",
+    "color": "#059669",
+    "title": {
+      "en": "Paul's Mediterranean Mission & Journey to Rome",
+      "ko": "사도 바울의 지중해 선교와 로마 여정",
+      "ja": "パウロの地中海宣教とローマへの旅",
+      "zh-Hans": "保罗的地中海宣教与罗马之行",
+      "zh-Hant": "保羅的地中海宣教與羅馬之行",
+      "es": "Misión de Pablo en el Mediterráneo y viaje a Roma",
+      "pt": "Missão de Paulo no Mediterrâneo e viagem a Roma",
+      "fr": "Mission méditerranéenne de Paul et voyage à Rome",
+      "de": "Mittelmeermission des Paulus und Reise nach Rom",
+      "ar": "رسالة بولس في المتوسط ورحلته إلى رومية"
+    },
+    "description": {
+      "en": "From Antioch across Asia Minor and Greece (Ephesus, Corinth) all the way to Rome.",
+      "ko": "수리아 안디옥에서 파송되어 에베소, 고린도를 거쳐 제국의 심장 로마까지 복음이 전파된 경로입니다.",
+      "ja": "アンティオキアからエフェソ、コリントを経てローマへと福音が広がったルートです。",
+      "zh-Hans": "从安提阿出发，经以弗所、哥林多，最终抵达帝国首都罗马的福音路径。",
+      "zh-Hant": "從安提阿出發，經以弗所、哥林多，最終抵達帝國首都羅馬的福音路徑。",
+      "es": "Desde Antioquía por Éfeso y Corinto hasta Roma.",
+      "pt": "De Antioquia passando por Éfeso e Corinto até Roma.",
+      "fr": "D'Antioche à Rome en passant par Éphèse et Corinthe.",
+      "de": "Von Antiochia über Ephesus und Korinth bis nach Rom.",
+      "ar": "من أنطاكية عبر أفسس وكورنثوس وصولاً إلى رومية."
+    },
+    "waypoints": [
+      {
+        "step": 1,
+        "placeId": "antioch",
+        "title": { "en": "Sent from Antioch", "ko": "안디옥 교회 파송", "ja": "アンティオキアからの派遣", "zh-Hans": "安提阿教会差派", "zh-Hant": "安提阿教會差派", "es": "Enviado desde Antioquía", "pt": "Enviado de Antioquia", "fr": "Envoyé d'Antioche", "de": "Aussendung aus Antiochia", "ar": "الإرسال من أنطاكية" },
+        "description": { "en": "Sending church for Paul's missionary journeys.", "ko": "바울과 바나바가 선교사로 파송된 곳입니다.", "ja": "パウロとバルナバが宣教師として送り出されました。", "zh-Hans": "保罗与巴拿巴受圣灵差遣出发之地。", "zh-Hant": "保羅與巴拿巴受聖靈差遣出發之地。", "es": "Iglesia enviadora de Pablo.", "pt": "Igreja enviadora de Paulo.", "fr": "Église d'envoi de Paul.", "de": "Aussendende Gemeinde des Paulus.", "ar": "الكنيسة المرسِلة لبولس." },
+        "verseRef": { "bookId": "ACT", "chapter": 11, "verse": 26 }
+      },
+      {
+        "step": 2,
+        "placeId": "ephesus",
+        "title": { "en": "Three Years in Ephesus", "ko": "에베소 3년 사역", "ja": "エフェソでの3年間", "zh-Hans": "在以弗所事奉三年", "zh-Hant": "在以弗所事奉三年", "es": "Tres años en Éfeso", "pt": "Três anos em Éfeso", "fr": "Trois ans à Éphèse", "de": "Drei Jahre in Ephesus", "ar": "ثلاث سنوات في أفسس" },
+        "description": { "en": "Center of gospel spread throughout Asia Minor.", "ko": "아시아 전역에 주의 말씀이 퍼진 거점입니다.", "ja": "アジア全土に主の言葉が広まった拠点です。", "zh-Hans": "主的道传遍亚细亚的中心。", "zh-Hant": "主的道傳遍亞細亞的中心。", "es": "Centro de difusión del evangelio en Asia.", "pt": "Centro de difusão do evangelho na Ásia.", "fr": "Centre de rayonnement de l'Évangile en Asie.", "de": "Zentrum der Evangeliumsverkündigung in Kleinasien.", "ar": "مركز انتشار البشارة في آسيا." },
+        "verseRef": { "bookId": "ACT", "chapter": 19, "verse": 29 }
+      },
+      {
+        "step": 3,
+        "placeId": "corinth",
+        "title": { "en": "Church in Corinth", "ko": "고린도 교회 설립", "ja": "コリント教会の設立", "zh-Hans": "建立哥林多教会", "zh-Hant": "建立哥林多教會", "es": "Iglesia en Corinto", "pt": "Igreja em Corinto", "fr": "Église de Corinthe", "de": "Gemeinde in Korinth", "ar": "كنيسة كورنثوس" },
+        "description": { "en": "18 months of ministry in Greece.", "ko": "그리스 아가야 지방의 핵심 교회입니다.", "ja": "ギリシャ・アカイア地方の重要な教会です。", "zh-Hans": "在希腊亚该亚省事奉十八个月。", "zh-Hant": "在希臘亞該亞省事奉十八個月。", "es": "18 meses de ministerio en Grecia.", "pt": "18 meses de ministério na Grécia.", "fr": "18 mois de ministère en Grèce.", "de": "18 Monate Dienst in Griechenland.", "ar": "18 شهراً من الخدمة في اليونان." },
+        "verseRef": { "bookId": "ACT", "chapter": 18, "verse": 1 }
+      },
+      {
+        "step": 4,
+        "placeId": "rome",
+        "title": { "en": "Arrival in Rome", "ko": "로마 도착과 복음 전파", "ja": "ローマ到着と福音宣教", "zh-Hans": "抵达罗马传道", "zh-Hant": "抵達羅馬傳道", "es": "Llegada a Roma", "pt": "Chegada a Roma", "fr": "Arrivée à Rome", "de": "Ankunft in Rom", "ar": "الوصول إلى رومية" },
+        "description": { "en": "Preached the kingdom of God unhindered for two years.", "ko": "거침없이 담대하게 하나님 나라를 전파했습니다.", "ja": "何の妨げもなく大胆に神の国を宣べ伝えました。", "zh-Hans": "放胆传讲神国的道，并无一人禁止。", "zh-Hant": "放膽傳講神國的道，並無一人禁止。", "es": "Predicó el reino de Dios sin impedimento.", "pt": "Pregou o reino de Deus sem impedimento.", "fr": "Prêcha le royaume de Dieu sans obstacle.", "de": "Predigte das Reich Gottes ungehindert.", "ar": "كرز بملكوت الله بكل مجاهرة وبلا مانع." },
+        "verseRef": { "bookId": "ACT", "chapter": 28, "verse": 30 }
+      }
+    ],
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [36.161, 36.202],
+        [27.3414, 37.939],
+        [22.8794, 37.9061],
+        [12.4964, 41.9028]
+      ]
+    }
+  }
+]

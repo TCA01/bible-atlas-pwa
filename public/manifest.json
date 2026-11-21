@@ -1,0 +1,16 @@
+{
+  "name": "LogosAtlas — Global Interactive Bible",
+  "short_name": "LogosAtlas",
+  "description": "Multilingual interactive Bible reader with historical geography, ancient-to-modern place comparisons, and culturally native reading modes.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#1E3A5F",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

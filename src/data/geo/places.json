@@ -1,0 +1,843 @@
+[
+  {
+    "id": "damascus",
+    "ancientName": {
+      "en": "Damascus", "ko": "다메섹", "ja": "ダマスコ", "zh-Hans": "大马士革", "zh-Hant": "大馬士革",
+      "es": "Damasco", "pt": "Damasco", "fr": "Damas", "de": "Damaskus", "ar": "دمشق"
+    },
+    "modernName": {
+      "en": "Damascus", "ko": "다마스쿠스", "ja": "ダマスカス", "zh-Hans": "大马士革", "zh-Hant": "大馬士革",
+      "es": "Damasco", "pt": "Damasco", "fr": "Damas", "de": "Damaskus", "ar": "دمشق"
+    },
+    "modernCountry": {
+      "en": "Syria", "ko": "시리아", "ja": "シリア", "zh-Hans": "叙利亚", "zh-Hant": "敘利亞",
+      "es": "Siria", "pt": "Síria", "fr": "Syrie", "de": "Syrien", "ar": "سوريا"
+    },
+    "modernCountryCode": "SY",
+    "coordinates": [36.2913, 33.5138],
+    "confidence": "certain",
+    "eras": ["patriarchs", "divided_kingdom", "apostolic"],
+    "aliases": {
+      "en": ["Damascus"], "ko": ["다메섹", "다마스쿠스"], "ja": ["ダマスコ", "ダマスカス"],
+      "zh-Hans": ["大马士革"], "zh-Hant": ["大馬士革"], "es": ["Damasco"], "pt": ["Damasco"],
+      "fr": ["Damas"], "de": ["Damaskus"], "ar": ["دمشق"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "Ancient oasis capital of Aram and Syria, site of Saul's (Paul's) conversion.",
+        "ko": "아람(시리아)의 고대 오아시스 수도이자, 사울(바울)이 부활하신 예수를 만나 회심한 곳입니다.",
+        "ja": "アラムの古代オアシス都市であり、サウロ（パウロ）が回心した地として知られます。",
+        "zh-Hans": "亚兰古国的绿洲首都，也是扫罗（保罗）归主的地方。",
+        "zh-Hant": "亞蘭古國的綠洲首都，也是掃羅（保羅）歸主的地方。",
+        "es": "Antigua capital oasis de Aram, lugar de la conversión de Saulo (Pablo).",
+        "pt": "Antiga capital oásis de Arã, local da conversão de Saulo (Paulo).",
+        "fr": "Ancienne capitale oasis d'Aram, lieu de la conversion de Saul (Paul).",
+        "de": "Antike Oasenstadt von Aram, Ort der Bekehrung des Saulus (Paulus).",
+        "ar": "عاصمة آرام القديمة وواحة تاريخية، ومكان اهتداء شاول (بولس)."
+      },
+      "geography": {
+        "en": "Located east of the Anti-Lebanon mountains, watered by the Barada (Abana) River.",
+        "ko": "안티레바논 산맥 동쪽 기슭에 위치하며 바라다(아바나) 강이 사막을 적셔 비옥한 오아시스를 이룹니다.",
+        "ja": "アンチレバノン山脈の東麓に位置し、バラダ川（アバナ川）の恵みを受けたオアシス都市です。",
+        "zh-Hans": "位于安提黎巴嫩山脉东麓，因巴拉达河（亚罢拿河）灌溉而成为肥沃绿洲。",
+        "zh-Hant": "位於安提黎巴嫩山脈東麓，因巴拉達河（亞罷拿河）灌溉而成為肥沃綠洲。",
+        "es": "Situada al este de las montañas del Antilíbano, regada por el río Barada (Abana).",
+        "pt": "Localizada a leste das montanhas do Antilíbano, irrigada pelo rio Barada (Abana).",
+        "fr": "Située à l'est de l'Anti-Liban, irriguée par la rivière Barada (Abana).",
+        "de": "Östlich des Antilibanon-Gebirges gelegen, bewässert vom Fluss Barada (Abana).",
+        "ar": "تقع شرق جبال لبنان الشرقية ويرويها نهر بردى (أبانة)."
+      },
+      "biblicalEvents": {
+        "en": "Mentioned in Genesis 15 (Eliezer), 2 Kings 5 (Naaman), and Acts 9 (Paul's conversion and Straight Street).",
+        "ko": "창세기 15장(엘리에셀), 열왕기하 5장(나아만 장군), 사도행전 9장(사울의 회심과 직가)에 등장합니다.",
+        "ja": "創世記15章（エリエゼル）、列王記下5章（ナアマン）、使徒言行録9章（パウロの回心と『まっすぐな通り』）に登場します。",
+        "zh-Hans": "见于创世记15章（以利以谢）、列王纪下5章（乃缦）及使徒行传9章（保罗归主与直街）。",
+        "zh-Hant": "見於創世記15章（以利以謝）、列王紀下5章（乃縵）及使徒行傳9章（保羅歸主與直街）。",
+        "es": "Mencionada en Génesis 15, 2 Reyes 5 (Naamán) y Hechos 9 (conversión de Pablo).",
+        "pt": "Mencionada em Gênesis 15, 2 Reis 5 (Naamã) e Atos 9 (conversão de Paulo).",
+        "fr": "Mentionnée dans Genèse 15, 2 Rois 5 (Naaman) et Actes 9 (conversion de Paul).",
+        "de": "Erwähnt in 1. Mose 15, 2. Könige 5 (Naaman) und Apostelgeschichte 9 (Paulus).",
+        "ar": "ورد ذكرها في تكوين 15، ملوك الثاني 5 (نعمان)، وأعمال الرسل 9 (اهتداء بولس)."
+      },
+      "modernContext": {
+        "en": "Today's Damascus is the capital of Syria; 'Straight Street' (Via Recta) still exists in the Old City.",
+        "ko": "오늘날 시리아의 수도이며, 사도행전의 '직가(Via Recta)'는 현재 다마스쿠스 구시가지에도 보존되어 있습니다.",
+        "ja": "現在のシリアの首都であり、使徒言行録の『まっすぐな通り』も旧市街に残っています。",
+        "zh-Hans": "今天的叙利亚首都，使徒行传中的“直街”至今仍存在于老城区。",
+        "zh-Hant": "今天的敘利亞首都，使徒行傳中的「直街」至今仍存在於老城區。",
+        "es": "Hoy es la capital de Siria; la Calle Derecha aún existe en la Ciudad Vieja.",
+        "pt": "Hoje é a capital da Síria; a Rua Direita ainda existe na Cidade Velha.",
+        "fr": "Aujourd'hui capitale de la Syrie; la rue Droite existe toujours dans la vieille ville.",
+        "de": "Heute die Hauptstadt Syriens; die Gerade Straße existiert noch in der Altstadt.",
+        "ar": "عاصمة سوريا اليوم، ولا يزال الشارع المستقيم قائماً في المدينة القديمة."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "ACT", "chapter": 9, "verse": 3, "label": { "en": "Saul's Conversion", "ko": "사울의 회심", "ja": "サウロの回心", "zh-Hans": "扫罗归主", "zh-Hant": "掃羅歸主", "es": "Conversión de Saulo", "pt": "Conversão de Saulo", "fr": "Conversion de Saul", "de": "Bekehrung des Saulus", "ar": "اهتداء شاول" } },
+      { "bookId": "ACT", "chapter": 9, "verse": 11, "label": { "en": "Street Called Straight", "ko": "직가라 하는 거리", "ja": "まっすぐな通り", "zh-Hans": "直街", "zh-Hant": "直街", "es": "Calle Derecha", "pt": "Rua Direita", "fr": "Rue Droite", "de": "Gerade Straße", "ar": "الزقاق المستقيم" } }
+    ]
+  },
+  {
+    "id": "jerusalem",
+    "ancientName": {
+      "en": "Jerusalem", "ko": "예루살렘", "ja": "エルサレム", "zh-Hans": "耶路撒冷", "zh-Hant": "耶路撒冷",
+      "es": "Jerusalén", "pt": "Jerusalém", "fr": "Jérusalem", "de": "Jerusalem", "ar": "أورشليم"
+    },
+    "modernName": {
+      "en": "Jerusalem", "ko": "예루살렘", "ja": "エルサレム", "zh-Hans": "耶路撒冷", "zh-Hant": "耶路撒冷",
+      "es": "Jerusalén", "pt": "Jerusalém", "fr": "Jérusalem", "de": "Jerusalem", "ar": "القدس"
+    },
+    "modernCountry": {
+      "en": "Israel / Palestine", "ko": "이스라엘 / 팔레스타인", "ja": "イスラエル / パレスチナ", "zh-Hans": "以色列 / 巴勒斯坦", "zh-Hant": "以色列 / 巴勒斯坦",
+      "es": "Israel / Palestina", "pt": "Israel / Palestina", "fr": "Israël / Palestine", "de": "Israel / Palästina", "ar": "إسرائيل / فلسطين"
+    },
+    "modernCountryCode": "IL",
+    "coordinates": [35.2137, 31.7683],
+    "confidence": "certain",
+    "eras": ["patriarchs", "united_kingdom", "divided_kingdom", "gospels", "apostolic"],
+    "aliases": {
+      "en": ["Jerusalem", "Zion"], "ko": ["예루살렘", "시온"], "ja": ["エルサレム", "シオン"],
+      "zh-Hans": ["耶路撒冷", "锡安"], "zh-Hant": ["耶路撒冷", "錫安"], "es": ["Jerusalén", "Sión"],
+      "pt": ["Jerusalém", "Sião"], "fr": ["Jérusalem", "Sion"], "de": ["Jerusalem", "Zion"], "ar": ["أورشليم", "القدس", "صهيون"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "The City of David, site of Solomon's Temple, and the crucifixion and resurrection of Jesus.",
+        "ko": "다윗의 성이자 솔로몬 성전이 세워졌으며, 예수님의 십자가와 부활, 초대교회 오순절 사건이 일어난 중심지입니다.",
+        "ja": "ダビデの町であり、ソロモンの神殿、そしてイエスの十字架と復活、ペンテコステの舞台となった聖都です。",
+        "zh-Hans": "大卫之城，所罗门圣殿所在地，也是耶稣受难、复活和五旬节圣灵降临的中心。",
+        "zh-Hant": "大衛之城，所羅門聖殿所在地，也是耶穌受難、復活和五旬節聖靈降臨的中心。",
+        "es": "La Ciudad de David, sede del Templo y lugar de la crucifixión y resurrección de Jesús.",
+        "pt": "A Cidade de Davi, local do Templo e da crucificação e ressurreição de Jesus.",
+        "fr": "La Cité de David, site du Temple, de la crucifixion et de la résurrection de Jésus.",
+        "de": "Die Stadt Davids, Ort des Tempels sowie der Kreuzigung und Auferstehung Jesu.",
+        "ar": "مدينة داود وموقع الهيكل ومكان صلب وقيامة يسوع."
+      },
+      "geography": {
+        "en": "Situated on the Judean mountain ridge (~750m elevation) between the Kidron and Hinnom valleys.",
+        "ko": "해발 약 750m의 유대 산지 능선 위, 기드론 골짜기와 힌놈의 골짜기 사이에 자리한 천연 요새입니다.",
+        "ja": "標高約750mのユダヤ山地の尾根に位置し、キデロンの谷とヒンノムの谷に挟まれた地形です。",
+        "zh-Hans": "坐落于海拔约750米的犹大山地山脊，介于汲沦谷与欣嫩子谷之间。",
+        "zh-Hant": "坐落於海拔約750公尺的猶大山地山脊，介於汲淪谷與欣嫩子谷之間。",
+        "es": "Situada en la cresta montañosa de Judea (~750 m), entre los valles de Cedrón e Hinom.",
+        "pt": "Situada na crista montanhosa da Judeia (~750 m), entre os vales de Cedrom e Hinom.",
+        "fr": "Située sur la crête des monts de Judée (~750 m), entre les vallées du Cédron et de Hinnom.",
+        "de": "Auf dem judäischen Bergrücken (~750 m) zwischen dem Kidron- und dem Hinnomtal gelegen.",
+        "ar": "تقع على قمم جبال يهوذا (بارتفاع 750 متراً) بين وادي قدرون ووادي هنوم."
+      },
+      "biblicalEvents": {
+        "en": "King David made it his capital; Jesus taught at the Temple, died at Golgotha, and rose again.",
+        "ko": "다윗이 수도로 삼고 솔로몬이 성전을 건축했으며, 예수님의 수난·부활과 사도행전 2장의 성령 강림이 일어났습니다.",
+        "ja": "ダビデが都を置き、イエスが神殿で教え、ゴルゴタで十字架にかかり復活された場所です。",
+        "zh-Hans": "大卫定都于此，所罗门建殿，耶稣在各各他受难并复活，使徒行传中教会由此诞生。",
+        "zh-Hant": "大衛定都於此，所羅門建殿，耶穌在各各他受難並復活，使徒行傳中教會由此誕生。",
+        "es": "David la hizo capital; Jesús enseñó en el Templo, murió en el Gólgota y resucitó.",
+        "pt": "Davi a tornou capital; Jesus ensinou no Templo, morreu no Gólgota e ressuscitou.",
+        "fr": "David en fit sa capitale; Jésus enseigna au Temple, mourut au Golgotha et ressuscita.",
+        "de": "David machte sie zur Hauptstadt; Jesus lehrte im Tempel, starb auf Golgatha und stand auf.",
+        "ar": "اتخذها داود عاصمة، وعلّم يسوع في الهيكل، وصلب وقام من بين الأموات."
+      },
+      "modernContext": {
+        "en": "The Old City preserves the Western Wall, Temple Mount, Church of the Holy Sepulchre, and City of David excavations.",
+        "ko": "구시가지에는 통곡의 벽(서쪽 벽), 성전산, 성묘교회, 다윗 성 고고학 발굴지가 보존되어 있습니다.",
+        "ja": "旧市街には嘆きの壁、神殿の丘、聖墳墓教会、ダビデの町の発掘遺跡が残されています。",
+        "zh-Hans": "老城保存着西墙、圣殿山、圣墓教堂及大卫城考古遗址。",
+        "zh-Hant": "舊城保存著西牆、聖殿山、聖墓教堂及大衛城考古遺址。",
+        "es": "La Ciudad Vieja conserva el Muro de los Lamentos, el Monte del Templo y el Santo Sepulcro.",
+        "pt": "A Cidade Velha preserva o Muro das Lamentações, o Monte do Templo e o Santo Sepulcro.",
+        "fr": "La Vieille Ville préserve le Mur des Lamentations, le Mont du Temple et le Saint-Sépulcre.",
+        "de": "Die Altstadt bewahrt die Klagemauer, den Tempelberg und die Grabeskirche.",
+        "ar": "تضم البلدة القديمة حائط المبكى والحرم القدسي وكنيسة القيامة."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "PSA", "chapter": 122, "verse": 1, "label": { "en": "House of the LORD", "ko": "여호와의 집", "ja": "主の家", "zh-Hans": "耶和华的殿", "zh-Hant": "耶和華的殿", "es": "Casa de Jehová", "pt": "Casa do Senhor", "fr": "Maison de l'Éternel", "de": "Haus des HERRN", "ar": "بيت الرب" } },
+      { "bookId": "ACT", "chapter": 9, "verse": 2, "label": { "en": "Saul's Letters", "ko": "사울의 공문", "ja": "サウロの手紙", "zh-Hans": "扫罗求文书", "zh-Hant": "掃羅求文書", "es": "Cartas de Saulo", "pt": "Cartas de Saulo", "fr": "Lettres de Saul", "de": "Briefe des Saulus", "ar": "رسائل شاول" } }
+    ]
+  },
+  {
+    "id": "bethlehem",
+    "ancientName": {
+      "en": "Bethlehem", "ko": "베들레헴", "ja": "ベツレヘム", "zh-Hans": "伯利恒", "zh-Hant": "伯利恆",
+      "es": "Belén", "pt": "Belém", "fr": "Bethléem", "de": "Betlehem", "ar": "بيت لحم"
+    },
+    "modernName": {
+      "en": "Bethlehem", "ko": "베들레헴", "ja": "ベツレヘム", "zh-Hans": "伯利恒", "zh-Hant": "伯利恆",
+      "es": "Belén", "pt": "Belém", "fr": "Bethléem", "de": "Betlehem", "ar": "بيت لحم"
+    },
+    "modernCountry": {
+      "en": "Palestine (West Bank)", "ko": "팔레스타인 (서안지구)", "ja": "パレスチナ（ヨルダン川西岸）", "zh-Hans": "巴勒斯坦（约旦河西岸）", "zh-Hant": "巴勒斯坦（約旦河西岸）",
+      "es": "Palestina (Cisjordania)", "pt": "Palestina (Cisjordânia)", "fr": "Palestine (Cisjordanie)", "de": "Palästina (Westjordanland)", "ar": "فلسطين (الضفة الغربية)"
+    },
+    "modernCountryCode": "PS",
+    "coordinates": [35.2024, 31.7054],
+    "confidence": "certain",
+    "eras": ["patriarchs", "conquest", "united_kingdom", "gospels"],
+    "aliases": {
+      "en": ["Bethlehem", "Ephrathah"], "ko": ["베들레헴", "에브랏"], "ja": ["ベツレヘム", "エフラタ"],
+      "zh-Hans": ["伯利恒", "以法他"], "zh-Hant": ["伯利恆", "以法他"], "es": ["Belén"], "pt": ["Belém"],
+      "fr": ["Bethléem"], "de": ["Betlehem", "Bethlehem"], "ar": ["بيت لحم"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "The 'House of Bread', hometown of King David and birthplace of Jesus Christ.",
+        "ko": "'떡집'이라는 뜻의 성읍으로, 다윗 왕의 고향이자 예수 그리스도께서 탄생하신 곳입니다.",
+        "ja": "「パンの家」を意味し、ダビデ王の故郷であり、イエス・キリストの生誕地です。",
+        "zh-Hans": "意为“粮食之家”，是大卫王的故乡，也是耶稣基督的诞生地。",
+        "zh-Hant": "意為「糧食之家」，是大衛王的故鄉，也是耶穌基督的誕生地。",
+        "es": "La 'Casa del Pan', ciudad natal del rey David y lugar de nacimiento de Jesús.",
+        "pt": "A 'Casa do Pão', cidade natal do rei Davi e local do nascimento de Jesus.",
+        "fr": "La 'Maison du Pain', patrie du roi David et lieu de naissance de Jésus.",
+        "de": "Das 'Haus des Brotes', Heimatstadt König Davids und Geburtsort Jesu.",
+        "ar": "'بيت الخبز'، مسقط رأس الملك داود ومكان ميلاد يسوع المسيح."
+      },
+      "geography": {
+        "en": "Located about 9 km south of Jerusalem in the fertile hill country of Judah.",
+        "ko": "예루살렘에서 남쪽으로 약 9km 떨어진 유다 산지의 비옥한 구릉에 자리잡고 있습니다.",
+        "ja": "エルサレムから南へ約9km、ユダヤ山地の肥沃な丘陵に位置しています。",
+        "zh-Hans": "位于耶路撒冷以南约9公里的犹大山地肥沃丘陵地带。",
+        "zh-Hant": "位於耶路撒冷以南約9公里的猶大山地肥沃丘陵地帶。",
+        "es": "Ubicada a unos 9 km al sur de Jerusalén en las colinas de Judá.",
+        "pt": "Localizada cerca de 9 km ao sul de Jerusalém nas colinas de Judá.",
+        "fr": "Située à environ 9 km au sud de Jérusalem dans les collines de Judée.",
+        "de": "Etwa 9 km südlich von Jerusalem im Bergland von Juda gelegen.",
+        "ar": "تقع على بعد نحو 9 كم جنوب أورشليم في تلال يهوذا الخصبة."
+      },
+      "biblicalEvents": {
+        "en": "Setting for the Book of Ruth, Samuel's anointing of David, Micah's prophecy (5:2), and Luke 2.",
+        "ko": "룻기의 배경이자 사무엘이 다윗에게 기름을 부은 곳이며, 미가 선지자의 예언(5:2)대로 예수님이 나셨습니다.",
+        "ja": "ルツ記の舞台であり、ダビデが油注がれた場所、そしてミカの預言通りにイエスが誕生されました。",
+        "zh-Hans": "路得记发生地，撒母耳膏立大卫之处，也应验弥迦书预言成为耶稣降生之地。",
+        "zh-Hant": "路得記發生地，撒母耳膏立大衛之處，也應驗彌迦書預言成為耶穌降生之地。",
+        "es": "Escenario del libro de Rut, unción de David y nacimiento de Jesús (Lucas 2).",
+        "pt": "Cenário do livro de Rute, unção de Davi e nascimento de Jesus (Lucas 2).",
+        "fr": "Cadre du livre de Ruth, onction de David et naissance de Jésus (Luc 2).",
+        "de": "Schauplatz des Buches Rut, Salbung Davids und Geburt Jesu (Lukas 2).",
+        "ar": "مسرح سفر راعوث، ومسح داود ملكاً، وميلاد يسوع (لوقا 2)."
+      },
+      "modernContext": {
+        "en": "The Church of the Nativity, built over the traditional birthplace cave, is a UNESCO World Heritage site.",
+        "ko": "예수 탄생 기념 교회(Church of the Nativity)가 유네스코 세계문화유산으로 보존되어 있습니다.",
+        "ja": "生誕教会がユネスコ世界遺産として保存され、世界中から巡礼者が訪れます。",
+        "zh-Hans": "建于传统诞生石窟之上的圣诞教堂已被列入联合国教科文组织世界遗产。",
+        "zh-Hant": "建於傳統誕生石窟之上的聖誕教堂已被列入聯合國教科文組織世界遺產。",
+        "es": "La Basílica de la Natividad es Patrimonio de la Humanidad por la UNESCO.",
+        "pt": "A Basílica da Natividade é Patrimônio Mundial da UNESCO.",
+        "fr": "La basilique de la Nativité est inscrite au patrimoine mondial de l'UNESCO.",
+        "de": "Die Geburtskirche gehört zum UNESCO-Weltkulturerbe.",
+        "ar": "تعد كنيسة المهد من مواقع التراث العالمي لليونسكو."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "MAT", "chapter": 2, "verse": 1, "label": { "en": "Birth of Jesus", "ko": "예수님의 탄생", "ja": "イエスの誕生", "zh-Hans": "耶稣降生", "zh-Hant": "耶穌降生", "es": "Nacimiento de Jesús", "pt": "Nascimento de Jesus", "fr": "Naissance de Jésus", "de": "Geburt Jesu", "ar": "ميلاد يسوع" } }
+    ]
+  },
+  {
+    "id": "nazareth",
+    "ancientName": {
+      "en": "Nazareth", "ko": "나사렛", "ja": "ナザレ", "zh-Hans": "拿撒勒", "zh-Hant": "拿撒勒",
+      "es": "Nazaret", "pt": "Nazaré", "fr": "Nazareth", "de": "Nazaret", "ar": "الناصرة"
+    },
+    "modernName": {
+      "en": "Nazareth", "ko": "나사렛", "ja": "ナザレ", "zh-Hans": "拿撒勒", "zh-Hant": "拿撒勒",
+      "es": "Nazaret", "pt": "Nazaré", "fr": "Nazareth", "de": "Nazaret", "ar": "الناصرة"
+    },
+    "modernCountry": {
+      "en": "Israel", "ko": "이스라엘", "ja": "イスラエル", "zh-Hans": "以色列", "zh-Hant": "以色列",
+      "es": "Israel", "pt": "Israel", "fr": "Israël", "de": "Israel", "ar": "إسرائيل"
+    },
+    "modernCountryCode": "IL",
+    "coordinates": [35.2978, 32.7019],
+    "confidence": "certain",
+    "eras": ["gospels"],
+    "aliases": {
+      "en": ["Nazareth"], "ko": ["나사렛"], "ja": ["ナザレ"], "zh-Hans": ["拿撒勒"], "zh-Hant": ["拿撒勒"],
+      "es": ["Nazaret"], "pt": ["Nazaré"], "fr": ["Nazareth"], "de": ["Nazaret", "Nazareth"], "ar": ["الناصرة"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "The Galilean village where Jesus grew up and began his public ministry.",
+        "ko": "예수님께서 어린 시절을 보내며 성장하신 갈릴리의 작은 마을입니다.",
+        "ja": "イエスが少年時代を過ごし、成長されたガリラヤの村です。",
+        "zh-Hans": "耶稣度过童年和成长的加利利村庄。",
+        "zh-Hant": "耶穌度過童年和成長的加利利村莊。",
+        "es": "La aldea galilea donde creció Jesús.",
+        "pt": "A aldeia da Galileia onde Jesus cresceu.",
+        "fr": "Le village de Galilée où Jésus a grandi.",
+        "de": "Das galiläische Dorf, in dem Jesus aufwuchs.",
+        "ar": "القرية الجليلية التي نشأ فيها يسوع."
+      },
+      "geography": {
+        "en": "Nestled in a bowl-shaped valley in Lower Galilee overlooking the Jezreel Valley.",
+        "ko": "하부 갈릴리의 분지 지형에 위치하여 이스르엘 평야를 내려다봅니다.",
+        "ja": "下ガリラヤの盆地にあり、イズレエル平野を見下ろす場所に位置します。",
+        "zh-Hans": "坐落于下加利利的一个盆地山谷中，俯瞰耶斯列平原。",
+        "zh-Hant": "坐落於下加利利的一個盆地山谷中，俯瞰耶斯列平原。",
+        "es": "Enclavada en un valle de la Baja Galilea con vistas al valle de Jezreel.",
+        "pt": "Situada em um vale da Baixa Galileia com vista para o vale de Jezreel.",
+        "fr": "Nichée dans une vallée de Basse-Galilée surplombant la plaine de Jezréel.",
+        "de": "In einem Tal in Untergaliläa mit Blick auf die Jesreelebene gelegen.",
+        "ar": "تقع في وادٍ بالجليل الأسفل يطل على مرج ابن عامر."
+      },
+      "biblicalEvents": {
+        "en": "Annunciation to Mary (Luke 1), Jesus' childhood (Luke 2), and his synagogue sermon (Luke 4).",
+        "ko": "가브리엘 천사의 수태고지, 예수님의 성장, 그리고 안식일 회당 설교(눅 4장)가 이곳에서 일어났습니다.",
+        "ja": "マリアへの受胎告知、イエスの成長、会堂での説教（ルカ4章）の舞台です。",
+        "zh-Hans": "天使向马利亚报信、耶稣成长及在会堂讲道（路加福音4章）发生于此。",
+        "zh-Hant": "天使向馬利亞報信、耶穌成長及在會堂講道（路加福音4章）發生於此。",
+        "es": "La Anunciación a María y la infancia de Jesús.",
+        "pt": "A Anunciação a Maria e a infância de Jesus.",
+        "fr": "L'Annonciation à Marie et l'enfance de Jésus.",
+        "de": "Die Verkündigung an Maria und die Kindheit Jesu.",
+        "ar": "بشارة مريم ونشأة يسوع ووعظه في المجمع."
+      },
+      "modernContext": {
+        "en": "Today a major city in northern Israel featuring the Basilica of the Annunciation.",
+        "ko": "오늘날 이스라엘 북부의 주요 도시로 수태고지 교회가 자리하고 있습니다.",
+        "ja": "現在はイスラエル北部の主要都市で、受胎告知教会があります。",
+        "zh-Hans": "如今是以色列北部的重要城市，建有著名的天使报喜堂。",
+        "zh-Hant": "如今是以色列北部的重要城市，建有著名的天使報喜堂。",
+        "es": "Hoy es una ciudad importante del norte de Israel con la Basílica de la Anunciación.",
+        "pt": "Hoje é uma cidade importante no norte de Israel com a Basílica da Anunciação.",
+        "fr": "Aujourd'hui une ville majeure du nord d'Israël abritant la basilique de l'Annonciation.",
+        "de": "Heute eine bedeutende Stadt im Norden Israels mit der Verkündigungsbasilika.",
+        "ar": "تعد اليوم مدينة رئيسية في شمال إسرائيل وتضم كنيسة البشارة."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "MAT", "chapter": 2, "verse": 23, "label": { "en": "Called a Nazarene", "ko": "나사렛 사람", "ja": "ナザレ人", "zh-Hans": "拿撒勒人", "zh-Hant": "拿撒勒人", "es": "Llamado nazareno", "pt": "Chamado nazareno", "fr": "Appelé Nazaréen", "de": "Nazoräer genannt", "ar": "يدعى ناصرياً" } }
+    ]
+  },
+  {
+    "id": "capernaum",
+    "ancientName": {
+      "en": "Capernaum", "ko": "가버나움", "ja": "カペナウム", "zh-Hans": "迦百农", "zh-Hant": "迦百農",
+      "es": "Capernaúm", "pt": "Cafarnaum", "fr": "Capharnaüm", "de": "Kafarnaum", "ar": "كفرناحوم"
+    },
+    "modernName": {
+      "en": "Kfar Nahum (Ruins)", "ko": "크파르 나훔 (유적지)", "ja": "クファル・ナフム（遺跡）", "zh-Hans": "迦百农遗址", "zh-Hant": "迦百農遺址",
+      "es": "Kfar Nahum (Ruinas)", "pt": "Kfar Nahum (Ruínas)", "fr": "Kfar Nahum (Ruines)", "de": "Kfar Nachum (Ruinen)", "ar": "كفرناحوم (آثار)"
+    },
+    "modernCountry": {
+      "en": "Israel", "ko": "이스라엘", "ja": "イスラエル", "zh-Hans": "以色列", "zh-Hant": "以色列",
+      "es": "Israel", "pt": "Israel", "fr": "Israël", "de": "Israel", "ar": "إسرائيل"
+    },
+    "modernCountryCode": "IL",
+    "coordinates": [35.5753, 32.8803],
+    "confidence": "certain",
+    "eras": ["gospels"],
+    "aliases": {
+      "en": ["Capernaum"], "ko": ["가버나움"], "ja": ["カペナウム", "カファルナウム"], "zh-Hans": ["迦百农"], "zh-Hant": ["迦百農"],
+      "es": ["Capernaúm"], "pt": ["Cafarnaum"], "fr": ["Capharnaüm"], "de": ["Kafarnaum", "Kapernaum"], "ar": ["كفرناحوم"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "Fishing town on the Sea of Galilee that served as Jesus' primary ministry headquarters.",
+        "ko": "갈릴리 호수 북서쪽의 어촌이자, 예수님 갈릴리 공생애의 중심 본부였습니다.",
+        "ja": "ガリラヤ湖畔の漁村で、イエスのガリラヤ伝道の拠点となった町です。",
+        "zh-Hans": "加利利海畔的渔村，是耶稣在加利利传道的主要据点。",
+        "zh-Hant": "加利利海畔的漁村，是耶穌在加利利傳道的主要據點。",
+        "es": "Pueblo pesquero junto al mar de Galilea, base principal del ministerio de Jesús.",
+        "pt": "Vila de pescadores no mar da Galileia, base principal do ministério de Jesus.",
+        "fr": "Village de pêcheurs au bord du lac de Galilée, base du ministère de Jésus.",
+        "de": "Fischerort am See Genezareth und Hauptwirkungsstätte Jesu.",
+        "ar": "قرية صيد على بحر الجليل كانت المقر الرئيسي لخدمة يسوع."
+      },
+      "geography": {
+        "en": "Located on the northern shore of the Sea of Galilee along the ancient Via Maris trade route.",
+        "ko": "갈릴리 호수 북안에 위치하며 고대 국제 무역로인 해변길(Via Maris)을 끼고 있었습니다.",
+        "ja": "ガリラヤ湖の北岸にあり、古代の国際交易路「海の道（ヴィア・マリス）」に面していました。",
+        "zh-Hans": "位于加利利海北岸，地处古代国际商道“海滨大道”沿线。",
+        "zh-Hant": "位於加利利海北岸，地處古代國際商道「海濱大道」沿線。",
+        "es": "En la orilla norte del mar de Galilea, junto a la ruta comercial Via Maris.",
+        "pt": "Na margem norte do mar da Galileia, junto à rota comercial Via Maris.",
+        "fr": "Sur la rive nord du lac de Galilée, le long de l'ancienne route Via Maris.",
+        "de": "Am Nordufer des Sees Genezareth an der antiken Handelsstraße Via Maris.",
+        "ar": "تقع على الشاطئ الشمالي لبحر الجليل على طريق التجارة القديم."
+      },
+      "biblicalEvents": {
+        "en": "Calling of Peter and Matthew, healing of Peter's mother-in-law, the paralytic lowered through the roof, and Bread of Life discourse.",
+        "ko": "베드로와 마태의 부르심, 지붕을 뚫고 내려온 중풍병자 치유, 백부장의 하인 치유 등이 일어났습니다.",
+        "ja": "ペテロとマタイの召命、屋根から降ろされた中風の人の癒やしなどが起きました。",
+        "zh-Hans": "呼召彼得和马太、拆屋顶治好瘫子及生命之粮讲论均发生在此。",
+        "zh-Hant": "呼召彼得和馬太、拆屋頂治好癱子及生命之糧講論均發生在此。",
+        "es": "Llamamiento de Pedro y Mateo, sanidad del paralítico bajado por el techo.",
+        "pt": "Chamado de Pedro e Mateus, cura do paralítico descido pelo telhado.",
+        "fr": "Appel de Pierre et Matthieu, guérison du paralytique descendu par le toit.",
+        "de": "Berufung von Petrus und Matthäus, Heilung des Gelähmten durch das Dach.",
+        "ar": "دعوة بطرس ومتى وشفاء المفلوج المدلى من السقف."
+      },
+      "modernContext": {
+        "en": "Archaeologists have uncovered a 4th-century white limestone synagogue built over a 1st-century basalt one, plus Peter's traditional house.",
+        "ko": "1세기 현무암 회당 터 위에 세워진 4세기 흰 석회암 회당과 베드로의 집 유적이 발굴되어 있습니다.",
+        "ja": "1世紀の玄武岩の会堂跡の上に建てられた4世紀の白い石灰岩の会堂やペテロの家跡が発掘されています。",
+        "zh-Hans": "考古学家发掘了建于一世纪玄武岩会堂之上的四世纪白色石灰岩会堂及彼得故居遗址。",
+        "zh-Hant": "考古學家發掘了建於一世紀玄武岩會堂之上的四世紀白色石灰岩會堂及彼得故居遺址。",
+        "es": "Se conservan ruinas de una sinagoga monumental y la casa tradicional de Pedro.",
+        "pt": "Conservam-se ruínas de uma sinagoga monumental e da casa tradicional de Pedro.",
+        "fr": "On y visite les ruines d'une synagogue antique et la maison traditionnelle de Pierre.",
+        "de": "Ausgegraben sind eine antike Synagoge und das traditionelle Haus des Petrus.",
+        "ar": "اكتشف علماء الآثار أنقاض المجمع اليهودي القديم وبيت بطرس."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "MAT", "chapter": 4, "verse": 13, "label": { "en": "Home in Capernaum", "ko": "가버나움에 사시니", "ja": "カペナウムに住まわれた", "zh-Hans": "住在迦百农", "zh-Hant": "住在迦百農", "es": "Habitó en Capernaúm", "pt": "Habitou em Cafarnaum", "fr": "Habita Capharnaüm", "de": "Wohnte in Kafarnaum", "ar": "سكن في كفرناحوم" } }
+    ]
+  },
+  {
+    "id": "jericho",
+    "ancientName": {
+      "en": "Jericho", "ko": "여리고", "ja": "エリコ", "zh-Hans": "耶利哥", "zh-Hant": "耶利哥",
+      "es": "Jericó", "pt": "Jericó", "fr": "Jéricho", "de": "Jericho", "ar": "أريحا"
+    },
+    "modernName": {
+      "en": "Jericho (Ariha)", "ko": "예리코 (아리하)", "ja": "エリコ（アリーハー）", "zh-Hans": "耶利哥（阿里哈）", "zh-Hant": "耶利哥（阿里哈）",
+      "es": "Jericó", "pt": "Jericó", "fr": "Jéricho", "de": "Jericho", "ar": "أريحا"
+    },
+    "modernCountry": {
+      "en": "Palestine (West Bank)", "ko": "팔레스타인 (서안지구)", "ja": "パレスチナ（ヨルダン川西岸）", "zh-Hans": "巴勒斯坦（约旦河西岸）", "zh-Hant": "巴勒斯坦（約旦河西岸）",
+      "es": "Palestina", "pt": "Palestina", "fr": "Palestine", "de": "Palästina", "ar": "فلسطين"
+    },
+    "modernCountryCode": "PS",
+    "coordinates": [35.4599, 31.8667],
+    "confidence": "certain",
+    "eras": ["conquest", "divided_kingdom", "gospels"],
+    "aliases": {
+      "en": ["Jericho"], "ko": ["여리고"], "ja": ["エリコ"], "zh-Hans": ["耶利哥"], "zh-Hant": ["耶利哥"],
+      "es": ["Jericó"], "pt": ["Jericó"], "fr": ["Jéricho"], "de": ["Jericho"], "ar": ["أريحا"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "One of the oldest continuously inhabited cities on Earth, gateway to Canaan and site of Zacchaeus's encounter.",
+        "ko": "지구상에서 가장 오래된 도시 중 하나이며, 여호수아의 가나안 정복 첫 성읍이자 삭개오가 예수님을 만난 곳입니다.",
+        "ja": "地球上で最も古い都市の一つで、ヨシュア記の城壁崩壊とザアカイの出会いの舞台です。",
+        "zh-Hans": "地球上最古老的城市之一，约书亚攻取迦南的第一座城，也是撒该遇见耶稣之处。",
+        "zh-Hant": "地球上最古老的城市之一，約書亞攻取迦南的第一座城，也是撒該遇見耶穌之處。",
+        "es": "Una de las ciudades más antiguas del mundo, puerta de Canaán y lugar del encuentro con Zaqueo.",
+        "pt": "Uma das cidades mais antigas do mundo, porta de Canaã e local do encontro com Zaqueu.",
+        "fr": "L'une des plus anciennes cités du monde, porte de Canaan et lieu de la rencontre avec Zachée.",
+        "de": "Eine der ältesten Städte der Welt, Tor zu Kanaan und Ort der Begegnung mit Zachäus.",
+        "ar": "من أقدم المدن المأهولة في العالم، بوابة كنعان ومكان لقاء زكا بيسوع."
+      },
+      "geography": {
+        "en": "An oasis in the Jordan Rift Valley (~258m below sea level), known as the 'City of Palms'.",
+        "ko": "해수면보다 약 258m 낮은 요단 계곡의 오아시스 도시로 '종려나무의 성읍'이라 불렸습니다.",
+        "ja": "海抜マイナス約258mのヨルダン渓谷にあるオアシスで、「なつめやしの町」と呼ばれました。",
+        "zh-Hans": "位于低于海平面约258米的约旦河谷绿洲，被称为“棕树城”。",
+        "zh-Hant": "位於低於海平面約258公尺的約旦河谷綠洲，被稱為「棕樹城」。",
+        "es": "Oasis en el valle del Jordán (~258 m bajo el nivel del mar), llamada la 'Ciudad de las Palmeras'.",
+        "pt": "Oásis no vale do Jordão (~258 m abaixo do nível do mar), chamada 'Cidade das Palmeiras'.",
+        "fr": "Oasis dans la vallée du Jourdain (~258 m sous le niveau de la mer), la 'Ville des Palmiers'.",
+        "de": "Oase im Jordantal (~258 m unter dem Meeresspiegel), bekannt als 'Palmenstadt'.",
+        "ar": "واحة في غور الأردن (258 متراً تحت سطح البحر) وتُعرف بمدينة النخيل."
+      },
+      "biblicalEvents": {
+        "en": "Rahab and the falling walls (Joshua 6), healing of blind Bartimaeus, and Zacchaeus climbing the sycamore tree.",
+        "ko": "여리고 성의 붕괴와 라합(수 6장), 맹인 바디매오 치유, 돌무화과나무에 오른 삭개오 이야기의 무대입니다.",
+        "ja": "ラハブと城壁の崩壊（ヨシュア6章）、盲人バルティマイの癒やし、ザアカイの物語の舞台です。",
+        "zh-Hans": "喇合与倒塌的城墙（约书亚记6章）、医治瞎子巴底买及撒该爬桑树发生于此。",
+        "zh-Hant": "喇合與倒塌的城牆（約書亞記6章）、醫治瞎子巴底買及撒該爬桑樹發生於此。",
+        "es": "Caída de los muros (Josué 6), curación de Bartimeo y encuentro con Zaqueo.",
+        "pt": "Queda dos muros (Josué 6), cura de Bartimeu e encontro com Zaqueu.",
+        "fr": "Chute des murailles (Josué 6), guérison de Bartimée et rencontre avec Zachée.",
+        "de": "Einsturz der Mauern (Josua 6), Heilung des Bartimäus und Zachäus.",
+        "ar": "سقوط الأسوار (يشوع 6)، وشفاء الأعمى بارتيماوس ولقاء زكا."
+      },
+      "modernContext": {
+        "en": "Tell es-Sultan (ancient Jericho) is a UNESCO World Heritage site in the West Bank.",
+        "ko": "고대 여리고 유적인 텔 에스-술탄(Tell es-Sultan)이 유네스코 세계유산으로 지정되어 있습니다.",
+        "ja": "古代エリコの遺跡テル・エス・スルタンはユネスコ世界遺産に登録されています。",
+        "zh-Hans": "古代耶利哥遗址苏丹丘（Tell es-Sultan）现为联合国教科文组织世界遗产。",
+        "zh-Hant": "古代耶利哥遺址蘇丹丘（Tell es-Sultan）現為聯合國教科文組織世界遺產。",
+        "es": "Tell es-Sultan (antigua Jericó) es Patrimonio de la Humanidad por la UNESCO.",
+        "pt": "Tell es-Sultan (antiga Jericó) é Patrimônio Mundial da UNESCO.",
+        "fr": "Tell es-Sultan (l'ancienne Jéricho) est inscrit au patrimoine mondial de l'UNESCO.",
+        "de": "Tell es-Sultan (das antike Jericho) ist UNESCO-Weltkulturerbe.",
+        "ar": "موقع تل السلطان (أريحا القديمة) مدرج ضمن التراث العالمي لليونسكو."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "JOS", "chapter": 6, "verse": 20, "label": { "en": "Walls of Jericho", "ko": "여리고 성벽", "ja": "エリコの城壁", "zh-Hans": "耶利哥城墙", "zh-Hant": "耶利哥城牆", "es": "Muros de Jericó", "pt": "Muros de Jericó", "fr": "Murailles de Jéricho", "de": "Mauern von Jericho", "ar": "أسوار أريحا" } }
+    ]
+  },
+  {
+    "id": "mount-sinai",
+    "ancientName": {
+      "en": "Mount Sinai (Horeb)", "ko": "시내산 (호렙산)", "ja": "シナイ山（ホレブ）", "zh-Hans": "西奈山（何烈山）", "zh-Hant": "西奈山（何烈山）",
+      "es": "Monte Sinaí (Horeb)", "pt": "Monte Sinai (Horebe)", "fr": "Mont Sinaï (Horeb)", "de": "Berg Sinai (Horeb)", "ar": "جبل سيناء (حوريب)"
+    },
+    "modernName": {
+      "en": "Jebel Musa", "ko": "제벨 무사 (모세의 산)", "ja": "ジャバル・ムーサー", "zh-Hans": "摩西山（杰贝勒穆萨）", "zh-Hant": "摩西山（傑貝勒穆薩）",
+      "es": "Jebel Musa", "pt": "Jebel Musa", "fr": "Djebel Moussa", "de": "Dschebel Musa", "ar": "جبل موسى"
+    },
+    "modernCountry": {
+      "en": "Egypt", "ko": "이집트", "ja": "エジプト", "zh-Hans": "埃及", "zh-Hant": "埃及",
+      "es": "Egipto", "pt": "Egito", "fr": "Égypte", "de": "Ägypten", "ar": "مصر"
+    },
+    "modernCountryCode": "EG",
+    "coordinates": [33.975, 28.5392],
+    "confidence": "probable",
+    "eras": ["exodus", "divided_kingdom"],
+    "aliases": {
+      "en": ["Sinai", "Horeb"], "ko": ["시내산", "호렙"], "ja": ["シナイ", "ホレブ"], "zh-Hans": ["西奈", "何烈"], "zh-Hant": ["西奈", "何烈"],
+      "es": ["Sinaí", "Horeb"], "pt": ["Sinai", "Horebe"], "fr": ["Sinaï", "Horeb"], "de": ["Sinai", "Horeb"], "ar": ["سيناء", "حوريب"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "Sacred mountain where Moses encountered the burning bush and received the Ten Commandments.",
+        "ko": "모세가 떨기나무 불꽃 가운데 하나님을 만나고 십계명과 율법을 받은 거룩한 산입니다.",
+        "ja": "モーセが燃える柴の中で神に出会い、十戒を授かった聖なる山です。",
+        "zh-Hans": "摩西在燃烧的荆棘中遇见神并领受十诫的圣山。",
+        "zh-Hant": "摩西在燃燒的荊棘中遇見神並領受十誡的聖山。",
+        "es": "Montaña sagrada donde Moisés recibió los Diez Mandamientos.",
+        "pt": "Montanha sagrada onde Moisés recebeu os Dez Mandamentos.",
+        "fr": "Montagne sacrée où Moïse reçut les Dix Commandements.",
+        "de": "Heiliger Berg, auf dem Mose die Zehn Gebote empfing.",
+        "ar": "الجبل المقدس حيث تسلم موسى الوصايا العشر."
+      },
+      "geography": {
+        "en": "Granite peak (2,285m) in the southern Sinai Peninsula, Egypt.",
+        "ko": "이집트 시나이 반도 남부의 해발 2,285m 화강암 산봉우리입니다.",
+        "ja": "エジプト・シナイ半島南部にそびえる標高2,285mの花崗岩の山です。",
+        "zh-Hans": "位于埃及西奈半岛南部的一座海拔2285米的花岗岩山峰。",
+        "zh-Hant": "位於埃及西奈半島南部的一座海拔2285公尺的花崗岩山峰。",
+        "es": "Pico de granito (2.285 m) en el sur de la península del Sinaí, Egipto.",
+        "pt": "Pico de granito (2.285 m) no sul da península do Sinai, Egito.",
+        "fr": "Sommet granitique (2 285 m) au sud de la péninsule du Sinaï, Égypte.",
+        "de": "Granitgipfel (2.285 m) auf der südlichen Sinai-Halbinsel, Ägypten.",
+        "ar": "قمة جرانيتية (2285 متراً) في جنوب شبه جزيرة سيناء بمصر."
+      },
+      "biblicalEvents": {
+        "en": "Exodus 3 (Burning Bush), Exodus 19–20 (Ten Commandments), and 1 Kings 19 (Elijah hearing the gentle whisper).",
+        "ko": "출애굽기 19~20장(십계명 수여)과 열왕기상 19장(엘리야가 세미한 음성을 들은 곳)의 무대입니다.",
+        "ja": "出エジプト記19-20章（十戒）および列王記上19章（エリヤが静かな細い声を聞いた地）です。",
+        "zh-Hans": "出埃及记19-20章（颁布十诫）及列王纪上19章（以利亚听见微小的声音）发生于此。",
+        "zh-Hant": "出埃及記19-20章（頒布十誡）及列王紀上19章（以利亞聽見微小的聲音）發生於此。",
+        "es": "Éxodo 19-20 (Diez Mandamientos) y 1 Reyes 19 (Elías).",
+        "pt": "Êxodo 19-20 (Dez Mandamentos) e 1 Reis 19 (Elias).",
+        "fr": "Exode 19-20 (Dix Commandements) et 1 Rois 19 (Élie).",
+        "de": "2. Mose 19-20 (Zehn Gebote) und 1. Könige 19 (Elia).",
+        "ar": "خروج 19-20 (الوصايا العشر) وملوك الأول 19 (إيليا)."
+      },
+      "modernContext": {
+        "en": "St. Catherine's Monastery (6th century) sits at its base, famous for preserving Codex Sinaiticus.",
+        "ko": "산기슭에는 6세기에 세워진 성 카타리나 수도원이 있으며 시내산 사본이 발견된 곳이기도 합니다.",
+        "ja": "麓には6世紀創建の聖カタリナ修道院があり、シナイ写本の発見地としても有名です。",
+        "zh-Hans": "山脚下建有建于6世纪的圣凯瑟琳修道院，也是西奈抄本的发现地。",
+        "zh-Hant": "山腳下建有建於6世紀的聖凱瑟琳修道院，也是西奈抄本的發現地。",
+        "es": "Al pie se encuentra el Monasterio de Santa Catalina (siglo VI).",
+        "pt": "Aos pés fica o Mosteiro de Santa Catarina (século VI).",
+        "fr": "Au pied se trouve le monastère Sainte-Catherine (VIe siècle).",
+        "de": "Am Fuß liegt das Katharinenkloster (6. Jh.), Fundort des Codex Sinaiticus.",
+        "ar": "يقع عند سفحه دير سانت كاترين (القرن السادس) الشهير."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "EXO", "chapter": 19, "verse": 20, "label": { "en": "Theophany at Sinai", "ko": "시내산 강림", "ja": "シナイ山の臨在", "zh-Hans": "西奈山降临", "zh-Hant": "西奈山降臨", "es": "Teofanía en el Sinaí", "pt": "Teofania no Sinai", "fr": "Théophanie au Sinaï", "de": "Theophanie am Sinai", "ar": "التجلي في سيناء" } }
+    ]
+  },
+  {
+    "id": "antioch",
+    "ancientName": {
+      "en": "Antioch (Syria)", "ko": "안디옥 (수리아)", "ja": "アンティオキア", "zh-Hans": "安提阿", "zh-Hant": "安提阿",
+      "es": "Antioquía", "pt": "Antioquia", "fr": "Antioche", "de": "Antiochia", "ar": "أنطاكية"
+    },
+    "modernName": {
+      "en": "Antakya", "ko": "안타키아", "ja": "アンタキヤ", "zh-Hans": "安塔基亚", "zh-Hant": "安塔基亞",
+      "es": "Antakya", "pt": "Antakya", "fr": "Antakya", "de": "Antakya", "ar": "أنطاكية"
+    },
+    "modernCountry": {
+      "en": "Turkey", "ko": "튀르키예", "ja": "トルコ", "zh-Hans": "土耳其", "zh-Hant": "土耳其",
+      "es": "Turquía", "pt": "Turquia", "fr": "Turquie", "de": "Türkei", "ar": "تركيا"
+    },
+    "modernCountryCode": "TR",
+    "coordinates": [36.161, 36.202],
+    "confidence": "certain",
+    "eras": ["apostolic"],
+    "aliases": {
+      "en": ["Antioch"], "ko": ["안디옥"], "ja": ["アンティオキア"], "zh-Hans": ["安提阿"], "zh-Hant": ["安提阿"],
+      "es": ["Antioquía"], "pt": ["Antioquia"], "fr": ["Antioche"], "de": ["Antiochia"], "ar": ["أنطاكية"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "Where believers were first called 'Christians' and Paul's missionary base.",
+        "ko": "제자들이 비로소 '그리스도인(Christians)'이라 불렸으며, 바울 선교 여행의 출발 기지였습니다.",
+        "ja": "弟子たちが初めて「キリスト者（クリスチャン）」と呼ばれ、パウロの宣教拠点となった都市です。",
+        "zh-Hans": "门徒首次被称为“基督徒”的地方，也是保罗宣教旅程的出发基地。",
+        "zh-Hant": "門徒首次被稱為「基督徒」的地方，也是保羅宣教旅程的出發基地。",
+        "es": "Donde los discípulos fueron llamados 'cristianos' por primera vez.",
+        "pt": "Onde os discípulos foram chamados 'cristãos' pela primeira vez.",
+        "fr": "Lieu où les disciples furent appelés 'chrétiens' pour la première fois.",
+        "de": "Ort, an dem die Jünger erstmals 'Christen' genannt wurden.",
+        "ar": "المدينة التي دُعي فيها التلاميذ 'مسيحيين' لأول مرة."
+      },
+      "geography": {
+        "en": "Located on the Orontes River near the Mediterranean coast in southern Turkey.",
+        "ko": "오늘날 튀르키예 남부 오론테스 강 유역, 지중해 연안 가까이에 위치한 대도시였습니다.",
+        "ja": "現在のトルコ南部、地中海に近いオロンテス川沿いに栄えた大都市です。",
+        "zh-Hans": "位于今土耳其南部靠近地中海的奥龙特斯河畔。",
+        "zh-Hant": "位於今土耳其南部靠近地中海的奧龍特斯河畔。",
+        "es": "En el río Orontes, cerca de la costa mediterránea en el sur de Turquía.",
+        "pt": "No rio Orontes, perto da costa mediterrânea no sul da Turquia.",
+        "fr": "Sur l'Oronte, près de la côte méditerranéenne au sud de la Turquie.",
+        "de": "Am Fluss Orontes nahe der Mittelmeerküste in der Südtürkei.",
+        "ar": "تقع على نهر العاصي قرب ساحل البحر المتوسط في جنوب تركيا."
+      },
+      "biblicalEvents": {
+        "en": "Acts 11:26 ('Christians'), Acts 13 (commissioning of Paul and Barnabas for the first missionary journey).",
+        "ko": "사도행전 11장(그리스도인 호칭)과 13장(바나바와 바울의 파송)이 이곳에서 일어났습니다.",
+        "ja": "使徒言行録11章（キリスト者の呼称）と13章（パウロとバルナバの派遣）の舞台です。",
+        "zh-Hans": "使徒行传11章（被称为基督徒）与13章（差派巴拿巴和保罗）发生于此。",
+        "zh-Hant": "使徒行傳11章（被稱為基督徒）與13章（差派巴拿巴和保羅）發生於此。",
+        "es": "Hechos 11:26 y Hechos 13 (envío de Pablo y Bernabé).",
+        "pt": "Atos 11:26 e Atos 13 (envio de Paulo e Barnabé).",
+        "fr": "Actes 11:26 et Actes 13 (envoi de Paul et Barnabé).",
+        "de": "Apostelgeschichte 11,26 und 13 (Aussendung von Paulus und Barnabas).",
+        "ar": "أعمال الرسل 11:26 وأعمال الرسل 13 (إرسال بولس وبرنابا)."
+      },
+      "modernContext": {
+        "en": "Modern Antakya in Hatay Province, Turkey; home to the ancient Cave Church of St. Peter.",
+        "ko": "현재 튀르키예 하타이주 안타키아이며, 고대 성 베드로 동굴 교회가 남아 있습니다.",
+        "ja": "現在のトルコ・ハタイ県アンタキヤで、聖ペテロの洞窟教会が残っています。",
+        "zh-Hans": "今土耳其哈塔伊省安塔基亚，保存有古老的圣彼得洞穴教堂。",
+        "zh-Hant": "今土耳其哈塔伊省安塔基亞，保存有古老的聖彼得洞穴教堂。",
+        "es": "Actual Antakya en Turquía, hogar de la antigua Iglesia Gruta de San Pedro.",
+        "pt": "Atual Antakya na Turquia, lar da antiga Igreja da Gruta de São Pedro.",
+        "fr": "Actuelle Antakya en Turquie, abritant l'ancienne église rupestre Saint-Pierre.",
+        "de": "Heute Antakya in der Türkei, Standort der antiken Petrusgrotte.",
+        "ar": "أنطاكية الحديثة في تركيا وتضم كنيسة القديس بطرس الصخرية."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "ACT", "chapter": 11, "verse": 26, "label": { "en": "First Called Christians", "ko": "비로소 그리스도인이라 일컬음", "ja": "初めてキリスト者と呼ばれた", "zh-Hans": "首称基督徒", "zh-Hant": "首稱基督徒", "es": "Llamados cristianos", "pt": "Chamados cristãos", "fr": "Appelés chrétiens", "de": "Christen genannt", "ar": "دُعوا مسيحيين" } }
+    ]
+  },
+  {
+    "id": "ephesus",
+    "ancientName": {
+      "en": "Ephesus", "ko": "에베소", "ja": "エフェソ", "zh-Hans": "以弗所", "zh-Hant": "以弗所",
+      "es": "Éfeso", "pt": "Éfeso", "fr": "Éphèse", "de": "Ephesus", "ar": "أفسس"
+    },
+    "modernName": {
+      "en": "Selçuk (Ephesus Ruins)", "ko": "셀추크 (에페수스 유적)", "ja": "セルチュク（エフェソス遺跡）", "zh-Hans": "塞尔丘克（以弗所遗址）", "zh-Hant": "塞爾丘克（以弗所遺址）",
+      "es": "Selçuk (Éfeso)", "pt": "Selçuk (Éfeso)", "fr": "Selçuk (Éphèse)", "de": "Selçuk (Ephesos)", "ar": "سلجوق (أفسس)"
+    },
+    "modernCountry": {
+      "en": "Turkey", "ko": "튀르키예", "ja": "トルコ", "zh-Hans": "土耳其", "zh-Hant": "土耳其",
+      "es": "Turquía", "pt": "Turquia", "fr": "Turquie", "de": "Türkei", "ar": "تركيا"
+    },
+    "modernCountryCode": "TR",
+    "coordinates": [27.3414, 37.939],
+    "confidence": "certain",
+    "eras": ["apostolic"],
+    "aliases": {
+      "en": ["Ephesus"], "ko": ["에베소"], "ja": ["エフェソ", "エペソ"], "zh-Hans": ["以弗所"], "zh-Hant": ["以弗所"],
+      "es": ["Éfeso"], "pt": ["Éfeso"], "fr": ["Éphèse"], "de": ["Ephesus", "Ephesos"], "ar": ["أفسس"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "Major Roman metropolis in Asia Minor where Paul ministered for three years; first of the Seven Churches of Revelation.",
+        "ko": "소아시아 최대의 항구 도시로, 바울이 3년간 사역하며 에베소서를 남겼고 요한계시록 일곱 교회 중 첫 번째 교회입니다.",
+        "ja": "小アジア最大の都市で、パウロが3年間滞在し、黙示録の七つの教会の筆頭に挙げられた地です。",
+        "zh-Hans": "小亚细亚重要都会，保罗曾在此事奉三年，也是启示录七教会之首。",
+        "zh-Hant": "小亞細亞重要都會，保羅曾在此事奉三年，也是啟示錄七教會之首。",
+        "es": "Metrópoli romana donde Pablo ministró tres años; primera iglesia del Apocalipsis.",
+        "pt": "Metrópole romana onde Paulo ministrou por três anos; primeira igreja do Apocalipse.",
+        "fr": "Métropole romaine où Paul exerça son ministère trois ans; première église de l'Apocalypse.",
+        "de": "Römische Metropole, in der Paulus drei Jahre wirkte; erste Gemeinde der Offenbarung.",
+        "ar": "حاضرة رومانية كبرى خدم فيها بولس ثلاث سنوات وأول كنائس الرؤيا السبع."
+      },
+      "geography": {
+        "en": "Aegean port city in western Anatolia (now silted inland near Selçuk, Izmir Province).",
+        "ko": "에게해 연안의 항구 도시였으나 현재는 토사가 쌓여 내륙에 위치합니다.",
+        "ja": "エーゲ海沿岸の港湾都市でしたが、現在は土砂の堆積により内陸に位置しています。",
+        "zh-Hans": "原为爱琴海沿岸港城，后因泥沙淤积现位于内陆。",
+        "zh-Hant": "原為愛琴海沿岸港城，後因泥沙淤積現位於內陸。",
+        "es": "Ciudad portuaria del Egeo en Anatolia occidental (hoy tierra adentro).",
+        "pt": "Cidade portuária do Egeu na Anatólia ocidental (hoje no interior).",
+        "fr": "Ville portuaire égéenne d'Anatolie occidentale (aujourd'hui à l'intérieur des terres).",
+        "de": "Ägäische Hafenstadt in Westanatolien (heute im Landesinneren).",
+        "ar": "مدينة ساحلية على بحر إيجة قديماً وأصبحت اليوم داخلية بسبب الطمي."
+      },
+      "biblicalEvents": {
+        "en": "Acts 19 (riot of Demetrius in the Great Theater), Paul's Epistle to the Ephesians, and Revelation 2.",
+        "ko": "사도행전 19장(아데미 신전 은장색 소동과 원형극장), 에베소서, 계시록 2장의 배경입니다.",
+        "ja": "使徒言行録19章（大劇場での暴動）、エフェソの信徒への手紙、黙示録2章の舞台です。",
+        "zh-Hans": "使徒行传19章（大剧场骚乱）、以弗所书及启示录2章的背景。",
+        "zh-Hant": "使徒行傳19章（大劇場騷亂）、以弗所書及啟示錄2章的背景。",
+        "es": "Hechos 19 (disturbio en el Gran Teatro), Efesios y Apocalipsis 2.",
+        "pt": "Atos 19 (tumulto no Grande Teatro), Efésios e Apocalipse 2.",
+        "fr": "Actes 19 (émeute au Grand Théâtre), Éphésiens et Apocalypse 2.",
+        "de": "Apostelgeschichte 19 (Aufruhr im Theater), Epheserbrief und Offenbarung 2.",
+        "ar": "أعمال الرسل 19 (شغب المسرح الكبير)، ورسالة أفسس، ورؤيا 2."
+      },
+      "modernContext": {
+        "en": "One of the best-preserved classical cities in the Mediterranean, featuring the Library of Celsus and the 25,000-seat theater.",
+        "ko": "켈수스 도서관과 2만 5천 석 규모의 대극장이 생생하게 보존된 세계적 유적지입니다.",
+        "ja": "ケルスス図書館や2万5千人収容の大劇場が良好に保存されています。",
+        "zh-Hans": "保存极为完好的古典城市遗址，拥有塞尔苏斯图书馆和可容纳2.5万人的大剧场。",
+        "zh-Hant": "保存極為完好的古典城市遺址，擁有塞爾蘇斯圖書館和可容納2.5萬人的大劇場。",
+        "es": "Conserva la Biblioteca de Celso y el gran teatro de 25.000 asientos.",
+        "pt": "Preserva a Biblioteca de Celso e o grande teatro de 25.000 lugares.",
+        "fr": "Préserve la bibliothèque de Celsus et le grand théâtre de 25 000 places.",
+        "de": "Bewahrt die Celsus-Bibliothek und das große Theater für 25.000 Zuschauer.",
+        "ar": "تضم مكتبة سيلسوس والمسرح الكبير الذي يتسع لـ 25 ألف متفرج."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "ACT", "chapter": 19, "verse": 29, "label": { "en": "Ephesus Theater", "ko": "에베소 연극장", "ja": "エフェソの劇場", "zh-Hans": "以弗所剧场", "zh-Hant": "以弗所劇場", "es": "Teatro de Éfeso", "pt": "Teatro de Éfeso", "fr": "Théâtre d'Éphèse", "de": "Theater von Ephesus", "ar": "مسرح أفسس" } }
+    ]
+  },
+  {
+    "id": "corinth",
+    "ancientName": {
+      "en": "Corinth", "ko": "고린도", "ja": "コリント", "zh-Hans": "哥林多", "zh-Hant": "哥林多",
+      "es": "Corinto", "pt": "Corinto", "fr": "Corinthe", "de": "Korinth", "ar": "كورنثوس"
+    },
+    "modernName": {
+      "en": "Korinthos (Ancient Corinth)", "ko": "코린토스 (고대 고린도)", "ja": "コリントス", "zh-Hans": "科林斯", "zh-Hant": "科林斯",
+      "es": "Corinto", "pt": "Corinto", "fr": "Corinthe", "de": "Korinth", "ar": "كورنث"
+    },
+    "modernCountry": {
+      "en": "Greece", "ko": "그리스", "ja": "ギリシャ", "zh-Hans": "希腊", "zh-Hant": "希臘",
+      "es": "Grecia", "pt": "Grécia", "fr": "Grèce", "de": "Griechenland", "ar": "اليونان"
+    },
+    "modernCountryCode": "GR",
+    "coordinates": [22.8794, 37.9061],
+    "confidence": "certain",
+    "eras": ["apostolic"],
+    "aliases": {
+      "en": ["Corinth"], "ko": ["고린도"], "ja": ["コリント"], "zh-Hans": ["哥林多"], "zh-Hant": ["哥林多"],
+      "es": ["Corinto"], "pt": ["Corinto"], "fr": ["Corinthe"], "de": ["Korinth"], "ar": ["كورنثوس"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "Strategic Greek commercial hub where Paul worked with Aquila and Priscilla for 18 months.",
+        "ko": "그리스의 상업 요충지로, 바울이 아굴라·브리스길라와 1년 6개월간 동역하며 고린도전후서를 보낸 교회입니다.",
+        "ja": "ギリシャの商業要衝で、パウロが1年半滞在し、コリントの信徒への手紙を宛てた町です。",
+        "zh-Hans": "希腊商业枢纽，保罗与亚居拉、百基拉在此同工十八个月。",
+        "zh-Hant": "希臘商業樞紐，保羅與亞居拉、百基拉在此同工十八個月。",
+        "es": "Centro comercial griego donde Pablo trabajó 18 meses.",
+        "pt": "Centro comercial grego onde Paulo trabalhou por 18 meses.",
+        "fr": "Carrefour commercial grec où Paul travailla 18 mois.",
+        "de": "Griechisches Handelszentrum, in dem Paulus 18 Monate wirkte.",
+        "ar": "مركز تجاري يوناني خدم فيه بولس 18 شهراً."
+      },
+      "geography": {
+        "en": "Positioned on the narrow Isthmus of Corinth connecting the Peloponnese to mainland Greece.",
+        "ko": "펠로폰네소스 반도와 그리스 본토를 잇는 좁은 지협(코린토스 지협)에 자리해 동서 무역을 장악했습니다.",
+        "ja": "ペロポネソス半島とギリシャ本土を結ぶ狭い地峡に位置する交通の要衝です。",
+        "zh-Hans": "地处连接伯罗奔尼撒半岛与希腊本土的科林斯地峡之上。",
+        "zh-Hant": "地處連接伯羅奔尼撒半島與希臘本土的科林斯地峽之上。",
+        "es": "En el estrecho istmo de Corinto entre el Peloponeso y Grecia continental.",
+        "pt": "No estreito istmo de Corinto entre o Peloponeso e a Grécia continental.",
+        "fr": "Sur l'isthme de Corinthe reliant le Péloponnèse à la Grèce continentale.",
+        "de": "Auf dem Isthmus von Korinth zwischen Peloponnes und Festland.",
+        "ar": "تقع على برزخ كورنث الضيق الذي يربط البيلوبونيز باليونان."
+      },
+      "biblicalEvents": {
+        "en": "Acts 18 (Paul before Proconsul Gallio at the Bema), 1 & 2 Corinthians (1 Cor 13 Love chapter).",
+        "ko": "사도행전 18장(갈리오 총독의 재판석 베마)과 고린도전서 13장(사랑장)의 배경입니다.",
+        "ja": "使徒言行録18章（総督ガリオの裁きの座）やコリントの信徒への手紙一の背景です。",
+        "zh-Hans": "使徒行传18章（在迦流公堂受审）及哥林多前书、后书的背景。",
+        "zh-Hant": "使徒行傳18章（在迦流公堂受審）及哥林多前書、後書的背景。",
+        "es": "Hechos 18 (tribunal de Galión) y 1 & 2 Corintios.",
+        "pt": "Atos 18 (tribunal de Gálio) e 1 & 2 Coríntios.",
+        "fr": "Actes 18 (tribunal de Gallion) et 1 & 2 Corinthiens.",
+        "de": "Apostelgeschichte 18 (Richterstuhl des Gallio) und Korintherbriefe.",
+        "ar": "أعمال الرسل 18 (محاكمة غاليون) ورسالتي كورنثوس."
+      },
+      "modernContext": {
+        "en": "Ancient Corinth ruins still display the Bema (judgment seat), Temple of Apollo, and the Erastus inscription.",
+        "ko": "고대 유적지에 바울이 섰던 '베마(재판석)'와 로마서 16장의 에라스도 비문이 그대로 남아 있습니다.",
+        "ja": "遺跡にはパウロが立った「裁きの座（ベマ）」やエラストの碑文が現存しています。",
+        "zh-Hans": "遗址中至今仍可见保罗受审的审判台（Bema）及以拉都铭文。",
+        "zh-Hant": "遺址中至今仍可見保羅受審的審判台（Bema）及以拉都銘文。",
+        "es": "Las ruinas muestran el Bema (tribunal) y la inscripción de Erasto.",
+        "pt": "As ruínas mostram o Bema (tribunal) e a inscrição de Erasto.",
+        "fr": "Les ruines montrent le Bêma (tribunal) et l'inscription d'Éraste.",
+        "de": "Die Ruinen zeigen das Bema (Richterstuhl) und die Erastus-Inschrift.",
+        "ar": "لا تزال الآثار تعرض منصة القضاء (بيما) ونقش أراستس."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "ACT", "chapter": 18, "verse": 1, "label": { "en": "Paul in Corinth", "ko": "고린도에 이르러", "ja": "コリントへ", "zh-Hans": "来到哥林多", "zh-Hant": "來到哥林多", "es": "Pablo en Corinto", "pt": "Paulo em Corinto", "fr": "Paul à Corinthe", "de": "Paulus in Korinth", "ar": "بولس في كورنثوس" } }
+    ]
+  },
+  {
+    "id": "rome",
+    "ancientName": {
+      "en": "Rome", "ko": "로마", "ja": "ローマ", "zh-Hans": "罗马", "zh-Hant": "羅馬",
+      "es": "Roma", "pt": "Roma", "fr": "Rome", "de": "Rom", "ar": "رومية"
+    },
+    "modernName": {
+      "en": "Rome", "ko": "로마", "ja": "ローマ", "zh-Hans": "罗马", "zh-Hant": "羅馬",
+      "es": "Roma", "pt": "Roma", "fr": "Rome", "de": "Rom", "ar": "روما"
+    },
+    "modernCountry": {
+      "en": "Italy", "ko": "이탈리아", "ja": "イタリア", "zh-Hans": "意大利", "zh-Hant": "義大利",
+      "es": "Italia", "pt": "Itália", "fr": "Italie", "de": "Italien", "ar": "إيطاليا"
+    },
+    "modernCountryCode": "IT",
+    "coordinates": [12.4964, 41.9028],
+    "confidence": "certain",
+    "eras": ["apostolic"],
+    "aliases": {
+      "en": ["Rome"], "ko": ["로마"], "ja": ["ローマ"], "zh-Hans": ["罗马"], "zh-Hant": ["羅馬"],
+      "es": ["Roma"], "pt": ["Roma"], "fr": ["Rome"], "de": ["Rom"], "ar": ["رومية", "روما"]
+    },
+    "commentary": {
+      "summary": {
+        "en": "Capital of the Roman Empire, destination of Paul's final journey in Acts 28 and recipient of the Epistle to the Romans.",
+        "ko": "로마 제국의 수도이자, 사도행전 28장에서 바울이 복음을 전한 최종 목적지이며 로마서의 수신지입니다.",
+        "ja": "ローマ帝国の首都であり、使徒言行録28章でパウロが到達した最終目的地です。",
+        "zh-Hans": "罗马帝国首都，使徒行传28章保罗最终抵达之地，也是罗马书的收信教会。",
+        "zh-Hant": "羅馬帝國首都，使徒行傳28章保羅最終抵達之地，也是羅馬書的收信教會。",
+        "es": "Capital del Imperio romano y destino final de Pablo en Hechos 28.",
+        "pt": "Capital do Império Romano e destino final de Paulo em Atos 28.",
+        "fr": "Capitale de l'Empire romain et destination finale de Paul dans Actes 28.",
+        "de": "Hauptstadt des Römischen Reiches und Endziel des Paulus in Apostelgeschichte 28.",
+        "ar": "عاصمة الإمبراطورية الرومانية والوجهة النهائية لبولس في أعمال 28."
+      },
+      "geography": {
+        "en": "Built on seven hills along the Tiber River on the Italian Peninsula.",
+        "ko": "이탈리아 반도 중부 테베레 강변의 일곱 언덕 위에 세워진 제국의 중심지입니다.",
+        "ja": "イタリア半島中部のテヴェレ川沿い、七つの丘の上に築かれた大都市です。",
+        "zh-Hans": "建于意大利半岛台伯河畔的七座山丘之上。",
+        "zh-Hant": "建於義大利半島台伯河畔的七座山丘之上。",
+        "es": "Construida sobre siete colinas junto al río Tíber en Italia.",
+        "pt": "Construída sobre sete colinas às margens do rio Tibre na Itália.",
+        "fr": "Construite sur sept collines le long du Tibre en Italie.",
+        "de": "Erbaut auf sieben Hügeln am Tiber in Italien.",
+        "ar": "بُنيت على سبع تلال على ضفاف نهر التيبر في إيطاليا."
+      },
+      "biblicalEvents": {
+        "en": "Acts 28 (Paul under house arrest preaching boldly for two years), Epistle to the Romans, and Prison Epistles.",
+        "ko": "바울이 가택 연금 상태에서 2년간 담대히 하나님 나라를 전파하고 옥중서신을 기록한 곳입니다.",
+        "ja": "パウロが2年間自宅で軟禁されながら福音を宣べ伝え、獄中書簡を記した場所です。",
+        "zh-Hans": "保罗被软禁两年仍放胆传道，并在此写下多卷监狱书信。",
+        "zh-Hant": "保羅被軟禁兩年仍放膽傳道，並在此寫下多卷監獄書信。",
+        "es": "Hechos 28 (arresto domiciliario de Pablo) y Epístola a los Romanos.",
+        "pt": "Atos 28 (prisão domiciliar de Paulo) e Epístola aos Romanos.",
+        "fr": "Actes 28 (assignation à résidence de Paul) et Épître aux Romains.",
+        "de": "Apostelgeschichte 28 (Hausarrest des Paulus) und Römerbrief.",
+        "ar": "أعمال الرسل 28 (إقامة بولس الجبرية) ورسالة رومية."
+      },
+      "modernContext": {
+        "en": "Capital of Italy; preserves the Appian Way (Via Appia), Mamertine Prison, Catacombs, and Colosseum.",
+        "ko": "오늘날 이탈리아의 수도이며, 바울이 걸었던 아피아 가도(Via Appia)와 카타콤 등이 보존되어 있습니다.",
+        "ja": "現在のイタリアの首都で、アッピア街道やカタコンベなどが現存しています。",
+        "zh-Hans": "今意大利首都，保存有保罗曾走过的亚壁古道（Via Appia）与地下墓窟。",
+        "zh-Hant": "今義大利首都，保存有保羅曾走過的亞壁古道（Via Appia）與地下墓窟。",
+        "es": "Capital de Italia; conserva la Vía Apia y las Catacumbas.",
+        "pt": "Capital da Itália; preserva a Via Ápia e as Catacumbas.",
+        "fr": "Capitale de l'Italie; préserve la Voie Appienne et les Catacombes.",
+        "de": "Hauptstadt Italiens; bewahrt die Via Appia und die Katakomben.",
+        "ar": "عاصمة إيطاليا وتضم طريق أبيا والدياميس التاريخية."
+      }
+    },
+    "keyVerses": [
+      { "bookId": "ACT", "chapter": 28, "verse": 30, "label": { "en": "Two Years in Rome", "ko": "로마에서 두 해를", "ja": "ローマでの二年間", "zh-Hans": "在罗马住了足足两年", "zh-Hant": "在羅馬住了足足兩年", "es": "Dos años en Roma", "pt": "Dois anos em Roma", "fr": "Deux ans à Rome", "de": "Zwei Jahre in Rom", "ar": "سنتين في رومية" } }
+    ]
+  }
+]

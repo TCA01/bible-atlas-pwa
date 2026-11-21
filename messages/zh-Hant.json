@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "全球互動聖經與歷史地圖"
+  },
+  "nav": {
+    "reader": "閱讀聖經",
+    "atlas": "聖經地圖",
+    "study": "我的書房",
+    "language": "語言"
+  },
+  "reader": {
+    "version": "譯本",
+    "book": "書卷",
+    "chapter": "章",
+    "prevChapter": "上一章",
+    "nextChapter": "下一章",
+    "verticalMode": "直排",
+    "horizontalMode": "橫排",
+    "placeHint": "點擊底線地名以查看現代位置與歷史解說",
+    "apiFallbackTitle": "{version} 需要 API 金鑰",
+    "apiFallbackDesc": "請於伺服器設定 ESV_API_KEY 或 API_BIBLE_KEY 以載入 {version}。目前顯示公共領域 KJV 譯本。",
+    "switchToKjv": "使用 KJV",
+    "loading": "正在載入經文..."
+  },
+  "typography": {
+    "title": "顯示與閱讀設定",
+    "fontSize": "字體大小",
+    "lineHeight": "行距",
+    "compact": "緊湊",
+    "normal": "標準",
+    "relaxed": "寬鬆",
+    "fontFamily": "字型",
+    "serif": "明體 (Serif)",
+    "sans": "黑體 (Sans)",
+    "theme": "主題",
+    "light": "淺色",
+    "sepia": "護眼紙",
+    "dark": "深色",
+    "writingDirection": "閱讀方向",
+    "showPlaces": "標示聖經地名"
+  },
+  "map": {
+    "title": "聖經地名與歷史解說",
+    "ancientName": "古代地名",
+    "modernLocation": "現代位置",
+    "confidence": "位置可信度",
+    "confidence_certain": "確定",
+    "confidence_probable": "極可能",
+    "confidence_uncertain": "推測",
+    "summary": "概述",
+    "geography": "地理背景",
+    "biblicalEvents": "聖經事件",
+    "modernContext": "現況與考古",
+    "keyVerses": "相關經文",
+    "close": "關閉地圖",
+    "selectPlacePrompt": "點擊經文中的地名或於下方搜尋。",
+    "searchPlaceholder": "搜尋古代或現代地名（如：大馬士革）..."
+  },
+  "atlas": {
+    "title": "聖經地圖與歷史路線",
+    "journeys": "歷史路線",
+    "places": "所有聖經地名",
+    "step": "第 {current} / {total} 站",
+    "prevStep": "上一站",
+    "nextStep": "下一站",
+    "openInReader": "在閱讀器中開啟",
+    "allEras": "所有時代"
+  },
+  "study": {
+    "title": "我的書房（本機儲存）",
+    "bookmarks": "書籤",
+    "highlights": "重點標記",
+    "notes": "筆記",
+    "addBookmark": "書籤",
+    "removeBookmark": "已收藏",
+    "highlight": "標記",
+    "addNote": "筆記",
+    "saveNote": "儲存筆記",
+    "delete": "刪除",
+    "notePlaceholder": "記錄您的默想或研經筆記...",
+    "empty": "尚無儲存項目。點擊任何節號即可新增書籤、標記或筆記。"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "Bíblia Interativa Global e Atlas Histórico"
+  },
+  "nav": {
+    "reader": "Ler a Bíblia",
+    "atlas": "Atlas Bíblico",
+    "study": "Meu Estudo",
+    "language": "Idioma"
+  },
+  "reader": {
+    "version": "Versão",
+    "book": "Livro",
+    "chapter": "Capítulo",
+    "prevChapter": "Anterior",
+    "nextChapter": "Próximo",
+    "verticalMode": "Vertical",
+    "horizontalMode": "Horizontal",
+    "placeHint": "Clique nos lugares destacados para explorar o mapa e a história",
+    "apiFallbackTitle": "{version} requer uma chave de API",
+    "apiFallbackDesc": "Configure ESV_API_KEY ou API_BIBLE_KEY no servidor para carregar {version}. Exibindo KJV (Domínio Público).",
+    "switchToKjv": "Usar KJV",
+    "loading": "Carregando as Escrituras..."
+  },
+  "typography": {
+    "title": "Leitura e Aparência",
+    "fontSize": "Tamanho da fonte",
+    "lineHeight": "Espaçamento",
+    "compact": "Compacto",
+    "normal": "Normal",
+    "relaxed": "Amplo",
+    "fontFamily": "Tipografia",
+    "serif": "Serif",
+    "sans": "Sans",
+    "theme": "Tema",
+    "light": "Claro",
+    "sepia": "Sépia",
+    "dark": "Escuro",
+    "writingDirection": "Direção de leitura",
+    "showPlaces": "Destacar lugares bíblicos"
+  },
+  "map": {
+    "title": "Lugar Bíblico e História",
+    "ancientName": "Nome antigo",
+    "modernLocation": "Localização moderna",
+    "confidence": "Confiança geográfica",
+    "confidence_certain": "Certa",
+    "confidence_probable": "Provável",
+    "confidence_uncertain": "Incerta",
+    "summary": "Resumo",
+    "geography": "Geografia",
+    "biblicalEvents": "Eventos bíblicos",
+    "modernContext": "Hoje e Arqueologia",
+    "keyVerses": "Versículos-chave",
+    "close": "Fechar mapa",
+    "selectPlacePrompt": "Selecione um lugar no texto ou pesquise abaixo.",
+    "searchPlaceholder": "Buscar lugar antigo ou moderno (ex. Damasco)..."
+  },
+  "atlas": {
+    "title": "Atlas Bíblico e Jornadas",
+    "journeys": "Jornadas históricas",
+    "places": "Todos os lugares",
+    "step": "Etapa {current} de {total}",
+    "prevStep": "Anterior",
+    "nextStep": "Próxima",
+    "openInReader": "Abrir no leitor",
+    "allEras": "Todas as eras"
+  },
+  "study": {
+    "title": "Meu Estudo (Local)",
+    "bookmarks": "Favoritos",
+    "highlights": "Destaques",
+    "notes": "Notas",
+    "addBookmark": "Favoritar",
+    "removeBookmark": "Favoritado",
+    "highlight": "Destacar",
+    "addNote": "Nota",
+    "saveNote": "Salvar nota",
+    "delete": "Excluir",
+    "notePlaceholder": "Escreva sua reflexão ou anotação...",
+    "empty": "Nenhum item salvo ainda. Toque no número de qualquer versículo para salvar."
+  }
+}

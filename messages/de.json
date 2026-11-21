@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "Globale Interaktive Bibel & Historischer Atlas"
+  },
+  "nav": {
+    "reader": "Bibel lesen",
+    "atlas": "Bibel-Atlas",
+    "study": "Mein Studium",
+    "language": "Sprache"
+  },
+  "reader": {
+    "version": "Übersetzung",
+    "book": "Buch",
+    "chapter": "Kapitel",
+    "prevChapter": "Zurück",
+    "nextChapter": "Weiter",
+    "verticalMode": "Vertikal",
+    "horizontalMode": "Horizontal",
+    "placeHint": "Klicken Sie auf hervorgehobene Orte für Karte & Geschichte",
+    "apiFallbackTitle": "{version} erfordert einen API-Schlüssel",
+    "apiFallbackDesc": "Konfigurieren Sie ESV_API_KEY oder API_BIBLE_KEY auf dem Server, um {version} zu laden. Zeige stattdessen KJV.",
+    "switchToKjv": "KJV nutzen",
+    "loading": "Lade Bibeltext..."
+  },
+  "typography": {
+    "title": "Anzeige & Lesen",
+    "fontSize": "Schriftgröße",
+    "lineHeight": "Zeilenabstand",
+    "compact": "Kompakt",
+    "normal": "Normal",
+    "relaxed": "Weit",
+    "fontFamily": "Schriftart",
+    "serif": "Serif",
+    "sans": "Sans",
+    "theme": "Design",
+    "light": "Hell",
+    "sepia": "Sepia",
+    "dark": "Dunkel",
+    "writingDirection": "Leserichtung",
+    "showPlaces": "Biblische Orte hervorheben"
+  },
+  "map": {
+    "title": "Biblischer Ort & Geschichte",
+    "ancientName": "Antiker Name",
+    "modernLocation": "Heutiger Ort",
+    "confidence": "Standortsicherheit",
+    "confidence_certain": "Sicher",
+    "confidence_probable": "Wahrscheinlich",
+    "confidence_uncertain": "Unsicher",
+    "summary": "Überblick",
+    "geography": "Geographie",
+    "biblicalEvents": "Biblische Ereignisse",
+    "modernContext": "Heute & Archäologie",
+    "keyVerses": "Schlüsselverse",
+    "close": "Karte schließen",
+    "selectPlacePrompt": "Wählen Sie einen Ort im Text oder suchen Sie unten.",
+    "searchPlaceholder": "Antiken oder modernen Ort suchen (z. B. Damaskus)..."
+  },
+  "atlas": {
+    "title": "Bibel-Atlas & Reisen",
+    "journeys": "Historische Reisen",
+    "places": "Alle biblischen Orte",
+    "step": "Station {current} von {total}",
+    "prevStep": "Zurück",
+    "nextStep": "Weiter",
+    "openInReader": "Im Leser öffnen",
+    "allEras": "Alle Epochen"
+  },
+  "study": {
+    "title": "Mein Studium (Lokal)",
+    "bookmarks": "Lesezeichen",
+    "highlights": "Markierungen",
+    "notes": "Notizen",
+    "addBookmark": "Merken",
+    "removeBookmark": "Gemerkt",
+    "highlight": "Markieren",
+    "addNote": "Notiz",
+    "saveNote": "Speichern",
+    "delete": "Löschen",
+    "notePlaceholder": "Schreiben Sie Ihre Gedanken oder Studiennotiz...",
+    "empty": "Noch keine gespeicherten Einträge. Tippen Sie auf eine Versnummer."
+  }
+}

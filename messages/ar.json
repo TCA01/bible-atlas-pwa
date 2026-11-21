@@ -1,0 +1,84 @@
+{
+  "app": {
+    "name": "LogosAtlas",
+    "tagline": "الكتاب المقدس التفاعلي العالمي والأطلس التاريخي"
+  },
+  "nav": {
+    "reader": "قراءة الكتاب",
+    "atlas": "أطلس الكتاب",
+    "study": "دراستي",
+    "language": "اللغة"
+  },
+  "reader": {
+    "version": "الترجمة",
+    "book": "السفر",
+    "chapter": "الأصحاح",
+    "prevChapter": "السابق",
+    "nextChapter": "التالي",
+    "verticalMode": "عمودي",
+    "horizontalMode": "أفقي",
+    "placeHint": "انقر على الأماكن المظللة لاستكشاف الخريطة والتاريخ",
+    "apiFallbackTitle": "تتطلب {version} مفتاح API",
+    "apiFallbackDesc": "قم بإعداد ESV_API_KEY أو API_BIBLE_KEY على الخادم لتحميل {version}. يتم عرض KJV حالياً.",
+    "switchToKjv": "استخدام KJV",
+    "loading": "جارٍ تحميل النص المقدس..."
+  },
+  "typography": {
+    "title": "العرض والقراءة",
+    "fontSize": "حجم الخط",
+    "lineHeight": "تباعد الأسطر",
+    "compact": "ضيق",
+    "normal": "عادي",
+    "relaxed": "واسع",
+    "fontFamily": "نوع الخط",
+    "serif": "نسخ (Serif)",
+    "sans": "حديث (Sans)",
+    "theme": "المظهر",
+    "light": "فاتح",
+    "sepia": "دافئ",
+    "dark": "داكن",
+    "writingDirection": "اتجاه القراءة",
+    "showPlaces": "تمييز الأماكن الكتابية"
+  },
+  "map": {
+    "title": "المكان الكتابي والتاريخ",
+    "ancientName": "الاسم القديم",
+    "modernLocation": "الموقع الحديث",
+    "confidence": "دقة الموقع",
+    "confidence_certain": "مؤكد",
+    "confidence_probable": "مرجح",
+    "confidence_uncertain": "تقديري",
+    "summary": "ملخص",
+    "geography": "الجغرافيا",
+    "biblicalEvents": "الأحداث الكتابية",
+    "modernContext": "الحاضر والآثار",
+    "keyVerses": "آيات رئيسية",
+    "close": "إغلاق الخريطة",
+    "selectPlacePrompt": "اختر مكاناً في النص أو ابحث أدناه.",
+    "searchPlaceholder": "ابحث عن مكان قديم أو حديث (مثل: دمشق)..."
+  },
+  "atlas": {
+    "title": "الأطلس الكتابي والرحلات",
+    "journeys": "الرحلات التاريخية",
+    "places": "جميع الأماكن",
+    "step": "المحطة {current} من {total}",
+    "prevStep": "السابق",
+    "nextStep": "التالي",
+    "openInReader": "فتح في القارئ",
+    "allEras": "جميع العصور"
+  },
+  "study": {
+    "title": "دراستي (محلي)",
+    "bookmarks": "الإشارات",
+    "highlights": "التظليل",
+    "notes": "الملاحظات",
+    "addBookmark": "حفظ",
+    "removeBookmark": "محفوظ",
+    "highlight": "تظليل",
+    "addNote": "ملاحظة",
+    "saveNote": "حفظ الملاحظة",
+    "delete": "حذف",
+    "notePlaceholder": "اكتب تأملك أو ملاحظتك الدراسية...",
+    "empty": "لا توجد عناصر محفوظة بعد. انقر على رقم أي آية للحفظ."
+  }
+}
