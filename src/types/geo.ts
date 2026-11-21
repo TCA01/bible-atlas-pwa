@@ -11,29 +11,33 @@ export type BiblicalEra =
   | 'gospels'
   | 'apostolic';
 
-export type LocalizedText = Record<LanguageCode, string>;
+export type LocalizedText = Partial<Record<LanguageCode, string>> & { en: string };
+export type LocalizedValue = string | LocalizedText;
 
 export interface BiblicalPlace {
   id: string;
-  ancientName: LocalizedText;
-  modernName: LocalizedText;
-  modernCountry: LocalizedText;
+  ancientName: LocalizedValue;
+  modernName: LocalizedValue;
+  modernCountry: LocalizedValue;
   modernCountryCode: string;
+  placeType?: string;
   coordinates: [number, number]; // [lng, lat]
   confidence: LocationConfidence;
-  eras: BiblicalEra[];
-  aliases: Record<LanguageCode, string[]>;
+  verseCount?: number;
+  featured?: boolean;
+  eras?: BiblicalEra[];
+  aliases?: Partial<Record<LanguageCode, string[]>>;
   commentary: {
-    summary: LocalizedText;
-    geography: LocalizedText;
-    biblicalEvents: LocalizedText;
-    modernContext: LocalizedText;
+    summary: LocalizedValue;
+    geography?: LocalizedValue;
+    biblicalEvents?: LocalizedValue;
+    modernContext?: LocalizedValue;
   };
   keyVerses: Array<{
     bookId: string;
     chapter: number;
     verse: number;
-    label: LocalizedText;
+    label?: LocalizedValue;
   }>;
 }
 

@@ -76,7 +76,8 @@ export function detectPlacesInText(text: string, language: LanguageCode): string
   const matched: string[] = [];
 
   for (const place of allPlaces) {
-    const aliases = place.aliases[language] ?? place.aliases.en ?? [];
+    if (!place.featured) continue;
+    const aliases = place.aliases?.[language] ?? place.aliases?.en ?? [];
     if (aliases.some((alias) => alias && lower.includes(alias.toLowerCase()))) {
       matched.push(place.id);
     }

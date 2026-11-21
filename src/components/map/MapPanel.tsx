@@ -8,6 +8,7 @@ import type { BiblicalPlace } from '@/types/geo';
 import { useReaderStore } from '@/store/useReaderStore';
 import { BiblicalMap } from './BiblicalMap';
 import { PlaceCard } from './PlaceCard';
+import { matchesPlaceQuery, pickText } from '@/lib/geo-utils';
 import placesData from '@/data/geo/places.json';
 
 const places = placesData as BiblicalPlace[];
@@ -23,15 +24,7 @@ export function MapPanel() {
   const selectedPlace = places.find((p) => p.id === selectedPlaceId) ?? places[0];
 
   const filteredPlaces = query.trim()
-    ? places.filter((p) => {
-        const q = query.toLowerCase();
-        return (
-          p.ancientName[locale].toLowerCase().includes(q) ||
-          p.modernName[locale].toLowerCase().includes(q) ||
-          p.modernCountry[locale].toLowerCase().includes(q) ||
-          p.ancientName.en.toLowerCase().includes(q)
-        );
-      })
+    ? places.filter((p) => matchesPlaceQuery(p, query, locale)).slice(0, 20)
     : [];
 
   return (
@@ -73,7 +66,7 @@ export function MapPanel() {
           />
           {filteredPlaces.length > 0 && (
             <div
-              className="mt-1 max-h-40 overflow-y-auto rounded-xl border p-1 shadow-md"
+              className="mt-1 max-h-48 overflow-y-auto rounded-xl border p-1 shadow-md"
               style={{
                 borderColor: 'var(--border-subtle)',
                 backgroundColor: 'var(--bg-surface)',
@@ -89,9 +82,9 @@ export function MapPanel() {
                   }}
                   className="flex w-full items-center justify-between rounded-lg px-3 py-1.5 text-start text-xs hover:opacity-80"
                 >
-                  <span className="font-semibold">{fp.ancientName[locale]}</span>
+                  <span className="font-semibold">{pickText(fp.ancientName, locale)}</span>
                   <span className="opacity-60">
-                    {fp.modernName[locale]}, {fp.modernCountry[locale]}
+                    {pickText(fp.modernName, locale)}
                   </span>
                 </button>
               ))}

@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, Compass, BookOpen, Landmark, Globe2 } from 'lucide-react';
 import type { LanguageCode } from '@/types/bible';
 import type { BiblicalPlace } from '@/types/geo';
+import { pickText } from '@/lib/geo-utils';
 
 interface PlaceCardProps {
   place: BiblicalPlace;
@@ -13,6 +14,14 @@ interface PlaceCardProps {
 export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
   const locale = useLocale() as LanguageCode;
   const t = useTranslations('map');
+
+  const ancient = pickText(place.ancientName, locale);
+  const modern = pickText(place.modernName, locale);
+  const country = pickText(place.modernCountry, locale);
+  const summary = pickText(place.commentary.summary, locale);
+  const geography = pickText(place.commentary.geography, locale);
+  const biblicalEvents = pickText(place.commentary.biblicalEvents, locale);
+  const modernContext = pickText(place.commentary.modernContext, locale);
 
   return (
     <div className="space-y-4">
@@ -29,7 +38,10 @@ export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
             <span className="block text-[11px] font-semibold uppercase tracking-wider opacity-60">
               {t('ancientName')}
             </span>
-            <span className="text-lg font-bold">{place.ancientName[locale]}</span>
+            <span className="text-lg font-bold">{ancient}</span>
+            {place.placeType && (
+              <span className="block text-[11px] capitalize opacity-60">{place.placeType}</span>
+            )}
           </div>
 
           <ArrowRight className="h-5 w-5 text-amber-600 rtl:rotate-180" />
@@ -39,10 +51,10 @@ export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
               {t('modernLocation')}
             </span>
             <span className="text-lg font-bold text-amber-700 dark:text-amber-400">
-              {place.modernName[locale]}
+              {modern}
             </span>
             <span className="block text-xs font-medium opacity-75">
-              {place.modernCountry[locale]} ({place.modernCountryCode})
+              {country}{place.modernCountryCode ? ` (${place.modernCountryCode})` : ''}
             </span>
           </div>
         </div>
@@ -59,37 +71,45 @@ export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
 
       {/* Commentary Sections */}
       <div className="space-y-3 text-sm leading-relaxed">
-        <div className="rounded-xl border p-3.5" style={{ borderColor: 'var(--border-subtle)' }}>
-          <h4 className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide opacity-70">
-            <Globe2 className="h-3.5 w-3.5 text-amber-600" />
-            {t('summary')}
-          </h4>
-          <p>{place.commentary.summary[locale]}</p>
-        </div>
+        {summary && (
+          <div className="rounded-xl border p-3.5" style={{ borderColor: 'var(--border-subtle)' }}>
+            <h4 className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide opacity-70">
+              <Globe2 className="h-3.5 w-3.5 text-amber-600" />
+              {t('summary')}
+            </h4>
+            <p>{summary}</p>
+          </div>
+        )}
 
-        <div className="rounded-xl border p-3.5" style={{ borderColor: 'var(--border-subtle)' }}>
-          <h4 className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide opacity-70">
-            <Compass className="h-3.5 w-3.5 text-blue-600" />
-            {t('geography')}
-          </h4>
-          <p>{place.commentary.geography[locale]}</p>
-        </div>
+        {geography && (
+          <div className="rounded-xl border p-3.5" style={{ borderColor: 'var(--border-subtle)' }}>
+            <h4 className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide opacity-70">
+              <Compass className="h-3.5 w-3.5 text-blue-600" />
+              {t('geography')}
+            </h4>
+            <p>{geography}</p>
+          </div>
+        )}
 
-        <div className="rounded-xl border p-3.5" style={{ borderColor: 'var(--border-subtle)' }}>
-          <h4 className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide opacity-70">
-            <BookOpen className="h-3.5 w-3.5 text-emerald-600" />
-            {t('biblicalEvents')}
-          </h4>
-          <p>{place.commentary.biblicalEvents[locale]}</p>
-        </div>
+        {biblicalEvents && (
+          <div className="rounded-xl border p-3.5" style={{ borderColor: 'var(--border-subtle)' }}>
+            <h4 className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide opacity-70">
+              <BookOpen className="h-3.5 w-3.5 text-emerald-600" />
+              {t('biblicalEvents')}
+            </h4>
+            <p>{biblicalEvents}</p>
+          </div>
+        )}
 
-        <div className="rounded-xl border p-3.5" style={{ borderColor: 'var(--border-subtle)' }}>
-          <h4 className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide opacity-70">
-            <Landmark className="h-3.5 w-3.5 text-purple-600" />
-            {t('modernContext')}
-          </h4>
-          <p>{place.commentary.modernContext[locale]}</p>
-        </div>
+        {modernContext && (
+          <div className="rounded-xl border p-3.5" style={{ borderColor: 'var(--border-subtle)' }}>
+            <h4 className="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide opacity-70">
+              <Landmark className="h-3.5 w-3.5 text-purple-600" />
+              {t('modernContext')}
+            </h4>
+            <p>{modernContext}</p>
+          </div>
+        )}
       </div>
 
       {/* Key Verses */}
@@ -111,7 +131,8 @@ export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
                   color: 'var(--accent)',
                 }}
               >
-                {kv.bookId} {kv.chapter}:{kv.verse} — {kv.label[locale]}
+                {kv.bookId} {kv.chapter}:{kv.verse}
+                {kv.label ? ` — ${pickText(kv.label, locale)}` : ''}
               </button>
             ))}
           </div>

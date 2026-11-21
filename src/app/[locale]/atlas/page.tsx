@@ -11,6 +11,7 @@ import { StudyDrawer } from '@/components/study/StudyDrawer';
 import { BiblicalMap } from '@/components/map/BiblicalMap';
 import { PlaceCard } from '@/components/map/PlaceCard';
 import { useReaderStore } from '@/store/useReaderStore';
+import { matchesPlaceQuery, pickText } from '@/lib/geo-utils';
 import placesData from '@/data/geo/places.json';
 import journeysData from '@/data/geo/journeys.json';
 
@@ -28,21 +29,14 @@ export default function AtlasPage() {
   const [stepIndex, setStepIndex] = useState(0);
   const [selectedPlaceId, setSelectedPlaceId] = useState<string>(journeys[0].waypoints[0].placeId);
   const [search, setSearch] = useState('');
+  const [visibleLimit, setVisibleLimit] = useState(40);
 
   const activeJourney = journeys.find((j) => j.id === selectedJourneyId) ?? null;
   const currentWaypoint = activeJourney?.waypoints[stepIndex] ?? null;
   const selectedPlace = places.find((p) => p.id === selectedPlaceId) ?? places[0];
 
-  const filteredPlaces = places.filter((p) => {
-    if (!search.trim()) return true;
-    const q = search.toLowerCase();
-    return (
-      p.ancientName[locale].toLowerCase().includes(q) ||
-      p.modernName[locale].toLowerCase().includes(q) ||
-      p.modernCountry[locale].toLowerCase().includes(q) ||
-      p.ancientName.en.toLowerCase().includes(q)
-    );
-  });
+  const filteredPlaces = places.filter((p) => matchesPlaceQuery(p, search, locale));
+  const displayedChips = filteredPlaces.slice(0, visibleLimit);
 
   const handleOpenInReader = (bookId: string, chapter: number) => {
     setLocation(bookId, chapter);
@@ -56,7 +50,9 @@ export default function AtlasPage() {
 
       <main className="mx-auto w-full max-w-7xl flex-1 space-y-6 px-4 py-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
-          <h1 className="text-2xl font-bold tracking-tight">{t('title')}</h1>
+          <h1 className="text-2xl font-bold tracking-tight">
+            {t('title')} <span className="text-sm font-normal opacity-60">({places.length.toLocaleString()})</span>
+          </h1>
 
           {/* Place Search */}
           <div className="relative w-full sm:w-80">
@@ -64,7 +60,10 @@ export default function AtlasPage() {
             <input
               type="text"
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setVisibleLimit(40);
+              }}
               placeholder={tMap('searchPlaceholder')}
               className="w-full rounded-xl border py-2 ps-9 pe-3 text-sm outline-none"
               style={{
@@ -101,9 +100,9 @@ export default function AtlasPage() {
                 >
                   <div className="mb-1 flex items-center gap-2">
                     <span className="h-2.5 w-2.5 rounded-full" style={{ backgroundColor: j.color }} />
-                    <span className="font-bold text-sm">{j.title[locale]}</span>
+                    <span className="font-bold text-sm">{pickText(j.title, locale)}</span>
                   </div>
-                  <p className="line-clamp-2 text-xs opacity-75">{j.description[locale]}</p>
+                  <p className="line-clamp-2 text-xs opacity-75">{pickText(j.description, locale)}</p>
                 </button>
               );
             })}
@@ -169,8 +168,8 @@ export default function AtlasPage() {
                   </div>
                 </div>
 
-                <h3 className="text-base font-bold">{currentWaypoint.title[locale]}</h3>
-                <p className="mt-1 text-sm opacity-80">{currentWaypoint.description[locale]}</p>
+                <h3 className="text-base font-bold">{pickText(currentWaypoint.title, locale)}</h3>
+                <p className="mt-1 text-sm opacity-80">{pickText(currentWaypoint.description, locale)}</p>
 
                 <button
                   type="button"
@@ -192,13 +191,13 @@ export default function AtlasPage() {
               </div>
             )}
 
-            {/* All Biblical Places Chips */}
+            {/* All Biblical Places Chips (Paginated) */}
             <div className="space-y-2">
               <h3 className="text-xs font-bold uppercase tracking-wider opacity-70">
-                {t('places')} ({filteredPlaces.length})
+                {t('places')} ({filteredPlaces.length.toLocaleString()})
               </h3>
               <div className="flex flex-wrap gap-2">
-                {filteredPlaces.map((p) => (
+                {displayedChips.map((p) => (
                   <button
                     key={p.id}
                     type="button"
@@ -211,10 +210,21 @@ export default function AtlasPage() {
                         p.id === selectedPlace.id ? 'var(--accent-soft)' : 'var(--bg-surface)',
                     }}
                   >
-                    {p.ancientName[locale]} ({p.modernCountry[locale]})
+                    {pickText(p.ancientName, locale)}
+                    {p.verseCount ? ` (${p.verseCount})` : ''}
                   </button>
                 ))}
               </div>
+              {filteredPlaces.length > visibleLimit && (
+                <button
+                  type="button"
+                  onClick={() => setVisibleLimit((v) => v + 60)}
+                  className="mt-2 rounded-lg border px-4 py-1.5 text-xs font-semibold hover:opacity-80 cursor-pointer"
+                  style={{ borderColor: 'var(--border-subtle)', backgroundColor: 'var(--bg-surface)' }}
+                >
+                  + Show more ({filteredPlaces.length - visibleLimit} remaining)
+                </button>
+              )}
             </div>
           </div>
 

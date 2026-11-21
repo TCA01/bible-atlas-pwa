@@ -8,6 +8,7 @@ import type { BiblicalPlace } from '@/types/geo';
 import { BIBLE_BOOKS, BIBLE_VERSIONS, LANGUAGE_META } from '@/lib/bible-versions';
 import { useReaderStore } from '@/store/useReaderStore';
 import { db, type BookmarkRecord, type HighlightRecord, type NoteRecord } from '@/lib/db/dexie';
+import { pickText } from '@/lib/geo-utils';
 import { VerseRenderer } from './VerseRenderer';
 import placesData from '@/data/geo/places.json';
 
@@ -304,9 +305,9 @@ export function BibleReader() {
               }}
             >
               <MapPin className="h-3 w-3 text-amber-600" />
-              <span>{p.ancientName[locale]}</span>
+              <span>{pickText(p.ancientName, locale)}</span>
               <span className="opacity-50">→</span>
-              <span className="opacity-80">{p.modernName[locale]}</span>
+              <span className="opacity-80">{pickText(p.modernName, locale)}</span>
             </button>
           ))}
         </div>

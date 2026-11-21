@@ -6,6 +6,7 @@ import { MapPin, Bookmark, Highlighter, StickyNote, Check } from 'lucide-react';
 import type { BibleVerse, HighlightColor, LanguageCode } from '@/types/bible';
 import type { BiblicalPlace } from '@/types/geo';
 import { useReaderStore } from '@/store/useReaderStore';
+import { getPlaceAliases, pickText } from '@/lib/geo-utils';
 
 interface VerseRendererProps {
   bookId: string;
@@ -60,7 +61,7 @@ export function VerseRenderer({
 
     const aliasMap: Array<{ alias: string; place: BiblicalPlace }> = [];
     for (const p of matchedPlaces) {
-      const aliases = p.aliases[locale] ?? p.aliases.en ?? [];
+      const aliases = getPlaceAliases(p, locale);
       for (const a of aliases) {
         if (a) aliasMap.push({ alias: a, place: p });
       }
@@ -91,7 +92,7 @@ export function VerseRenderer({
             textDecorationColor: 'var(--place-underline)',
             backgroundColor: isSelected ? 'var(--accent-soft)' : 'transparent',
           }}
-          title={`${found.place.ancientName[locale]} → ${found.place.modernName[locale]} (${found.place.modernCountry[locale]})`}
+          title={`${pickText(found.place.ancientName, locale)} → ${pickText(found.place.modernName, locale)}`}
         >
           <span>{part}</span>
           <MapPin className="inline h-3 w-3 shrink-0 text-amber-600" />
