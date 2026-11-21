@@ -153,14 +153,10 @@ export function BibleReader() {
         }}
       >
         <div className="flex flex-wrap items-center gap-2">
-          {/* Book Selector */}
+          {/* Book Selector (All 66 Books: OT 39 + NT 27) */}
           <select
             value={bookId}
-            onChange={(e) => {
-              const nextBook = e.target.value;
-              const defaultChap = nextBook === 'ACT' ? 9 : nextBook === 'MAT' ? 2 : nextBook === 'PSA' ? 23 : 1;
-              setLocation(nextBook, defaultChap);
-            }}
+            onChange={(e) => setLocation(e.target.value, 1)}
             aria-label={t('book')}
             className="rounded-lg border px-3 py-1.5 text-sm font-semibold outline-none cursor-pointer"
             style={{
@@ -168,11 +164,20 @@ export function BibleReader() {
               backgroundColor: 'var(--bg-page)',
             }}
           >
-            {BIBLE_BOOKS.map((b) => (
-              <option key={b.id} value={b.id}>
-                {b.names[locale] ?? b.names.en}
-              </option>
-            ))}
+            <optgroup label="Old Testament (39)">
+              {BIBLE_BOOKS.filter((b) => b.testament === 'OT').map((b) => (
+                <option key={b.id} value={b.id}>
+                  {b.names[locale] ?? b.names.en}
+                </option>
+              ))}
+            </optgroup>
+            <optgroup label="New Testament (27)">
+              {BIBLE_BOOKS.filter((b) => b.testament === 'NT').map((b) => (
+                <option key={b.id} value={b.id}>
+                  {b.names[locale] ?? b.names.en}
+                </option>
+              ))}
+            </optgroup>
           </select>
 
           {/* Chapter Selector */}

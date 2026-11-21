@@ -1,8 +1,8 @@
 import type { BibleChapter, BibleProvider, BibleVersionId } from '@/types/bible';
 import { BIBLE_BOOKS, BIBLE_VERSIONS } from '@/lib/bible-versions';
 import { attachPlacesToVerses, LocalPublicDomainProvider } from './local-pd.provider';
+import { fetchFromBollsApi } from './bolls.provider';
 
-// Standard API.Bible IDs for NIV & NRSV
 const API_BIBLE_IDS: Partial<Record<BibleVersionId, string>> = {
   NIV: '78a9f6124f344018-01',
   NRSV: '06125adad2d5898a-01',
@@ -25,50 +25,64 @@ export class ApiBibleProvider implements BibleProvider {
     const bookMeta = BIBLE_BOOKS.find((b) => b.id === bookId) ?? BIBLE_BOOKS[0];
     const bibleId = API_BIBLE_IDS[version];
 
-    if (!apiKey || !bibleId) {
-      const kjv = await this.fallbackProvider.getChapter('KJV', bookId, chapter);
+    // 1. Use official API.Bible when API_BIBLE_KEY is configured
+    if (apiKey && bibleId) {
+      try {
+        const res = await fetch(
+          `https://api.scripture.api.bible/v1/bibles/${bibleId}/chapters/${bookMeta.id}.${chapter}?content-type=text&include-verse-numbers=true`,
+          {
+            headers: { 'api-key': apiKey },
+            next: { revalidate: 3600 },
+          }
+        );
+
+        if (res.ok) {
+          const payload = (await res.json()) as { data?: { content?: string; copyright?: string } };
+          const text = payload.data?.content ?? '';
+          const parsedVerses: Array<{ verse: number; text: string }> = [];
+          const regex = /\[(\d+)\]\s*([^\[]+)/g;
+          let match: RegExpExecArray | null;
+          while ((match = regex.exec(text)) !== null) {
+            parsedVerses.push({ verse: Number(match[1]), text: match[2].trim() });
+          }
+
+          if (parsedVerses.length > 0) {
+            return {
+              version,
+              bookId: bookMeta.id,
+              bookName: bookMeta.names.en,
+              chapter,
+              totalChapters: bookMeta.chapters,
+              verses: attachPlacesToVerses(bookMeta.id, chapter, parsedVerses, 'en'),
+              copyright: payload.data?.copyright ?? BIBLE_VERSIONS[version].copyrightNotice,
+            };
+          }
+        }
+      } catch {
+        // fall through to open API
+      }
+    }
+
+    // 2. Fallback to Bolls.life open NIV/NRSV endpoint (all 66 books)
+    const bollsVerses = await fetchFromBollsApi(version, bookMeta.bookNum, chapter);
+    if (bollsVerses && bollsVerses.length > 0) {
       return {
-        ...kjv,
         version,
-        fallbackNotice: 'API_BIBLE_KEY_MISSING',
+        bookId: bookMeta.id,
+        bookName: bookMeta.names.en,
+        chapter,
+        totalChapters: bookMeta.chapters,
+        verses: attachPlacesToVerses(bookMeta.id, chapter, bollsVerses, 'en'),
+        copyright: BIBLE_VERSIONS[version].copyrightNotice,
       };
     }
 
-    const res = await fetch(
-      `https://api.scripture.api.bible/v1/bibles/${bibleId}/chapters/${bookId}.${chapter}?content-type=text&include-verse-numbers=true`,
-      {
-        headers: { 'api-key': apiKey },
-        next: { revalidate: 3600 },
-      }
-    );
-
-    if (!res.ok) {
-      const kjv = await this.fallbackProvider.getChapter('KJV', bookId, chapter);
-      return { ...kjv, version, fallbackNotice: 'API_BIBLE_ERROR' };
-    }
-
-    const payload = (await res.json()) as { data?: { content?: string; copyright?: string } };
-    const text = payload.data?.content ?? '';
-    const parsedVerses: Array<{ verse: number; text: string }> = [];
-    const regex = /\[(\d+)\]\s*([^\[]+)/g;
-    let match: RegExpExecArray | null;
-    while ((match = regex.exec(text)) !== null) {
-      parsedVerses.push({ verse: Number(match[1]), text: match[2].trim() });
-    }
-
-    if (parsedVerses.length === 0) {
-      const kjv = await this.fallbackProvider.getChapter('KJV', bookId, chapter);
-      return { ...kjv, version, fallbackNotice: 'API_BIBLE_PARSE_FALLBACK' };
-    }
-
+    // 3. Final offline fallback to KJV
+    const kjv = await this.fallbackProvider.getChapter('KJV', bookMeta.id, chapter);
     return {
+      ...kjv,
       version,
-      bookId,
-      bookName: bookMeta.names.en,
-      chapter,
-      totalChapters: bookMeta.chapters,
-      verses: attachPlacesToVerses(bookId, chapter, parsedVerses),
-      copyright: payload.data?.copyright ?? BIBLE_VERSIONS[version].copyrightNotice,
+      fallbackNotice: 'API_BIBLE_KEY_MISSING',
     };
   }
 }

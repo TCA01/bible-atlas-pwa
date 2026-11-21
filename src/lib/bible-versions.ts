@@ -226,43 +226,4 @@ export const BIBLE_VERSIONS: Record<BibleVersionId, BibleVersionMeta> = {
   },
 };
 
-export interface BibleBookMeta {
-  id: string;
-  chapters: number;
-  names: Record<LanguageCode, string>;
-}
-
-export const BIBLE_BOOKS: BibleBookMeta[] = [
-  {
-    id: 'GEN',
-    chapters: 50,
-    names: {
-      en: 'Genesis', ko: '창세기', ja: '創世記', 'zh-Hans': '创世记', 'zh-Hant': '創世記',
-      es: 'Génesis', pt: 'Gênesis', fr: 'Genèse', de: '1. Mose', ar: 'التكوين',
-    },
-  },
-  {
-    id: 'PSA',
-    chapters: 150,
-    names: {
-      en: 'Psalms', ko: '시편', ja: '詩編', 'zh-Hans': '诗篇', 'zh-Hant': '詩篇',
-      es: 'Salmos', pt: 'Salmos', fr: 'Psaumes', de: 'Psalmen', ar: 'المزامير',
-    },
-  },
-  {
-    id: 'MAT',
-    chapters: 28,
-    names: {
-      en: 'Matthew', ko: '마태복음', ja: 'マタイによる福音書', 'zh-Hans': '马太福音', 'zh-Hant': '馬太福音',
-      es: 'Mateo', pt: 'Mateus', fr: 'Matthieu', de: 'Matthäus', ar: 'متى',
-    },
-  },
-  {
-    id: 'ACT',
-    chapters: 28,
-    names: {
-      en: 'Acts', ko: '사도행전', ja: '使徒言行録', 'zh-Hans': '使徒行传', 'zh-Hant': '使徒行傳',
-      es: 'Hechos', pt: 'Atos', fr: 'Actes', de: 'Apostelgeschichte', ar: 'أعمال الرسل',
-    },
-  },
-];
+export { BIBLE_BOOKS, type BibleBookMeta } from './bible-books';

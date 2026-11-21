@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { Map as MapLibreMap, Marker, NavigationControl } from 'maplibre-gl';
+import { Map as MapLibreMap, Marker, NavigationControl, setWorkerUrl } from 'maplibre-gl';
 import { useLocale } from 'next-intl';
 import type { LanguageCode } from '@/types/bible';
 import type { BiblicalJourney, BiblicalPlace } from '@/types/geo';
@@ -28,6 +28,8 @@ export function BiblicalMap({
 
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
+
+    setWorkerUrl('/maplibre-gl-worker.mjs');
 
     const map = new MapLibreMap({
       container: containerRef.current,

@@ -1,0 +1,81 @@
+import type { LanguageCode } from '@/types/bible';
+
+export interface BibleBookMeta {
+  bookNum: number; // 1..66 (Genesis=1 .. Revelation=66)
+  id: string;      // USFM 3-letter code
+  testament: 'OT' | 'NT';
+  chapters: number;
+  names: Record<LanguageCode, string>;
+}
+
+export const BIBLE_BOOKS: BibleBookMeta[] = [
+  // Old Testament (1–39)
+  { bookNum: 1, id: 'GEN', testament: 'OT', chapters: 50, names: { en: 'Genesis', ko: '창세기', ja: '創世記', 'zh-Hans': '创世记', 'zh-Hant': '創世記', es: 'Génesis', pt: 'Gênesis', fr: 'Genèse', de: '1. Mose', ar: 'التكوين' } },
+  { bookNum: 2, id: 'EXO', testament: 'OT', chapters: 40, names: { en: 'Exodus', ko: '출애굽기', ja: '出エジプト記', 'zh-Hans': '出埃及记', 'zh-Hant': '出埃及記', es: 'Éxodo', pt: 'Êxodo', fr: 'Exode', de: '2. Mose', ar: 'الخروج' } },
+  { bookNum: 3, id: 'LEV', testament: 'OT', chapters: 27, names: { en: 'Leviticus', ko: '레위기', ja: 'レビ記', 'zh-Hans': '利未记', 'zh-Hant': '利未記', es: 'Levítico', pt: 'Levítico', fr: 'Lévitique', de: '3. Mose', ar: 'اللاويين' } },
+  { bookNum: 4, id: 'NUM', testament: 'OT', chapters: 36, names: { en: 'Numbers', ko: '민수기', ja: '民数記', 'zh-Hans': '民数记', 'zh-Hant': '民數記', es: 'Números', pt: 'Números', fr: 'Nombres', de: '4. Mose', ar: 'العدد' } },
+  { bookNum: 5, id: 'DEU', testament: 'OT', chapters: 34, names: { en: 'Deuteronomy', ko: '신명기', ja: '申命記', 'zh-Hans': '申命记', 'zh-Hant': '申命記', es: 'Deuteronomio', pt: 'Deuteronômio', fr: 'Deutéronome', de: '5. Mose', ar: 'التثنية' } },
+  { bookNum: 6, id: 'JOS', testament: 'OT', chapters: 24, names: { en: 'Joshua', ko: '여호수아', ja: 'ヨシュア記', 'zh-Hans': '约书亚记', 'zh-Hant': '約書亞記', es: 'Josué', pt: 'Josué', fr: 'Josué', de: 'Josua', ar: 'يشوع' } },
+  { bookNum: 7, id: 'JDG', testament: 'OT', chapters: 21, names: { en: 'Judges', ko: '사사기', ja: '士師記', 'zh-Hans': '士师记', 'zh-Hant': '士師記', es: 'Jueces', pt: 'Juízes', fr: 'Juges', de: 'Richter', ar: 'القضاة' } },
+  { bookNum: 8, id: 'RUT', testament: 'OT', chapters: 4, names: { en: 'Ruth', ko: '룻기', ja: 'ルツ記', 'zh-Hans': '路得记', 'zh-Hant': '路得記', es: 'Rut', pt: 'Rute', fr: 'Ruth', de: 'Rut', ar: 'راعوث' } },
+  { bookNum: 9, id: '1SA', testament: 'OT', chapters: 31, names: { en: '1 Samuel', ko: '사무엘상', ja: 'サムエル記上', 'zh-Hans': '撒母耳记上', 'zh-Hant': '撒母耳記上', es: '1 Samuel', pt: '1 Samuel', fr: '1 Samuel', de: '1. Samuel', ar: 'صموئيل الأول' } },
+  { bookNum: 10, id: '2SA', testament: 'OT', chapters: 24, names: { en: '2 Samuel', ko: '사무엘하', ja: 'サムエル記下', 'zh-Hans': '撒母耳记下', 'zh-Hant': '撒母耳記下', es: '2 Samuel', pt: '2 Samuel', fr: '2 Samuel', de: '2. Samuel', ar: 'صموئيل الثاني' } },
+  { bookNum: 11, id: '1KI', testament: 'OT', chapters: 22, names: { en: '1 Kings', ko: '열왕기상', ja: '列王記上', 'zh-Hans': '列王纪上', 'zh-Hant': '列王紀上', es: '1 Reyes', pt: '1 Reis', fr: '1 Rois', de: '1. Könige', ar: 'الملوك الأول' } },
+  { bookNum: 12, id: '2KI', testament: 'OT', chapters: 25, names: { en: '2 Kings', ko: '열왕기하', ja: '列王記下', 'zh-Hans': '列王纪下', 'zh-Hant': '列王紀下', es: '2 Reyes', pt: '2 Reis', fr: '2 Rois', de: '2. Könige', ar: 'الملوك الثاني' } },
+  { bookNum: 13, id: '1CH', testament: 'OT', chapters: 29, names: { en: '1 Chronicles', ko: '역대상', ja: '歴代誌上', 'zh-Hans': '历代志上', 'zh-Hant': '歷代志上', es: '1 Crónicas', pt: '1 Crônicas', fr: '1 Chroniques', de: '1. Chronik', ar: 'أخبار الأيام الأول' } },
+  { bookNum: 14, id: '2CH', testament: 'OT', chapters: 36, names: { en: '2 Chronicles', ko: '역대하', ja: '歴代誌下', 'zh-Hans': '历代志下', 'zh-Hant': '歷代志下', es: '2 Crónicas', pt: '2 Crônicas', fr: '2 Chroniques', de: '2. Chronik', ar: 'أخبار الأيام الثاني' } },
+  { bookNum: 15, id: 'EZR', testament: 'OT', chapters: 10, names: { en: 'Ezra', ko: '에스라', ja: 'エズラ記', 'zh-Hans': '以斯拉记', 'zh-Hant': '以斯拉記', es: 'Esdras', pt: 'Esdras', fr: 'Esdras', de: 'Esra', ar: 'عزرا' } },
+  { bookNum: 16, id: 'NEH', testament: 'OT', chapters: 13, names: { en: 'Nehemiah', ko: '느헤미야', ja: 'ネヘミヤ記', 'zh-Hans': '尼希米记', 'zh-Hant': '尼希米記', es: 'Nehemías', pt: 'Neemias', fr: 'Néhémie', de: 'Nehemia', ar: 'نحميا' } },
+  { bookNum: 17, id: 'EST', testament: 'OT', chapters: 10, names: { en: 'Esther', ko: '에스더', ja: 'エステル記', 'zh-Hans': '以斯帖记', 'zh-Hant': '以斯帖記', es: 'Ester', pt: 'Ester', fr: 'Esther', de: 'Ester', ar: 'أستير' } },
+  { bookNum: 18, id: 'JOB', testament: 'OT', chapters: 42, names: { en: 'Job', ko: '욥기', ja: 'ヨブ記', 'zh-Hans': '约伯记', 'zh-Hant': '約伯記', es: 'Job', pt: 'Jó', fr: 'Job', de: 'Hiob', ar: 'أيوب' } },
+  { bookNum: 19, id: 'PSA', testament: 'OT', chapters: 150, names: { en: 'Psalms', ko: '시편', ja: '詩編', 'zh-Hans': '诗篇', 'zh-Hant': '詩篇', es: 'Salmos', pt: 'Salmos', fr: 'Psaumes', de: 'Psalmen', ar: 'المزامير' } },
+  { bookNum: 20, id: 'PRO', testament: 'OT', chapters: 31, names: { en: 'Proverbs', ko: '잠언', ja: '箴言', 'zh-Hans': '箴言', 'zh-Hant': '箴言', es: 'Proverbios', pt: 'Provérbios', fr: 'Proverbes', de: 'Sprüche', ar: 'الأمثال' } },
+  { bookNum: 21, id: 'ECC', testament: 'OT', chapters: 12, names: { en: 'Ecclesiastes', ko: '전도서', ja: 'コヘレトの言葉', 'zh-Hans': '传道书', 'zh-Hant': '傳道書', es: 'Eclesiastés', pt: 'Eclesiastes', fr: 'Ecclésiaste', de: 'Prediger', ar: 'الجامعة' } },
+  { bookNum: 22, id: 'SNG', testament: 'OT', chapters: 8, names: { en: 'Song of Solomon', ko: '아가', ja: '雅歌', 'zh-Hans': '雅歌', 'zh-Hant': '雅歌', es: 'Cantares', pt: 'Cânticos', fr: 'Cantique', de: 'Hohelied', ar: 'نشيد الأنشاد' } },
+  { bookNum: 23, id: 'ISA', testament: 'OT', chapters: 66, names: { en: 'Isaiah', ko: '이사야', ja: 'イザヤ書', 'zh-Hans': '以赛亚书', 'zh-Hant': '以賽亞書', es: 'Isaías', pt: 'Isaías', fr: 'Ésaïe', de: 'Jesaja', ar: 'إشعياء' } },
+  { bookNum: 24, id: 'JER', testament: 'OT', chapters: 52, names: { en: 'Jeremiah', ko: '예레미야', ja: 'エレミヤ書', 'zh-Hans': '耶利米书', 'zh-Hant': '耶利米書', es: 'Jeremías', pt: 'Jeremias', fr: 'Jérémie', de: 'Jeremia', ar: 'إرميا' } },
+  { bookNum: 25, id: 'LAM', testament: 'OT', chapters: 5, names: { en: 'Lamentations', ko: '예레미야애가', ja: '哀歌', 'zh-Hans': '耶利米哀歌', 'zh-Hant': '耶利米哀歌', es: 'Lamentaciones', pt: 'Lamentações', fr: 'Lamentations', de: 'Klagelieder', ar: 'مراثي إرميا' } },
+  { bookNum: 26, id: 'EZK', testament: 'OT', chapters: 48, names: { en: 'Ezekiel', ko: '에스겔', ja: 'エゼキエル書', 'zh-Hans': '以西结书', 'zh-Hant': '以西結書', es: 'Ezequiel', pt: 'Ezequiel', fr: 'Ézéchiel', de: 'Hesekiel', ar: 'حزقيال' } },
+  { bookNum: 27, id: 'DAN', testament: 'OT', chapters: 12, names: { en: 'Daniel', ko: '다니엘', ja: 'ダニエル書', 'zh-Hans': '但以理书', 'zh-Hant': '但以理書', es: 'Daniel', pt: 'Daniel', fr: 'Daniel', de: 'Daniel', ar: 'دانيال' } },
+  { bookNum: 28, id: 'HOS', testament: 'OT', chapters: 14, names: { en: 'Hosea', ko: '호세아', ja: 'ホセア書', 'zh-Hans': '何西阿书', 'zh-Hant': '何西阿書', es: 'Oseas', pt: 'Oseias', fr: 'Osée', de: 'Hosea', ar: 'هوشع' } },
+  { bookNum: 29, id: 'JOL', testament: 'OT', chapters: 3, names: { en: 'Joel', ko: '요엘', ja: 'ヨエル書', 'zh-Hans': '约珥书', 'zh-Hant': '約珥書', es: 'Joel', pt: 'Joel', fr: 'Joël', de: 'Joel', ar: 'يوئيل' } },
+  { bookNum: 30, id: 'AMO', testament: 'OT', chapters: 9, names: { en: 'Amos', ko: '아모스', ja: 'アモス書', 'zh-Hans': '阿摩司书', 'zh-Hant': '阿摩司書', es: 'Amós', pt: 'Amós', fr: 'Amos', de: 'Amos', ar: 'عاموس' } },
+  { bookNum: 31, id: 'OBA', testament: 'OT', chapters: 1, names: { en: 'Obadiah', ko: '오바댜', ja: 'オバデヤ書', 'zh-Hans': '俄巴底亚书', 'zh-Hant': '俄巴底亞書', es: 'Abdías', pt: 'Obadias', fr: 'Abdias', de: 'Obadja', ar: 'عوبديا' } },
+  { bookNum: 32, id: 'JON', testament: 'OT', chapters: 4, names: { en: 'Jonah', ko: '요나', ja: 'ヨナ書', 'zh-Hans': '约拿书', 'zh-Hant': '約拿書', es: 'Jonás', pt: 'Jonas', fr: 'Jonas', de: 'Jona', ar: 'يونان' } },
+  { bookNum: 33, id: 'MIC', testament: 'OT', chapters: 7, names: { en: 'Micah', ko: '미가', ja: 'ミカ書', 'zh-Hans': '弥迦书', 'zh-Hant': '彌迦書', es: 'Miqueas', pt: 'Miqueias', fr: 'Michée', de: 'Micha', ar: 'ميخا' } },
+  { bookNum: 34, id: 'NAM', testament: 'OT', chapters: 3, names: { en: 'Nahum', ko: '나훔', ja: 'ナホム書', 'zh-Hans': '那鸿书', 'zh-Hant': '那鴻書', es: 'Nahúm', pt: 'Naum', fr: 'Nahum', de: 'Nahum', ar: 'ناحوم' } },
+  { bookNum: 35, id: 'HAB', testament: 'OT', chapters: 3, names: { en: 'Habakkuk', ko: '하박국', ja: 'ハバクク書', 'zh-Hans': '哈巴谷书', 'zh-Hant': '哈巴谷書', es: 'Habacuc', pt: 'Habacuque', fr: 'Habacuc', de: 'Habakuk', ar: 'حبقوق' } },
+  { bookNum: 36, id: 'ZEP', testament: 'OT', chapters: 3, names: { en: 'Zephaniah', ko: '스바냐', ja: 'ゼファニヤ書', 'zh-Hans': '西番雅书', 'zh-Hant': '西番雅書', es: 'Sofonías', pt: 'Sofonias', fr: 'Sophonie', de: 'Zefanja', ar: 'صفنيا' } },
+  { bookNum: 37, id: 'HAG', testament: 'OT', chapters: 2, names: { en: 'Haggai', ko: '학개', ja: 'ハガイ書', 'zh-Hans': '哈该书', 'zh-Hant': '哈該書', es: 'Hageo', pt: 'Ageu', fr: 'Aggée', de: 'Haggai', ar: 'حجي' } },
+  { bookNum: 38, id: 'ZEC', testament: 'OT', chapters: 14, names: { en: 'Zechariah', ko: '스가랴', ja: 'ゼカリヤ書', 'zh-Hans': '撒迦利亚书', 'zh-Hant': '撒迦利亞書', es: 'Zacarías', pt: 'Zacarias', fr: 'Zacharie', de: 'Sacharja', ar: 'زكريا' } },
+  { bookNum: 39, id: 'MAL', testament: 'OT', chapters: 4, names: { en: 'Malachi', ko: '말라기', ja: 'マラキ書', 'zh-Hans': '玛拉基书', 'zh-Hant': '瑪拉基書', es: 'Malaquías', pt: 'Malaquias', fr: 'Malachie', de: 'Maleachi', ar: 'ملاخي' } },
+
+  // New Testament (40–66)
+  { bookNum: 40, id: 'MAT', testament: 'NT', chapters: 28, names: { en: 'Matthew', ko: '마태복음', ja: 'マタイによる福音書', 'zh-Hans': '马太福音', 'zh-Hant': '馬太福音', es: 'Mateo', pt: 'Mateus', fr: 'Matthieu', de: 'Matthäus', ar: 'متى' } },
+  { bookNum: 41, id: 'MRK', testament: 'NT', chapters: 16, names: { en: 'Mark', ko: '마가복음', ja: 'マルコによる福音書', 'zh-Hans': '马可福音', 'zh-Hant': '馬可福音', es: 'Marcos', pt: 'Marcos', fr: 'Marc', de: 'Markus', ar: 'مرقس' } },
+  { bookNum: 42, id: 'LUK', testament: 'NT', chapters: 24, names: { en: 'Luke', ko: '누가복음', ja: 'ルカによる福音書', 'zh-Hans': '路加福音', 'zh-Hant': '路加福音', es: 'Lucas', pt: 'Lucas', fr: 'Luc', de: 'Lukas', ar: 'لوقا' } },
+  { bookNum: 43, id: 'JHN', testament: 'NT', chapters: 21, names: { en: 'John', ko: '요한복음', ja: 'ヨハネによる福音書', 'zh-Hans': '约翰福音', 'zh-Hant': '約翰福音', es: 'Juan', pt: 'João', fr: 'Jean', de: 'Johannes', ar: 'يوحنا' } },
+  { bookNum: 44, id: 'ACT', testament: 'NT', chapters: 28, names: { en: 'Acts', ko: '사도행전', ja: '使徒言行録', 'zh-Hans': '使徒行传', 'zh-Hant': '使徒行傳', es: 'Hechos', pt: 'Atos', fr: 'Actes', de: 'Apostelgeschichte', ar: 'أعمال الرسل' } },
+  { bookNum: 45, id: 'ROM', testament: 'NT', chapters: 16, names: { en: 'Romans', ko: '로마서', ja: 'ローマの信徒への手紙', 'zh-Hans': '罗马书', 'zh-Hant': '羅馬書', es: 'Romanos', pt: 'Romanos', fr: 'Romains', de: 'Römer', ar: 'رومية' } },
+  { bookNum: 46, id: '1CO', testament: 'NT', chapters: 16, names: { en: '1 Corinthians', ko: '고린도전서', ja: 'コリントの信徒への手紙一', 'zh-Hans': '哥林多前书', 'zh-Hant': '哥林多前書', es: '1 Corintios', pt: '1 Coríntios', fr: '1 Corinthiens', de: '1. Korinther', ar: 'كورنثوس الأولى' } },
+  { bookNum: 47, id: '2CO', testament: 'NT', chapters: 13, names: { en: '2 Corinthians', ko: '고린도후서', ja: 'コリントの信徒への手紙二', 'zh-Hans': '哥林多后书', 'zh-Hant': '哥林多後書', es: '2 Corintios', pt: '2 Coríntios', fr: '2 Corinthiens', de: '2. Korinther', ar: 'كورنثوس الثانية' } },
+  { bookNum: 48, id: 'GAL', testament: 'NT', chapters: 6, names: { en: 'Galatians', ko: '갈라디아서', ja: 'ガラテヤの信徒への手紙', 'zh-Hans': '加拉太书', 'zh-Hant': '加拉太書', es: 'Gálatas', pt: 'Gálatas', fr: 'Galates', de: 'Galater', ar: 'غلاطية' } },
+  { bookNum: 49, id: 'EPH', testament: 'NT', chapters: 6, names: { en: 'Ephesians', ko: '에베소서', ja: 'エフェソの信徒への手紙', 'zh-Hans': '以弗所书', 'zh-Hant': '以弗所書', es: 'Efesios', pt: 'Efésios', fr: 'Éphésiens', de: 'Epheser', ar: 'أفسس' } },
+  { bookNum: 50, id: 'PHP', testament: 'NT', chapters: 4, names: { en: 'Philippians', ko: '빌립보서', ja: 'フィリピの信徒への手紙', 'zh-Hans': '腓立比书', 'zh-Hant': '腓立比書', es: 'Filipenses', pt: 'Filipenses', fr: 'Philippiens', de: 'Philipper', ar: 'فيلبي' } },
+  { bookNum: 51, id: 'COL', testament: 'NT', chapters: 4, names: { en: 'Colossians', ko: '골로새서', ja: 'コロサイの信徒への手紙', 'zh-Hans': '歌罗西书', 'zh-Hant': '歌羅西書', es: 'Colosenses', pt: 'Colossenses', fr: 'Colossiens', de: 'Kolosser', ar: 'كولوسي' } },
+  { bookNum: 52, id: '1TH', testament: 'NT', chapters: 5, names: { en: '1 Thessalonians', ko: '데살로니가전서', ja: 'テサロニケの信徒への手紙一', 'zh-Hans': '帖撒罗尼迦前书', 'zh-Hant': '帖撒羅尼迦前書', es: '1 Tesalonicenses', pt: '1 Tessalonicenses', fr: '1 Thessaloniciens', de: '1. Thessalonicher', ar: 'تسالونيكي الأولى' } },
+  { bookNum: 53, id: '2TH', testament: 'NT', chapters: 3, names: { en: '2 Thessalonians', ko: '데살로니가후서', ja: 'テサロニケの信徒への手紙二', 'zh-Hans': '帖撒罗尼迦后书', 'zh-Hant': '帖撒羅尼迦後書', es: '2 Tesalonicenses', pt: '2 Tessalonicenses', fr: '2 Thessaloniciens', de: '2. Thessalonicher', ar: 'تسالونيكي الثانية' } },
+  { bookNum: 54, id: '1TI', testament: 'NT', chapters: 6, names: { en: '1 Timothy', ko: '디모데전서', ja: 'テモテへの手紙一', 'zh-Hans': '提摩太前书', 'zh-Hant': '提摩太前書', es: '1 Timoteo', pt: '1 Timóteo', fr: '1 Timothée', de: '1. Timotheus', ar: 'تيموثاوس الأولى' } },
+  { bookNum: 55, id: '2TI', testament: 'NT', chapters: 4, names: { en: '2 Timothy', ko: '디모데후서', ja: 'テモテへの手紙二', 'zh-Hans': '提摩太后书', 'zh-Hant': '提摩太後書', es: '2 Timoteo', pt: '2 Timóteo', fr: '2 Timothée', de: '2. Timotheus', ar: 'تيموثاوس الثانية' } },
+  { bookNum: 56, id: 'TIT', testament: 'NT', chapters: 3, names: { en: 'Titus', ko: '디도서', ja: 'テトスへの手紙', 'zh-Hans': '提多书', 'zh-Hant': '提多書', es: 'Tito', pt: 'Tito', fr: 'Tite', de: 'Titus', ar: 'تيطس' } },
+  { bookNum: 57, id: 'PHM', testament: 'NT', chapters: 1, names: { en: 'Philemon', ko: '빌레몬서', ja: 'フィレモンへの手紙', 'zh-Hans': '腓利门书', 'zh-Hant': '腓利門書', es: 'Filemón', pt: 'Filemom', fr: 'Philémon', de: 'Philemon', ar: 'فليمون' } },
+  { bookNum: 58, id: 'HEB', testament: 'NT', chapters: 13, names: { en: 'Hebrews', ko: '히브리서', ja: 'ヘブライ人への手紙', 'zh-Hans': '希伯来书', 'zh-Hant': '希伯來書', es: 'Hebreos', pt: 'Hebreus', fr: 'Hébreux', de: 'Hebräer', ar: 'العبرانيين' } },
+  { bookNum: 59, id: 'JAS', testament: 'NT', chapters: 5, names: { en: 'James', ko: '야고보서', ja: 'ヤコブの手紙', 'zh-Hans': '雅各书', 'zh-Hant': '雅各書', es: 'Santiago', pt: 'Tiago', fr: 'Jacques', de: 'Jakobus', ar: 'يعقوب' } },
+  { bookNum: 60, id: '1PE', testament: 'NT', chapters: 5, names: { en: '1 Peter', ko: '베드로전서', ja: 'ペトロの手紙一', 'zh-Hans': '彼得前书', 'zh-Hant': '彼得前書', es: '1 Pedro', pt: '1 Pedro', fr: '1 Pierre', de: '1. Petrus', ar: 'بطرس الأولى' } },
+  { bookNum: 61, id: '2PE', testament: 'NT', chapters: 3, names: { en: '2 Peter', ko: '베드로후서', ja: 'ペトロの手紙二', 'zh-Hans': '彼得后书', 'zh-Hant': '彼得後書', es: '2 Pedro', pt: '2 Pedro', fr: '2 Pierre', de: '2. Petrus', ar: 'بطرس الثانية' } },
+  { bookNum: 62, id: '1JN', testament: 'NT', chapters: 5, names: { en: '1 John', ko: '요한1서', ja: 'ヨハネの手紙一', 'zh-Hans': '约翰一书', 'zh-Hant': '約翰一書', es: '1 Juan', pt: '1 João', fr: '1 Jean', de: '1. Johannes', ar: 'يوحنا الأولى' } },
+  { bookNum: 63, id: '2JN', testament: 'NT', chapters: 1, names: { en: '2 John', ko: '요한2서', ja: 'ヨハネの手紙二', 'zh-Hans': '约翰二书', 'zh-Hant': '約翰二書', es: '2 Juan', pt: '2 João', fr: '2 Jean', de: '2. Johannes', ar: 'يوحنا الثانية' } },
+  { bookNum: 64, id: '3JN', testament: 'NT', chapters: 1, names: { en: '3 John', ko: '요한3서', ja: 'ヨハネの手紙三', 'zh-Hans': '约翰三书', 'zh-Hant': '約翰三書', es: '3 Juan', pt: '3 João', fr: '3 Jean', de: '3. Johannes', ar: 'يوحنا الثالثة' } },
+  { bookNum: 65, id: 'JUD', testament: 'NT', chapters: 1, names: { en: 'Jude', ko: '유다서', ja: 'ユダの手紙', 'zh-Hans': '犹大书', 'zh-Hant': '猶大書', es: 'Judas', pt: 'Judas', fr: 'Jude', de: 'Judas', ar: 'يهوذا' } },
+  { bookNum: 66, id: 'REV', testament: 'NT', chapters: 22, names: { en: 'Revelation', ko: '요한계시록', ja: 'ヨハネの黙示録', 'zh-Hans': '启示录', 'zh-Hant': '啟示錄', es: 'Apocalipsis', pt: 'Apocalipse', fr: 'Apocalypse', de: 'Offenbarung', ar: 'الرؤيا' } },
+];
