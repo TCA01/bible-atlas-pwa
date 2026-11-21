@@ -5,6 +5,8 @@ import { ArrowRight, Compass, BookOpen, Landmark, Globe2 } from 'lucide-react';
 import type { LanguageCode } from '@/types/bible';
 import type { BiblicalPlace } from '@/types/geo';
 import { pickText } from '@/lib/geo-utils';
+import { formatLocalizedSummary, inferModernCountry, localizePlaceType } from '@/lib/geo-i18n';
+import { BIBLE_BOOKS } from '@/lib/bible-books';
 
 interface PlaceCardProps {
   place: BiblicalPlace;
@@ -16,9 +18,29 @@ export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
   const t = useTranslations('map');
 
   const ancient = pickText(place.ancientName, locale);
-  const modern = pickText(place.modernName, locale);
-  const country = pickText(place.modernCountry, locale);
-  const summary = pickText(place.commentary.summary, locale);
+  const ancientEn = pickText(place.ancientName, 'en');
+  const rawModern = pickText(place.modernName, locale);
+  const modern =
+    typeof place.modernName === 'string' && rawModern.toLowerCase() === ancientEn.toLowerCase()
+      ? ancient
+      : rawModern;
+
+  const inferredCountry = inferModernCountry(place.coordinates, locale);
+  const country = place.featured ? pickText(place.modernCountry, locale) : inferredCountry.name;
+  const countryCode = place.featured ? place.modernCountryCode : inferredCountry.code;
+  const placeTypeLabel = localizePlaceType(place.placeType, locale);
+
+  const summary = place.featured
+    ? pickText(place.commentary.summary, locale)
+    : formatLocalizedSummary(
+        ancient,
+        modern,
+        country,
+        placeTypeLabel,
+        place.verseCount ?? place.keyVerses.length,
+        locale
+      );
+
   const geography = pickText(place.commentary.geography, locale);
   const biblicalEvents = pickText(place.commentary.biblicalEvents, locale);
   const modernContext = pickText(place.commentary.modernContext, locale);
@@ -39,9 +61,7 @@ export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
               {t('ancientName')}
             </span>
             <span className="text-lg font-bold">{ancient}</span>
-            {place.placeType && (
-              <span className="block text-[11px] capitalize opacity-60">{place.placeType}</span>
-            )}
+            <span className="block text-[11px] opacity-60">{placeTypeLabel}</span>
           </div>
 
           <ArrowRight className="h-5 w-5 text-amber-600 rtl:rotate-180" />
@@ -54,7 +74,7 @@ export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
               {modern}
             </span>
             <span className="block text-xs font-medium opacity-75">
-              {country}{place.modernCountryCode ? ` (${place.modernCountryCode})` : ''}
+              {country}{countryCode ? ` (${countryCode})` : ''}
             </span>
           </div>
         </div>
@@ -112,29 +132,33 @@ export function PlaceCard({ place, onJumpToVerse }: PlaceCardProps) {
         )}
       </div>
 
-      {/* Key Verses */}
+      {/* Key Verses (Localized book names!) */}
       {place.keyVerses.length > 0 && (
         <div>
           <h4 className="mb-2 text-xs font-bold uppercase tracking-wide opacity-70">
             {t('keyVerses')}
           </h4>
           <div className="flex flex-wrap gap-2">
-            {place.keyVerses.map((kv, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => onJumpToVerse?.(kv.bookId, kv.chapter)}
-                className="rounded-lg border px-3 py-1.5 text-xs font-semibold transition hover:opacity-80 cursor-pointer"
-                style={{
-                  borderColor: 'var(--border-subtle)',
-                  backgroundColor: 'var(--accent-soft)',
-                  color: 'var(--accent)',
-                }}
-              >
-                {kv.bookId} {kv.chapter}:{kv.verse}
-                {kv.label ? ` — ${pickText(kv.label, locale)}` : ''}
-              </button>
-            ))}
+            {place.keyVerses.map((kv, i) => {
+              const bookMeta = BIBLE_BOOKS.find((b) => b.id === kv.bookId);
+              const bookTitle = bookMeta?.names[locale] ?? kv.bookId;
+              const customLabel = place.featured && kv.label ? ` — ${pickText(kv.label, locale)}` : '';
+              return (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => onJumpToVerse?.(kv.bookId, kv.chapter)}
+                  className="rounded-lg border px-3 py-1.5 text-xs font-semibold transition hover:opacity-80 cursor-pointer"
+                  style={{
+                    borderColor: 'var(--border-subtle)',
+                    backgroundColor: 'var(--accent-soft)',
+                    color: 'var(--accent)',
+                  }}
+                >
+                  {bookTitle} {kv.chapter}:{kv.verse}{customLabel}
+                </button>
+              );
+            })}
           </div>
         </div>
       )}
