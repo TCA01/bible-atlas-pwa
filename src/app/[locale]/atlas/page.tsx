@@ -230,7 +230,7 @@ export default function AtlasPage() {
 
           {/* Right Column: Selected Place Commentary */}
           <div
-            className="rounded-2xl border p-5 lg:col-span-5"
+            className="rounded-2xl border p-5 lg:col-span-5 lg:sticky lg:top-20 lg:self-start"
             style={{
               backgroundColor: 'var(--bg-surface)',
               borderColor: 'var(--border-subtle)',
