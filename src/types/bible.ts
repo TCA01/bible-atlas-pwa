@@ -43,6 +43,8 @@ export interface BibleVerse {
   placeIds?: string[];
 }
 
+import type { BiblicalPlace } from './geo';
+
 export interface BibleChapter {
   version: BibleVersionId;
   bookId: string;
@@ -50,6 +52,7 @@ export interface BibleChapter {
   chapter: number;
   totalChapters: number;
   verses: BibleVerse[];
+  places?: BiblicalPlace[];
   copyright: string;
   fallbackNotice?: string;
 }

@@ -10,9 +10,8 @@ import { useReaderStore } from '@/store/useReaderStore';
 import { db, type BookmarkRecord, type HighlightRecord, type NoteRecord } from '@/lib/db/dexie';
 import { pickText } from '@/lib/geo-utils';
 import { VerseRenderer } from './VerseRenderer';
-import placesData from '@/data/geo/places.json';
 
-const allPlaces = placesData as BiblicalPlace[];
+const chapterMemCache = new Map<string, BibleChapter>();
 
 export function BibleReader() {
   const t = useTranslations('reader');
@@ -53,20 +52,28 @@ export function BibleReader() {
     hydrateFromDb(locale);
   }, [locale, hydrateFromDb]);
 
-  // Load chapter (online first, fallback to IndexedDB cache for PD versions)
+  // Load chapter (memory cache -> network -> IndexedDB offline cache for PD versions)
   useEffect(() => {
     if (!hydrated) return;
     let cancelled = false;
 
     const load = async () => {
-      setLoading(true);
       const cacheKey = `${version}.${bookId}.${chapter}`;
+      const memHit = chapterMemCache.get(cacheKey);
+      if (memHit) {
+        setChapterData(memHit);
+        setLoading(false);
+        return;
+      }
+
+      setLoading(true);
       const meta = BIBLE_VERSIONS[version];
 
       try {
         const res = await fetch(`/api/bible/${version}/${bookId}/${chapter}`);
         if (!res.ok) throw new Error('Fetch failed');
         const data = (await res.json()) as BibleChapter;
+        chapterMemCache.set(cacheKey, data);
         if (!cancelled) {
           setChapterData(data);
           setLoading(false);
@@ -78,6 +85,7 @@ export function BibleReader() {
         if (db && meta?.allowOfflineCache) {
           const cached = await db.cachedChapters.get(cacheKey);
           if (cached && !cancelled) {
+            chapterMemCache.set(cacheKey, cached.data);
             setChapterData(cached.data);
             setLoading(false);
             return;
@@ -135,13 +143,8 @@ export function BibleReader() {
     return 'var(--font-noto-serif), Georgia, serif';
   };
 
-  // Collect unique places mentioned in this chapter for quick-access pills
-  const chapterPlaceIds = Array.from(
-    new Set(chapterData?.verses.flatMap((v) => v.placeIds ?? []) ?? [])
-  );
-  const chapterPlaces = chapterPlaceIds
-    .map((id) => allPlaces.find((p) => p.id === id))
-    .filter((p): p is BiblicalPlace => Boolean(p));
+  // Places mentioned in this chapter (returned directly by /api/bible)
+  const chapterPlaces: BiblicalPlace[] = chapterData?.places ?? [];
 
   return (
     <div className="flex flex-col gap-4">
@@ -345,7 +348,7 @@ export function BibleReader() {
                       bookId={bookId}
                       chapter={chapter}
                       verse={v}
-                      places={allPlaces}
+                      places={chapterPlaces}
                       isBookmarked={Boolean(bookmarks[refKey])}
                       highlightColor={highlights[refKey]?.color}
                       hasNote={Boolean(notes[refKey])}

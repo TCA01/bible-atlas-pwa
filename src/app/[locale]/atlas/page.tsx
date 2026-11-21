@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { Route, Search, ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
@@ -12,10 +12,9 @@ import { BiblicalMap } from '@/components/map/BiblicalMap';
 import { PlaceCard } from '@/components/map/PlaceCard';
 import { useReaderStore } from '@/store/useReaderStore';
 import { matchesPlaceQuery, pickText } from '@/lib/geo-utils';
-import placesData from '@/data/geo/places.json';
+import { fetchAllPlaces, getCachedPlacesSync } from '@/lib/geo-client';
 import journeysData from '@/data/geo/journeys.json';
 
-const places = placesData as BiblicalPlace[];
 const journeys = journeysData as BiblicalJourney[];
 
 export default function AtlasPage() {
@@ -25,17 +24,32 @@ export default function AtlasPage() {
   const router = useRouter();
   const { setLocation } = useReaderStore();
 
+  const [places, setPlaces] = useState<BiblicalPlace[]>(getCachedPlacesSync);
   const [selectedJourneyId, setSelectedJourneyId] = useState<string>(journeys[0].id);
   const [stepIndex, setStepIndex] = useState(0);
   const [selectedPlaceId, setSelectedPlaceId] = useState<string>(journeys[0].waypoints[0].placeId);
   const [search, setSearch] = useState('');
+  const [onlyLocalized, setOnlyLocalized] = useState(true);
   const [visibleLimit, setVisibleLimit] = useState(40);
+
+  useEffect(() => {
+    if (places.length === 0) {
+      fetchAllPlaces().then(setPlaces);
+    }
+  }, [places.length]);
 
   const activeJourney = journeys.find((j) => j.id === selectedJourneyId) ?? null;
   const currentWaypoint = activeJourney?.waypoints[stepIndex] ?? null;
   const selectedPlace = places.find((p) => p.id === selectedPlaceId) ?? places[0];
 
-  const filteredPlaces = places.filter((p) => matchesPlaceQuery(p, search, locale));
+  const localizedCount = places.filter((p) => typeof p.ancientName !== 'string').length;
+
+  const baseList =
+    onlyLocalized && !search.trim() && locale !== 'en'
+      ? places.filter((p) => typeof p.ancientName !== 'string')
+      : places;
+
+  const filteredPlaces = baseList.filter((p) => matchesPlaceQuery(p, search, locale));
   const displayedChips = filteredPlaces.slice(0, visibleLimit);
 
   const handleOpenInReader = (bookId: string, chapter: number) => {
@@ -51,7 +65,12 @@ export default function AtlasPage() {
       <main className="mx-auto w-full max-w-7xl flex-1 space-y-6 px-4 py-6">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <h1 className="text-2xl font-bold tracking-tight">
-            {t('title')} <span className="text-sm font-normal opacity-60">({places.length.toLocaleString()})</span>
+            {t('title')}{' '}
+            {places.length > 0 && (
+              <span className="text-sm font-normal opacity-60">
+                ({places.length.toLocaleString()})
+              </span>
+            )}
           </h1>
 
           {/* Place Search */}
@@ -113,8 +132,8 @@ export default function AtlasPage() {
         <div className="grid gap-6 lg:grid-cols-12">
           <div className="space-y-4 lg:col-span-7">
             <BiblicalMap
-              places={filteredPlaces}
-              selectedPlaceId={selectedPlace.id}
+              places={places}
+              selectedPlaceId={selectedPlace?.id ?? null}
               onSelectPlace={(id) => setSelectedPlaceId(id)}
               activeJourney={activeJourney}
               heightClass="h-80 sm:h-[420px]"
@@ -191,11 +210,41 @@ export default function AtlasPage() {
               </div>
             )}
 
-            {/* All Biblical Places Chips (Paginated) */}
-            <div className="space-y-2">
-              <h3 className="text-xs font-bold uppercase tracking-wider opacity-70">
-                {t('places')} ({filteredPlaces.length.toLocaleString()})
-              </h3>
+            {/* Biblical Places Chips with Major (Localized) / All Toggle */}
+            <div className="space-y-3">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <h3 className="text-xs font-bold uppercase tracking-wider opacity-70">
+                  {t('places')} ({filteredPlaces.length.toLocaleString()})
+                </h3>
+
+                {locale !== 'en' && (
+                  <div className="flex items-center gap-1 rounded-lg p-0.5 text-xs" style={{ backgroundColor: 'var(--bg-muted)' }}>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setOnlyLocalized(true);
+                        setVisibleLimit(40);
+                      }}
+                      className="rounded-md px-2.5 py-1 font-semibold transition cursor-pointer"
+                      style={onlyLocalized ? { backgroundColor: 'var(--bg-surface)' } : undefined}
+                    >
+                      주요 지명 ({localizedCount})
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setOnlyLocalized(false);
+                        setVisibleLimit(40);
+                      }}
+                      className="rounded-md px-2.5 py-1 font-semibold transition cursor-pointer"
+                      style={!onlyLocalized ? { backgroundColor: 'var(--bg-surface)' } : undefined}
+                    >
+                      전체 ({places.length.toLocaleString()})
+                    </button>
+                  </div>
+                )}
+              </div>
+
               <div className="flex flex-wrap gap-2">
                 {displayedChips.map((p) => (
                   <button
@@ -205,9 +254,9 @@ export default function AtlasPage() {
                     className="rounded-full border px-3 py-1.5 text-xs font-medium transition cursor-pointer"
                     style={{
                       borderColor:
-                        p.id === selectedPlace.id ? 'var(--accent)' : 'var(--border-subtle)',
+                        p.id === selectedPlace?.id ? 'var(--accent)' : 'var(--border-subtle)',
                       backgroundColor:
-                        p.id === selectedPlace.id ? 'var(--accent-soft)' : 'var(--bg-surface)',
+                        p.id === selectedPlace?.id ? 'var(--accent-soft)' : 'var(--bg-surface)',
                     }}
                   >
                     {pickText(p.ancientName, locale)}
@@ -236,10 +285,14 @@ export default function AtlasPage() {
               borderColor: 'var(--border-subtle)',
             }}
           >
-            <PlaceCard
-              place={selectedPlace}
-              onJumpToVerse={(bookId, chapter) => handleOpenInReader(bookId, chapter)}
-            />
+            {selectedPlace ? (
+              <PlaceCard
+                place={selectedPlace}
+                onJumpToVerse={(bookId, chapter) => handleOpenInReader(bookId, chapter)}
+              />
+            ) : (
+              <p className="py-12 text-center text-xs opacity-60">Loading...</p>
+            )}
           </div>
         </div>
       </main>

@@ -13,13 +13,21 @@ export async function GET(req: Request) {
   if (id) {
     const found = places.find((p) => p.id === id);
     if (!found) return NextResponse.json({ error: 'Place not found' }, { status: 404 });
-    return NextResponse.json(found);
+    return NextResponse.json(found, {
+      headers: { 'Cache-Control': 'public, max-age=86400' },
+    });
   }
 
   if (q) {
-    const filtered = places.filter((p) => matchesPlaceQuery(p, q, 'en') || matchesPlaceQuery(p, q, 'ko'));
-    return NextResponse.json(filtered.slice(0, 50));
+    const filtered = places.filter(
+      (p) => matchesPlaceQuery(p, q, 'en') || matchesPlaceQuery(p, q, 'ko')
+    );
+    return NextResponse.json(filtered.slice(0, 50), {
+      headers: { 'Cache-Control': 'public, max-age=3600' },
+    });
   }
 
-  return NextResponse.json(places);
+  return NextResponse.json(places, {
+    headers: { 'Cache-Control': 'public, max-age=86400, stale-while-revalidate=604800' },
+  });
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { X, Search } from 'lucide-react';
 import type { LanguageCode } from '@/types/bible';
@@ -9,15 +9,19 @@ import { useReaderStore } from '@/store/useReaderStore';
 import { BiblicalMap } from './BiblicalMap';
 import { PlaceCard } from './PlaceCard';
 import { matchesPlaceQuery, pickText } from '@/lib/geo-utils';
-import placesData from '@/data/geo/places.json';
-
-const places = placesData as BiblicalPlace[];
+import { fetchAllPlaces, getCachedPlacesSync } from '@/lib/geo-client';
 
 export function MapPanel() {
   const t = useTranslations('map');
   const locale = useLocale() as LanguageCode;
   const { isMapOpen, selectedPlaceId, closeMap, openPlaceOnMap, setLocation } = useReaderStore();
+  const [places, setPlaces] = useState<BiblicalPlace[]>(getCachedPlacesSync);
   const [query, setQuery] = useState('');
+
+  useEffect(() => {
+    if (!isMapOpen || places.length > 0) return;
+    fetchAllPlaces().then(setPlaces);
+  }, [isMapOpen, places.length]);
 
   if (!isMapOpen) return null;
 
@@ -83,28 +87,29 @@ export function MapPanel() {
                   className="flex w-full items-center justify-between rounded-lg px-3 py-1.5 text-start text-xs hover:opacity-80"
                 >
                   <span className="font-semibold">{pickText(fp.ancientName, locale)}</span>
-                  <span className="opacity-60">
-                    {pickText(fp.modernName, locale)}
-                  </span>
+                  <span className="opacity-60">{pickText(fp.modernName, locale)}</span>
                 </button>
               ))}
             </div>
           )}
         </div>
 
-        {/* Interactive Vector Map */}
-        <BiblicalMap
-          places={places}
-          selectedPlaceId={selectedPlace.id}
-          onSelectPlace={(id) => openPlaceOnMap(id)}
-          heightClass="h-56 sm:h-64"
-        />
-
-        {/* Selected Place Details */}
-        <PlaceCard
-          place={selectedPlace}
-          onJumpToVerse={(bookId, chapter) => setLocation(bookId, chapter)}
-        />
+        {selectedPlace ? (
+          <>
+            <BiblicalMap
+              places={places}
+              selectedPlaceId={selectedPlace.id}
+              onSelectPlace={(id) => openPlaceOnMap(id)}
+              heightClass="h-56 sm:h-64"
+            />
+            <PlaceCard
+              place={selectedPlace}
+              onJumpToVerse={(bookId, chapter) => setLocation(bookId, chapter)}
+            />
+          </>
+        ) : (
+          <p className="py-12 text-center text-xs opacity-60">Loading map...</p>
+        )}
       </div>
     </aside>
   );
